@@ -16,7 +16,7 @@
   "devDependencies": {
     "clea-cli": "^0.0.1",
     "@types/angular": "^1.6.5",
-    "@types/es6-shim": "^0.31.32",
+    "@types/core-js": "^0.9.36",
     "@types/angular-mocks": "^1.5.9",
     "@types/jasmine": "^2.5.43",
     "@types/webpack": "^2.2.6",
