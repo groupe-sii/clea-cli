@@ -17,6 +17,12 @@ let module: ng.IModule = angular.module('<%= slugify(appName) %>', [
   'toastr',
   'ngTable',
   'pikaday',
+  <% if (bootstrap) { %>
+  'ui.bootstrap',
+  <% } %>
+  <% if (ngMaterial) { %>
+  'ngMaterial',
+  <% } %>
   'restangular',
   'oc.lazyLoad'
 ]);

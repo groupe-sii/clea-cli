@@ -1,3 +1,10 @@
 //----------------------------------------
 //  <%= appName %>
 //----------------------------------------
+<% if (bootstrap) { %>
+  @import '~angular-material/angular-material.scss';
+<% } %>
+<% if (ngMaterial) { %>
+  @import '~angular-material/angular-material.scss';
+<% } %>
+

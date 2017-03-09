@@ -10,6 +10,7 @@ program
   .version(packageFile.version)
   .arguments('[type] [project-name]')
   .option('-v, --verbose', 'verbose mode')
+  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults none)')
   .action((type, name) => {
     if (!InitProject.allowedTypes().includes(type)) {
       logger.error(`"${type}" type is not allowed. ${chalk.blue.bold('akg help new')} to see allowed types.`);
@@ -17,9 +18,17 @@ program
       process.exit(1);
     }
 
+    if (!['material', 'bootstrap', undefined].includes(program.uiFramework)) {
+      logger.error(`"${program.uiFramework}" ui framework is not allowed.`);
+
+      process.exit(1);
+    }
+
     try {
+
       let initProject = new InitProject(name, type, {
-        verbose: Boolean(program.verbose)
+        verbose: Boolean(program.verbose),
+        uiFramework: program.uiFramework
       });
       initProject.createFolder();
       initProject.start().catch((err) => {
