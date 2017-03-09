@@ -1,0 +1,69 @@
+{
+  "name": "clea-cli",
+  "version": "0.0.1",
+  "description": "CLI tool for AngularJS typescript projects",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "bin": {
+    "clea": "./bin/clea.js"
+  },
+  "author": "SII",
+  "dependencies": {
+    "angular-mocks": "^1.6.2",
+    "chalk": "^1.1.3",
+    "clean-webpack-plugin": "^0.1.15",
+    "cli-spinner": "^0.2.6",
+    "commander": "^2.9.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "debug": "^2.6.1",
+    "ejs": "^2.5.5",
+    "ejs-render-loader": "^1.0.0",
+    "express": "^4.14.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
+    "findup": "^0.1.5",
+    "fs-extra": "^2.0.0",
+    "glob": "^7.1.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.28.0",
+    "inquirer": "^3.0.1",
+    "jasmine-core": "^2.5.2",
+    "json-loader": "^0.5.4",
+    "json-server": "^0.9.5",
+    "karma": "^1.4.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.26",
+    "karma-webpack": "^2.0.2",
+    "ng-annotate-loader": "^0.2.0",
+    "node-sass": "^4.5.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "postcss-loader": "^1.3.0",
+    "raw-loader": "^0.5.1",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "^6.0.0",
+    "semver": "^5.3.0",
+    "slugify": "^1.1.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.0",
+    "tslint": "^4.4.2",
+    "typedoc": "^0.5.7",
+    "typedoc-webpack-plugin": "^1.1.3",
+    "typescript": "^2.1.6",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.3",
+    "webpack-merge": "^2.6.1",
+    "winston": "^2.3.1"
+  },
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.0"
+  }
+}

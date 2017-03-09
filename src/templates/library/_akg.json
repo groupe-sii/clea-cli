@@ -1,0 +1,5 @@
+{
+  "type": "library",
+  "root": "src",
+  "name": "<%= appName %>"
+}

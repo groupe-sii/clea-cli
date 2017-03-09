@@ -1,0 +1,18 @@
+{
+  "projectName": "<%= appName %>",
+  "sass-to-scsslint": {
+    "src": "src/**/*.scss",
+    "report": "reports/sonar/scsslint.json",
+    "rulesFile": ".sass-lint.yml"
+  },
+  "htmlhint": {
+    "src": "src/**/*.html",
+    "report": "reports/sonar/htmlhint.json",
+    "rulesFile": "./src/.htmlhintrc"
+  },
+  "tslint": {
+    "src": "src/**/*.ts",
+    "report": "reports/sonar/tslint.json",
+    "rulesFile": "tslint.json"
+  }
+}

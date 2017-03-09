@@ -1,0 +1,13 @@
+{
+  "type": "application",
+  "name": "<%= appName %>",
+  "domain": "<%= domain %>",
+  "tracking": "<%= tracking %>",
+  "root": "src",
+  "environments": {
+    "source": "config/config.json",
+    "development": "config/config.dev.json",
+    "production": "config/config.prod.json",
+    "recette": "config/config.rec.json"
+  }
+}

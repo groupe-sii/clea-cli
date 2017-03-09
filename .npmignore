@@ -1,0 +1,10 @@
+!._*
+
+test/
+docs/
+assets/
+
+node_modules/
+patrick/
+
+yarn.lock
