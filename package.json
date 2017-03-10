@@ -22,7 +22,7 @@
     "generator",
     "webpack",
     "karma",
-    "jasmie"
+    "jasmine"
   ],
   "dependencies": {
     "angular-mocks": "^1.6.3",
