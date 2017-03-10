@@ -4,7 +4,7 @@ import { <%= moduleName %> } from '<%= modulePath %>';
 import { <%= classifiedName %>Service } from '<%= servicePath %>';
 
 describe ('<%= classifiedName %>Service', () => {
-  let <%= camelizedName %>Service: <%= classifiedName %>Service;
+  let <%= camelizedName %>Service: <%= camelizedName %>Service;
 
   beforeEach (angular.mock.module(<%= moduleName %>));
 
