@@ -10,7 +10,7 @@ akg help build
 
 `--verbose` (`-V`) affiche des informations plus détaillées lors de la tache de build.
 
-`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](environments.md) pour plus de détails. **development** par défaut.
+`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](more/environments.md) pour plus de détails. **development** par défaut.
 
 `--output-path [path]` dossier de destination de build. **dist/** par défaut.
 

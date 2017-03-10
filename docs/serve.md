@@ -10,7 +10,7 @@ akg help serve
 
 `--verbose` (`-V`) affiche des informations plus détaillées.
 
-`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](environments.md) pour plus de détails. **development** par défaut.
+`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](more/environments.md) pour plus de détails. **development** par défaut.
 
 `--host [host]` hôte que le serveur doit écouter. **localhost** par défaut. Peut être positionné à **0.0.0.0** pour accèder à l'application sur votre réseau locale.
 
@@ -24,7 +24,7 @@ akg help serve
 
 `--json-server-route [route]` Defini un fichier de configuration du serveur express (défaut: json-server.js)
 
-`--proxy-config [config]` fichier de configuration pour le proxy. [proxy.md](proxy.md) pour plus de détails.
+`--proxy-config [config]` fichier de configuration pour le proxy. [proxy.md](more/proxy.md) pour plus de détails.
 
 `--merge-config [config]` merge la configuration webpack avec l'éxistante.
 
