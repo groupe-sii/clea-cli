@@ -12,7 +12,8 @@ program
   .arguments('[project-name]')
   .option('-v, --verbose', 'verbose mode')
   .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
-  .action((type, name) => {
+  .option('--lib', 'generate a library instead of an application')
+  .action((name) => {
     if (!InitProject.allowedTypes().includes(type)) {
       logger.error(`"${type}" type is not allowed. ${chalk.blue.bold('akg help init')} to see allowed types.`);
 
@@ -26,7 +27,7 @@ program
     }
 
     try {
-      let initProject = new InitProject(name, type, {
+      let initProject = new InitProject(name, (program.lib === undefined) ? InitProject.APPLICATION[0] : InitProject.LIBRARY[0], {
         init       : true,
         verbose    : Boolean(program.verbose),
         uiFramework: program.uiFramework
