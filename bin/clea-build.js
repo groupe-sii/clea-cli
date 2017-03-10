@@ -3,7 +3,6 @@ const program = require('commander'),
 
   packageFile = require('../package.json'),
   project = require('../lib/project').getInstance(),
-  projectTypes = require('../lib/project').TYPE,
   Build = require('../lib/commands/build'),
   logger = require('../vendors/logger');
 
@@ -31,14 +30,6 @@ project.init().then(() => {
     overrideConfig: program.overrideConfig,
     enableDoc     : program.doc !== undefined
   });
-
-  if (project.clea && project.clea.type === projectTypes.LIBRARY && program.target) {
-    logger.warning('WARNING: --target option is not available for library projects');
-  }
-
-  if (project.clea.type === projectTypes.LIBRARY && program.outputPath) {
-    logger.warning('WARNING: --output-path (./lib) option is not available for library projects');
-  }
 
   build.start().catch((err) => {
     debug(err);
