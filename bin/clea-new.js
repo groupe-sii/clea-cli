@@ -10,8 +10,9 @@ program
   .version(packageFile.version)
   .arguments('[project-name]')
   .option('-v, --verbose', 'verbose mode')
-  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
   .option('--lib', 'generate a library instead of an application')
+  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
+  .option('--skip-install', 'skip installing packages (defaults to: false)')
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
       logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('akg help new')} to see allowed types.`);
@@ -22,8 +23,9 @@ program
     try {
 
       let initProject = new InitProject(name, (program.lib === undefined) ? InitProject.APPLICATION : InitProject.LIBRARY, {
-        verbose: Boolean(program.verbose),
-        uiFramework: program.uiFramework
+        verbose    : Boolean(program.verbose),
+        uiFramework: program.uiFramework,
+        skipInstall: program.skipInstall !== undefined
       });
       initProject.createFolder();
       initProject.start().catch((err) => {
