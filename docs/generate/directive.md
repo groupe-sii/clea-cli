@@ -1,6 +1,6 @@
 # clea generate directive [name]
 
-> Generate a new directive in the closest parent moduel
+> Generate a new directive and register it in the closest parent module
 
 ## Structure
 

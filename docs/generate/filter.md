@@ -1,6 +1,6 @@
 # clea generate filter [name]
 
-> Generate a new filter in the closest parent moduel
+> Generate a new filter and register it in the closest parent module
 
 ## Structure
 

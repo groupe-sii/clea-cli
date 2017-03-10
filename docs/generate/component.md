@@ -1,6 +1,6 @@
 # clea generate component [name]
 
-> Generate a new component in the closest parent moduel
+> Generate a new component and register it in the closest parent module
 
 ## Structure
 
