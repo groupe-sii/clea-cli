@@ -22,7 +22,6 @@ program
     }
 
     try {
-
       let initProject = new InitProject(name, (program.lib === undefined) ? InitProject.APPLICATION : InitProject.LIBRARY, {
         verbose          : Boolean(program.verbose),
         uiFramework      : program.uiFramework,
