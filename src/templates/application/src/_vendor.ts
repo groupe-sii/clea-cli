@@ -7,9 +7,6 @@ import 'angular-aria';
 import 'angular-ui-router';
 import 'angular-mocks';
 import 'angular-toastr';
-import 'ng-table';
-import 'moment';
-import 'pikaday-angular';
 import 'restangular';
 import 'oclazyload';<% if (ngMaterial) { %>
 import 'angular-material';
