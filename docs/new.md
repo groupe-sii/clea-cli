@@ -1,46 +1,42 @@
-# akg new|init [type] [name]
+# clea new|init [name]
 
 Génère une application ou une librairie AngularJS.
 
-## akg new [type] [name]
+## clea new [name]
 
-Créé un dossier `name` et lance la commande `akg init` à l'intérieur.
-
-### Options
+Create a `name` folder and launch `clea init in it.
 
 ```bash
-akg help new
-```
-
-## akg init [type] [name]
-
-Génère un projet AngularJS.
-
-Permet de générer un squelette d'application ou de librairie.
-
-### Usage
-
-```bash
-akg help init
-```
-
-### Application
-
-```bash
-akg new application APPLICATION_NAME
-akg new app APPLICATION_NAME # En utilisant l'alias
+clea new APPLICATION_NAME
 
 cd APPLICATION_NAME
-akg serve
+clea serve
 ```
 
-Rendez-vous sur http://localhost:8080/. L'application va automatiquement se recharger si vous changez l'un des fichiers source.
+Go to http://localhost:8080/. Hot reload is active.
 
-### Librairie
+## Options
 
 ```bash
-akg new library LIBRARY_NAME
-akg new lib LIBRARY_NAME # En utilisant l'alias
+clea help new
+```
+`--verbose` (`-V`) verbose mode.
 
+`--lib` generate a library instead of an application.
+
+`--ui-framework [framework]` create application with built-in ui framework. **material** or **bootstrap** (defaults to: **none**).
+
+`--skip-install` skip installing packages (defaults to: **false**).
+
+`--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**).
+
+### Library
+
+You can also scaffold a new library instead of an application.
+
+To do so, use the `--lib` option.
+
+```bash
+clea new LIBRARY_NAME --lib
 cd LIBRARY_NAME
 ```
