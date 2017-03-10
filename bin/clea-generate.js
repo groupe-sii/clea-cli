@@ -13,7 +13,7 @@ program
   .version(packageFile.version)
   .arguments('[blueprint] [name]')
   .option('--with-component', `generate a component with the generated module. Only for ${chalk.blue('module')} blueprint.`)
-  .option('--lazy-load', `lazy load the module in the parent routing. Only for ${chalk.blue('module')} blueprint.`)
+  .option('--lazy-load', `lazy load the module in the closest parent routing file. Only for ${chalk.blue('module')} blueprint.`)
   .action((blueprint, name, options) => {
     project.init().then(() => {
       if (project.clea && project.clea.type === Project.TYPE.LIBRARY) {
