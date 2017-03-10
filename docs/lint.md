@@ -1,21 +1,21 @@
-# akg lint
+# clea lint
 
-> lance l'analyse statique du code
+> launch code analysis
 
 ## Options
 
 ```bash
-akg help lint
+clea help lint
 ```
 
-`--fix` essaie de corriger les erreurs.
+`--fix` will attempt to fix lint errors.
 
-`--force` retourne un code d'erreur 0 et lance tous les analyseurs de code en cas d'erreurs.
+`--force` will always return error code 0 even with lint errors. It also launches all linters, whether there is errors or not.
 
 ## TypeScript
 
-Se base sur le fichier `tslint.json`. Si celui-ci n'est pas présent, la tache TypeScript sera ignorée avec un warning.
+Based on `tslint.json`. If file doesn't exists, TSLint task will be ignored with a warning.
 
 ## SASS
 
-Se base sur le fichier `.sass-lint.yml`. Si celui-ci n'est pas présent, la tache SASS sera ignorée avec un warning.
+Based on `.sass-lint.yml`. If file doesn't exists, SASSLint task will be ignored with a warning.
