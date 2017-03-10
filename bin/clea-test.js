@@ -1,5 +1,5 @@
 const program = require('commander'),
-  debug = require('debug')('akg-test'),
+  debug = require('debug')('clea-test'),
 
   packageFile = require('../package.json'),
   project = require('../lib/project').getInstance(),

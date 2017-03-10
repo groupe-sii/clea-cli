@@ -4,7 +4,7 @@
   "private": true,
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
-    "akg": "clea",
+    "clea": "clea",
     "start": "clea serve",
     "build": "clea build",
     "build:prod": "clea build --target production --doc",

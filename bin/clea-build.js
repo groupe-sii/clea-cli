@@ -1,5 +1,5 @@
 const program = require('commander'),
-  debug = require('debug')('akg-build'),
+  debug = require('debug')('clea-build'),
 
   packageFile = require('../package.json'),
   project = require('../lib/project').getInstance(),
@@ -32,11 +32,11 @@ project.init().then(() => {
     enableDoc     : program.doc !== undefined
   });
 
-  if (project.akg && project.akg.type === projectTypes.LIBRARY && program.target) {
+  if (project.clea && project.clea.type === projectTypes.LIBRARY && program.target) {
     logger.warning('WARNING: --target option is not available for library projects');
   }
 
-  if (project.akg.type === projectTypes.LIBRARY && program.outputPath) {
+  if (project.clea.type === projectTypes.LIBRARY && program.outputPath) {
     logger.warning('WARNING: --output-path (./lib) option is not available for library projects');
   }
 
