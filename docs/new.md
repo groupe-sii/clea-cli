@@ -1,6 +1,6 @@
 # clea new|init [name]
 
-Génère une application ou une librairie AngularJS.
+Create a new application (or library) with AngularJS + TypeScript.
 
 ## clea new [name]
 
