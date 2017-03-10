@@ -1,25 +1,25 @@
-# akg build
+# clea build
 
-> Compile l'application dans le dossier destination
+> Compiles the application into an output directory
 
 ## Options
 
 ```bash
-akg help build
+clea help build
 ```
 
-`--verbose` (`-V`) affiche des informations plus détaillées lors de la tache de build.
+`--verbose` (`-V`) verbose mode.
 
-`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](more/environments.md) pour plus de détails. **development** par défaut.
+`--target [env]` build the application with the targeted environment (defaults to: **development**).
 
-`--output-path [path]` dossier de destination de build. **dist/** par défaut.
+`--output-path [path]` build the application into this path (defaults to: **dist/**).
 
-`--sourcemap` génère les sourcemaps.
+`--sourcemap` output sourcemaps.
 
-`--doc` genère la documentation.
+`--doc` generate the documentation with [TypeDoc](http://typedoc.org/).
 
-`--progress` affiche une état de la compilation.
+`--progress` display a compilation progress.
 
-`--merge-config [config]` merge la configuration webpack avec l'éxistante.
+`--merge-config [config]` merge the given webpack configuration with the existing one.
 
-`--override-config [config]` remplace totalement la configuration webpack existante par celle-ci.
+`--override-config [config]` override the existing webpack configuration by the given one.
