@@ -1,5 +1,0 @@
-{
-  "AUTH_URL": "/api/auth",
-  "CAS_URL": "https://cas.rec.gicm.net:8443/cas/login",
-  "BASE_URL": "/api"
-}

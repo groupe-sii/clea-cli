@@ -7,7 +7,6 @@
   "environments": {
     "source": "config/config.json",
     "development": "config/config.dev.json",
-    "production": "config/config.prod.json",
-    "recette": "config/config.rec.json"
+    "production": "config/config.prod.json"
   }
 }
