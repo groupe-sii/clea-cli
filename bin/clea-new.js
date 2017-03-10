@@ -8,9 +8,9 @@ const program = require('commander'),
 
 program
   .version(packageFile.version)
-  .arguments('[type] [project-name]')
+  .arguments('[project-name]')
   .option('-v, --verbose', 'verbose mode')
-  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults none)')
+  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
   .action((type, name) => {
     if (!InitProject.allowedTypes().includes(type)) {
       logger.error(`"${type}" type is not allowed. ${chalk.blue.bold('akg help new')} to see allowed types.`);
@@ -18,8 +18,8 @@ program
       process.exit(1);
     }
 
-    if (!['material', 'bootstrap', undefined].includes(program.uiFramework)) {
-      logger.error(`"${program.uiFramework}" ui framework is not allowed.`);
+    if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
+      logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('akg help new')} to see allowed types.`);
 
       process.exit(1);
     }
