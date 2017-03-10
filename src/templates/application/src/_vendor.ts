@@ -11,13 +11,9 @@ import 'ng-table';
 import 'moment';
 import 'pikaday-angular';
 import 'restangular';
-import 'oclazyload';
-<% if (ngMaterial) { %>
+import 'oclazyload';<% if (ngMaterial) { %>
 import 'angular-material';
-import 'material-design-icons';
-<% } %>
-<% if (bootstrap) { %>
-import 'angular-ui-bootstrap';
-<% } %>
+import 'material-design-icons';<% } else if (bootstrap) { %>
+import 'angular-ui-bootstrap';<% } %>
 
 /// <reference path="custom-typings.d.ts" />
