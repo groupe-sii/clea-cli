@@ -1,17 +1,17 @@
-# akg test
+# clea test
 
-> Lance les tests unitaires de l'application
+> Launch unit tests with Karma
 
 ## Options
 
 ```bash
-akg help test
+clea help test
 ```
 
-`--log-level [level]` niveau de logging. Options disponibles: off, error, warn, info, debug. **info** par défaut.
+`--log-level [level]` level of logging (defaults to: **info**). Available: off, error, warn, info, debug.
 
-`--port [port]` port sur lequel le serveur Karma doit écouter. **9876** par défaut.
+`--port [port]` port where the web server will be listening (defaults to: **9876**)
 
 ## Configuration
 
-La configuration de Karma peut être étendue dans le fichier **karma.conf.js** présent à la racine de l'application.
+Karma configuration file can be changed in `.clea-cli.json` file be modifying `karmaConfig` property.
