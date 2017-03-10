@@ -1,4 +1,4 @@
-# akg serve
+# clea serve
 
 > Build the application and launch a server with hot reload
 
