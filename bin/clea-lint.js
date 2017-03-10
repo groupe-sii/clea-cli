@@ -1,5 +1,5 @@
 const program = require('commander'),
-  debug = require('debug')('akg-lint'),
+  debug = require('debug')('clea-lint'),
   chalk = require('chalk'),
 
   packageFile = require('../package.json'),

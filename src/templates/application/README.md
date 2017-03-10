@@ -41,7 +41,7 @@ Please refer to [Angular documentation](https://github.com/angular/angular.js/wi
 Documentation is launched by adding `--doc` argument to the build command. Which is already done by default by `build:prod` NPM script.
 
 ```bash
-akg build --doc
+clea build --doc
 ```
 
 ## Styling

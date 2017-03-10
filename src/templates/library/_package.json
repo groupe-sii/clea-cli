@@ -4,7 +4,7 @@
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "akg": "clea",
+    "clea": "clea",
     "build": "clea build",
     "test": "clea test",
     "sonar:reporters": "sreporter"

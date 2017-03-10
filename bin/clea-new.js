@@ -1,6 +1,6 @@
 const program = require('commander'),
   chalk = require('chalk'),
-  debug = require('debug')('akg-new'),
+  debug = require('debug')('clea-new'),
 
   packageFile = require('../package.json'),
   Project = require('../lib/project'),
@@ -17,7 +17,7 @@ program
   .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
-      logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('akg help new')} to see allowed types.`);
+      logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('clea help new')} to see allowed types.`);
 
       process.exit(1);
     }
