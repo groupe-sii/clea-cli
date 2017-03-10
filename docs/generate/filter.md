@@ -1,12 +1,12 @@
-# akg generate filter [name]
+# clea generate filter [name]
 
-> Ajout d'un nouveau filtre au module parent le plus proche
+> Generate a new filter in the closest parent moduel
 
 ## Structure
 
-La structure générée est la suivante:
+The generated structure is as followed:
 
 <pre>
 ├── my-new-filter.filter.ts
-└── parent.module.ts    <-- Déclare le filtre dans le module parent
+└── parent.module.ts    <-- Register the component in the closest parent module
 </pre>
