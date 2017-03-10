@@ -3,7 +3,7 @@ const program = require('commander'),
   debug = require('debug')('akg-init'),
 
   packageFile = require('../package.json'),
-  project = require('../lib/project').getInstance(),
+  Project = require('../lib/project'),
   InitProject = require('../lib/commands/init-project'),
   logger = require('../vendors/logger');
 
@@ -23,7 +23,7 @@ program
     }
 
     try {
-      let initProject = new InitProject(name, (program.lib === undefined) ? InitProject.APPLICATION : InitProject.LIBRARY, {
+      let initProject = new InitProject(name, (program.lib === undefined) ? Project.TYPE.APPLICATION : Project.TYPE.LIBRARY, {
         init             : true,
         verbose          : Boolean(program.verbose),
         uiFramework      : program.uiFramework,
