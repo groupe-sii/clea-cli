@@ -8,7 +8,12 @@
   "bin": {
     "clea": "./bin/clea.js"
   },
-  "author": "SII",
+  "license": "MIT",
+  "author": "Groupe SII",
+  "contributors": [
+    "Valentin Got <gotvalentin@gmail.com>",
+    "Olivier Le Lay <liollury@gmail.com>"
+  ],
   "dependencies": {
     "angular-mocks": "^1.6.2",
     "chalk": "^1.1.3",
