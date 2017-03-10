@@ -1,10 +1,10 @@
-# akg generate component [name]
+# clea generate component [name]
 
-> Ajout d'un nouveau composant au module parent le plus proche
+> Generate a new component in the closest parent moduel
 
 ## Structure
 
-La structure générée est la suivante:
+The generated structure is as followed:
 
 <pre>
 ├── my-new-component/
@@ -14,5 +14,5 @@ La structure générée est la suivante:
 │    |──  my-new-component.component.ts
 │    └──  my-new-component.controller.ts
 │
-└── parent.module.ts    <-- Déclare le composant dans le module parent
+└── parent.module.ts    <-- Register the component in the closest parent module
 </pre>
