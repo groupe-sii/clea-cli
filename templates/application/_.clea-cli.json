@@ -6,5 +6,6 @@
   "environments": {
     "development": "config/config.dev.json",
     "production": "config/config.prod.json"
-  }
+  },
+  "karmaConfig": "./karma.conf.js"
 }
