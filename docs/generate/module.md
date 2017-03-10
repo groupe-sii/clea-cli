@@ -3,9 +3,12 @@
 > Create a new module
 
 > **Disclamer**
+>
 > The new module isn't added to the closest parent module.
+>
 > You have to do it manually.
-> You can also use the `--lazy-load` option to make it lazy-loadable on the /[name] route.
+>
+> You can also use the `--lazy-load` option to make it lazy-loadable on the **/[name]** route.
 
 ## Options
 
