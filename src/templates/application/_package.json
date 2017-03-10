@@ -33,7 +33,6 @@
     "@types/angular-mocks": "^1.5.9",
     "@types/angular-toastr": "^1.6.30",
     "@types/angular-ui-router": "^1.1.36",
-    "@types/core-js": "^0.9.36",
     "@types/jasmine": "^2.5.43",
     "@types/oclazyload": "^0.0.31",
     "@types/restangular": "^1.5.34",
