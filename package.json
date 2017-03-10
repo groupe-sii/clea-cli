@@ -1,7 +1,7 @@
 {
   "name": "clea-cli",
   "version": "0.0.1",
-  "description": "CLI tool for AngularJS typescript projects",
+  "description": "CLI tool for AngularJS + Typescript projects",
   "scripts": {
     "lint": "eslint ."
   },
@@ -13,6 +13,16 @@
   "contributors": [
     "Valentin Got <gotvalentin@gmail.com>",
     "Olivier Le Lay <liollury@gmail.com>"
+  ],
+  "keywords": [
+    "clea-cli",
+    "angularjs",
+    "typescript",
+    "cli",
+    "generator",
+    "webpack",
+    "karma",
+    "jasmie"
   ],
   "dependencies": {
     "angular-mocks": "^1.6.3",
