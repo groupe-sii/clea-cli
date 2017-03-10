@@ -10,7 +10,7 @@ clea help build
 
 `--verbose` (`-V`) verbose mode.
 
-`--target [env]` build the application with the targeted environment (defaults to: **development**).
+`--target [env]` build the application with the targeted environment (defaults to: **development**). More info about [environments](more/environments.md).
 
 `--output-path [path]` build the application into this path (defaults to: **dist/**).
 
