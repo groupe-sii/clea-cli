@@ -22,10 +22,8 @@
     "angular-sanitize": "^1.6.2",
     "angular-toastr": "^2.1.1",
     "angular-ui-router": "^1.0.0-rc.1",
-    "ng-table": "^3.0.1",
     "oclazyload": "^1.1.0",
     "restangular": "^1.6.1",
-    "pikaday-angular": "^2.0.0",
     <% if (ngMaterial) { %>
     "angular-material": "^1.1.3",
     "material-design-icons": "^3.0.1",
@@ -33,7 +31,6 @@
     <% if (bootstrap) { %>
     "angular-ui-bootstrap": "^2.5.0",
     <% } %>
-    "moment": "^2.17.1"
   },
   "devDependencies": {
     "clea-cli": "^0.0.1",

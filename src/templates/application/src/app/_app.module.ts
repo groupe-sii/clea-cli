@@ -15,8 +15,6 @@ let module: ng.IModule = angular.module('<%= slugify(appName) %>', [
   'ngAria',
   'ui.router',
   'toastr',
-  'ngTable',
-  'pikaday',
   <% if (bootstrap) { %>
   'ui.bootstrap',
   <% } %>
