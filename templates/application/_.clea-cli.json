@@ -2,8 +2,8 @@
   "type": "application",
   "name": "<%= appName %>",
   "root": "src",
+  "environmentSource": "config/config.json",
   "environments": {
-    "source": "config/config.json",
     "development": "config/config.dev.json",
     "production": "config/config.prod.json"
   }
