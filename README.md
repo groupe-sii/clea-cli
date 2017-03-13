@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Clea" src="https://github.com/groupe-sii/clea-cli/blob/master/assets/clea.png" />
+  <img alt="Clea" src="https://github.com/groupe-sii/clea-cli/blob/master/assets/clea.png?raw=true" />
 </p>
 
 <p align="center">CLI tool for AngularJS & Typescript projects</p>
