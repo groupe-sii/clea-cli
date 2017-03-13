@@ -13,6 +13,19 @@
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no" />
+    <% if (pwa) { %>
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2F3BA2" />
+    <meta name="apple-mobile-web-app-title" content="Make it Progressive" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-128x128.png" />
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/icons/icon-128x128.png" />
+    <meta name="msapplication-TileColor" content="#2F3BA2" /><% } %>
   </head>
 
   <body>
