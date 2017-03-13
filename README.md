@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Clea" src="assets/clea.png" />
+  <img alt="Clea" src="https://github.com/groupe-sii/clea-cli/blob/master/assets/clea.png" />
 </p>
 
 <p align="center">CLI tool for AngularJS & Typescript projects</p>
@@ -39,7 +39,7 @@ clea serve
 
 Go to http://localhost:8080/. Hot reload is active by default.
 
-To see the `clea serve` options & details, go check the [documentation](docs/serve.md).
+To see the `clea serve` options & details, go check the [documentation](https://github.com/groupe-sii/clea-cli/blob/master/docs/serve.md).
 
 # Generate some entities
 
@@ -68,11 +68,11 @@ Filter                  | `clea generate filter my-new-filter`
 Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
-[Learn more](docs/generate.md)
+[Learn more](https://github.com/groupe-sii/clea-cli/blob/master/docs/generate.md)
 
 # Documentation
 
-The documentation can be found under the [docs](docs/) folder.
+The documentation can be found under the [docs](https://github.com/groupe-sii/clea-cli/tree/master/docs) folder.
 
 # License
 
