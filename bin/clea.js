@@ -15,7 +15,7 @@ if (nodeVersion.compare(new SemVer('6.9.0')) < 0) {
 }
 
 program.version(packageFile.version)
-  .command('new', `creates a new directory and runs ${chalk.blue.bold('akg init')} in it`)
+  .command('new', `creates a new directory and runs ${chalk.blue.bold('clea init')} in it`)
   .command('init', `creates a new project in the current folder`)
   .command('generate', 'generates new code from blueprints')
   .command('serve', 'builds your app and places it into the output path')

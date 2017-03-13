@@ -11,7 +11,4 @@ node_modules
 
 # Test generated application
 vgo/
-lazy-loading-sample/
 test-gen-app/
-
-patrick

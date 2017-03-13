@@ -1,6 +1,6 @@
 const program = require('commander'),
   chalk = require('chalk'),
-  debug = require('debug')('akg-generate'),
+  debug = require('debug')('clea-generate'),
 
   packageFile = require('../package.json'),
   logger = require('../vendors/logger'),
@@ -13,17 +13,17 @@ program
   .version(packageFile.version)
   .arguments('[blueprint] [name]')
   .option('--with-component', `generate a component with the generated module. Only for ${chalk.blue('module')} blueprint.`)
-  .option('--lazy-load', `lazy load the module in the parent routing. Only for ${chalk.blue('module')} blueprint.`)
+  .option('--lazy-load', `lazy load the module in the closest parent routing file. Only for ${chalk.blue('module')} blueprint.`)
   .action((blueprint, name, options) => {
     project.init().then(() => {
-      if (project.akg && project.akg.type === Project.TYPE.LIBRARY) {
+      if (project.clea && project.clea.type === Project.TYPE.LIBRARY) {
         logger.error('ERROR: Generation is disabled in library mode.');
 
         process.exit(1);
       }
 
       if (!Blueprints.types.includes(blueprint) && !Blueprints.types.includes(name)) {
-        logger.error(`"${blueprint}" blueprint is not allowed. ${chalk.blue.bold('akg help generate')} to see allowed blueprints.`);
+        logger.error(`"${blueprint}" blueprint is not allowed. ${chalk.blue.bold('clea help generate')} to see allowed blueprints.`);
 
         process.exit(1);
       }

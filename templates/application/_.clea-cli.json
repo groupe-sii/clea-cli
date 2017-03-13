@@ -1,0 +1,11 @@
+{
+  "type": "application",
+  "name": "<%= appName %>",
+  "root": "src",
+  "environmentSource": "config/config.json",
+  "environments": {
+    "development": "config/config.dev.json",
+    "production": "config/config.prod.json"
+  },
+  "karmaConfig": "./karma.conf.js"
+}

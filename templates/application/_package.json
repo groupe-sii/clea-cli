@@ -1,0 +1,44 @@
+{
+  "name": "<%= slugify(appName) %>",
+  "version": "0.0.1",
+  "private": true,
+  "sasslintConfig": ".sass-lint.yml",
+  "scripts": {
+    "clea": "clea",
+    "start": "clea serve",
+    "build": "clea build",
+    "build:prod": "clea build --target production --doc",
+    "test": "clea test",
+    "lint": "clea lint",
+    "sonar:reporters": "sreporter"
+  },
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-aria": "^1.6.2",
+    "angular-cookies": "^1.6.2",
+    "angular-messages": "^1.6.2",
+    "angular-resource": "^1.6.2",
+    "angular-sanitize": "^1.6.2",
+    "angular-toastr": "^2.1.1",
+    "angular-ui-router": "^1.0.0-rc.1",
+    "oclazyload": "^1.1.0",<% if (ngMaterial) { %>
+    "angular-material": "^1.1.3",
+    "material-design-icons": "^3.0.1",<% } else if (bootstrap) { %>
+    "angular-ui-bootstrap": "^2.5.0",<% } %>
+    "restangular": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.5",
+    "@types/angular-mocks": "^1.5.9",
+    "@types/angular-toastr": "^1.6.30",
+    "@types/angular-ui-router": "^1.1.36",
+    "@types/jasmine": "^2.5.43",
+    "@types/oclazyload": "^0.0.31",
+    "@types/restangular": "^1.5.34",
+    "@types/webpack": "^2.2.6",
+    "angular-mocks": "^1.6.1",
+    "typescript": "^2.1.6",
+    "sonar-web-frontend-reporters": "^3.2.0"
+  }
+}

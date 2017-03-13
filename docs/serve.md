@@ -1,31 +1,31 @@
-# akg serve
+# clea serve
 
-> Build l'application est lance le serveur web
+> Build the application and launch a server with hot reload
 
 ## Options
 
 ```bash
-akg help serve
+clea help serve
 ```
 
-`--verbose` (`-V`) affiche des informations plus détaillées.
+`--verbose` (`-V`) verbose mode.
 
-`--target [env]` sélectionne l'environnement avec lequel doit être buildé l'application. Voir [environments.md](environments.md) pour plus de détails. **development** par défaut.
+`--target [env]` build the application with the targeted environment (defaults to: **development**). [Details](more/environments.md).
 
-`--host [host]` hôte que le serveur doit écouter. **localhost** par défaut. Peut être positionné à **0.0.0.0** pour accèder à l'application sur votre réseau locale.
+`--host [host]` host to listen to (defaults to: **localhost**). Can be set to **0.0.0.0** to access on local network.
 
-`--port [port]` port sur lequel servir l'application.
+`--port [port]` the port to serve the application (defaults to: **8080**).
 
-`--https` activer le mode HTTPS.
+`--https` flag to turn on HTTPS.
 
-`--progress` affiche une état de la compilation.
+`--progress` display a compilation progress (defaults to: **false**).
 
-`--api [db]` active l'API de mock sur le fichier JSON en argument. **db.json** par défaut.
+`--api [db]` enable the mock API on the specified database JSON file (defaults to: **db.json**). [Details](more/api.md).
 
-`--json-server-route [route]` Defini un fichier de configuration du serveur express (défaut: json-server.js)
+`--json-server-route [route]` add custom routes to json-server definition (defaults to: **json-server.js**). [Details](more/api.md).
 
-`--proxy-config [config]` fichier de configuration pour le proxy. [proxy.md](proxy.md) pour plus de détails.
+`--proxy-config [config]` proxy configuration file. [Details](more/proxy.md).
 
-`--merge-config [config]` merge la configuration webpack avec l'éxistante.
+`--merge-config [config]` merge the given webpack configuration with the existing one.
 
-`--override-config [config]` remplace totalement la configuration webpack existante par celle-ci.
+`--override-config [config]` override the existing webpack configuration by the given one.

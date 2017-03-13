@@ -1,5 +1,5 @@
 const program = require('commander'),
-  debug = require('debug')('akg-build'),
+  debug = require('debug')('clea-build'),
 
   packageFile = require('../package.json'),
   Project = require('../lib/project'),
@@ -24,7 +24,7 @@ program
 program.parse(process.argv);
 
 project.init().then(() => {
-  if (project.akg && project.akg.type === Project.TYPE.LIBRARY) {
+  if (project.clea && project.clea.type === Project.TYPE.LIBRARY) {
     logger.error('ERROR: A library project cannot be served.');
 
     process.exit(1);

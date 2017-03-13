@@ -1,60 +1,48 @@
-# akg generate [blueprint] [name]
+# clea generate [blueprint] [name]
 
-> Ajout d'une nouvelle entité
+> Generate a new entity
 
-L'ajout d'une nouvelle entité est sensiblement la même pour tous les types.
+The generation is almost the same for each entity type.
 
-Si les fichiers existes déjà, ils ne sont pas surchargés.
+> **Info**
+>
+> If the files already exists, they aren't overrided.
 
-Générer                 | Usage
+Entity                  | Usage
 ---                     | ---
-Component               | `akg generate component my-new-component`
-Directive               | `akg generate directive my-new-directive`
-Filter                  | `akg generate filter my-new-filter`
-Service                 | `akg generate service my-new-service`
-Module                  | `akg generate module my-new-module`
-Route                   | `akg generate route my-new-route`
+Component               | `clea generate component my-new-component`
+Directive               | `clea generate directive my-new-directive`
+Filter                  | `clea generate filter my-new-filter`
+Service                 | `clea generate service my-new-service`
+Module                  | `clea generate module my-new-module`
 
 ## Options
 
 ```bash
-akg help generate
+clea help generate
 ```
 
-## Commande
+## Command
 
 ```bash
-akg generate [blueprint] my-new-entity
+clea generate [entity] my-new-entity
 
-# La génération supporte les chemins relatifs
-# Si vous êtes dans le dossier src/app/feature/ et que vous lancez
-akg generate [blueprint] my-new-entity
-# Votre entité va être générée dans le dossier src/app/feature/my-new-entity
+# Support relative path
+# If you are under the src/app/feature/ folder, and launch:
+clea generate [entity] my-new-entity
+# Your new entity will be generated under the src/app/feature/my-new-entity folder
 
-# Mais si vous lancez (toujours dans le dossier src/app/feature/)
-akg generate [blueprint] ../my-newer-entity
-# Votre entité va être générée dans le dossier src/app/my-newer-entity
-```
-
-## Module
-
-Pour les entités de type **component**, **directive**, **filter** et **service** la commande va rechercher le module parent le plus proche pour y ajouter la déclaration de cette nouvelle entité.
-
-Dans la structure ci-dessus, le composant `my-new-component` est déclaré dans le module `parent.module.ts`:
-
-```javascript
-import { MyNewComponent } from './my-new-component/my-new-component.component';
-
-module.component('my-new-component', MyNewComponent);
+# But, if you are still in the src/app/feature/ folder, and launch:
+clea generate [entity] ../my-newer-entity
+# Your entity will be generated in the src/app/my-newer-entity folder
 ```
 
 ## Details
 
-Pour des détails plus spécifiques sur les entités générées:
+For more details on specific entity:
 
-* [Component](component.md)
-* [Directive](directive.md)
-* [Filter](filter.md)
-* [Service](service.md)
-* [Module](module.md)
-* [Route](route.md)
+* [Component](generate/component.md)
+* [Directive](generate/directive.md)
+* [Filter](generate/filter.md)
+* [Service](generate/service.md)
+* [Module](generate/module.md)

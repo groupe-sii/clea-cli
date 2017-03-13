@@ -1,20 +1,13 @@
-# akg generate service [name]
+# clea generate service [name]
 
-> Ajout d'un nouveau service au module parent le plus proche
-
-## Questions
-
-Le générateur de service va vous demandez si celui-ci doit être utilisé pour appeler une resource ou non:
-
-* **Non**: Génère un service vide ;
-* **Oui**: Vous demande le nom de la resource et génère un service RESTFull avec les méthodes `getAll`, `get`, `post`, `put` et `remove`.
+> Generate a new service and register it in the closest parent module
 
 ## Structure
 
-La structure générée est la suivante:
+The generated structure is as followed:
 
 <pre>
 ├── my-new-service.service.ts
 ├── my-new-service.service.spec.ts
-└── parent.module.ts    <-- Déclare le service dans le module parent
+└── parent.module.ts    <-- Register the component in the closest parent module
 </pre>

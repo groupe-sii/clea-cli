@@ -1,12 +1,12 @@
-# akg generate directive [name]
+# clea generate directive [name]
 
-> Ajout d'une nouvelle directive au module parent le plus proche
+> Generate a new directive and register it in the closest parent module
 
 ## Structure
 
-La structure générée est la suivante:
+The generated structure is as followed:
 
 <pre>
 ├── my-new-directive.directive.ts
-└── parent.module.ts    <-- Déclare la directive dans le module parent
+└── parent.module.ts    <-- Register the component in the closest parent module
 </pre>
