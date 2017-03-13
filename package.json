@@ -1,5 +1,5 @@
 {
-  "name": "clea-cli",
+  "name": "clea",
   "version": "0.0.1",
   "description": "CLI tool for AngularJS + Typescript projects",
   "scripts": {
@@ -15,7 +15,7 @@
     "Olivier Le Lay <liollury@gmail.com>"
   ],
   "keywords": [
-    "clea-cli",
+    "clea",
     "angularjs",
     "typescript",
     "cli",
