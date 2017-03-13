@@ -1,13 +1,13 @@
-<center>
-  <img alt="Clea" src="" width="546" />
-</center>
+<p align="center">
+  <img alt="Clea" src="" />
+</p>
 
-<center>CLI tool for AngularJS & Typescript projects</center>
+<p align="center">CLI tool for AngularJS & Typescript projects</p>
 
-<center>
+<p align="center">
   [![Build Status](https://travis-ci.org/groupe-sii/clea-cli.svg?branch=master)](https://travis-ci.org/groupe-sii/clea-cli)
   [![NPM version][npm-image]][npm-url]
-</center>
+</p>
 
 [npm-image]: https://badge.fury.io/js/generator-webpack-angular.svg
 [npm-url]: https://npmjs.org/package/generator-webpack-angular
