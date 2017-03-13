@@ -25,15 +25,15 @@ clea help generate
 ## Command
 
 ```bash
-clea generate [blueprint] my-new-entity
+clea generate [entity] my-new-entity
 
 # Support relative path
 # If you are under the src/app/feature/ folder, and launch:
-clea generate [blueprint] my-new-entity
+clea generate [entity] my-new-entity
 # Your new entity will be generated under the src/app/feature/my-new-entity folder
 
 # But, if you are still in the src/app/feature/ folder, and launch:
-clea generate [blueprint] ../my-newer-entity
+clea generate [entity] ../my-newer-entity
 # Your entity will be generated in the src/app/my-newer-entity folder
 ```
 
