@@ -6,7 +6,7 @@ import { AppConfig } from './app.config';
 import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 
-let module: ng.IModule = angular.module('<%= slugify(appName) %>', [
+let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'ngAnimate',
   'ngResource',
   'ngSanitize',
