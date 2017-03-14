@@ -10,7 +10,7 @@ clea new <app-name> --make-it-progressive
 
 ## Structure
 
-Some of these files are generated or modified by the Progressive Web App support:
+These file are generated or modified by the Progressive Web App support option:
 
 - **src/public/index.html**: add <head> metadata for PWA support and Service Worker registration.
 - **src/public/manifest.json**: manifest file describing the application.
