@@ -20,7 +20,7 @@ let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'oc.lazyLoad'
 ]);
 
-module.constant('ENVIRONNEMENT', ENV);
+module.constant('ENVIRONMENT', ENV);
 module.constant('CONFIG', CONFIG);
 
 module.config(AppConfig);
