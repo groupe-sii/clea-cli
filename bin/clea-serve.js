@@ -1,5 +1,5 @@
 const program = require('commander'),
-  debug = require('debug')('clea-build'),
+  debug = require('debug')('clea-serve'),
 
   packageFile = require('../package.json'),
   Project = require('../lib/project'),
