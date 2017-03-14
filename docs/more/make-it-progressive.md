@@ -33,9 +33,9 @@ With the `sw-precache` support, your application will automatically generate a s
 
 It provides some simple helpers and strategies to cache your dynamic contents.
 
-`sw-toolbox` is used alongside `sw-precache`: https://github.com/GoogleChrome/sw-precache/blob/master/sw-precache-and-sw-toolbox.md.
+`sw-toolbox` is used alongside `sw-precache`: [doc](https://github.com/GoogleChrome/sw-precache/blob/master/sw-precache-and-sw-toolbox.md).
 
-## Configuration
+## Configuration
 
 All the sw-precache / sw-toolbox configuration is available in the `sw.conf.js` file, located at your root folder.
 
