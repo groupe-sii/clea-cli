@@ -1,21 +1,48 @@
-# Environnements
+# Environments
 
-Les commandes `akg serve` et `akg build` permettent d'utiliser une option `--target=environment` pour spécifier le fichier de configuration qui sera utilisé.
-Par défaut, c'est l'environnement de développement qui est ciblé (`config.dev.json`).
+`clea serve` and `clea build` commands allows you to use the `--target=environment` option to specify the configuration file to be used.
 
-Le mapping pour déterminer quel fichier doit être utilisé en fonction de la cible choisie se fait dans le fichier `akg.json`:
+By default, the development environment is used (`config.dev.json`).
+
+The mapping used to determine which environment file is used can be found in `.clea-cli.json`:
 
 ```json
+"environmentSource": "config/config.json",
 "environments": {
-  "source": "config/config.json",
   "development": "config/config.dev.json",
   "production": "config/config.prod.json"
 }
 ```
 
-> **Attention**
-> L'environnement `source` doit toujours être présent car il est mergé avec l'environnement cible. Ce qui permet d'avoir une configuration globale ou plus granulaire de votre application.
+The source environment will always be merged with the selected environment.
 
-> **Attention 2**
-> Le chemin vers les fichiers de configuration doit être relatif par rapport au `root` de votre projet.
-> Le root est lui aussi configuré dans le fichier `akg.json`.
+> **Disclaimer**
+> 
+> The path to the environment file should be relative to the `root` (configurable in .clea-cli.json) folder of your project
+
+## Access it
+
+To access the environment configuration in your application, just inject the `CONFIG` constant:
+
+```typescript
+export class AppController {
+
+  constructor (
+    private ENVIRONMENT,
+    private CONFIG,
+  ) {
+    console.log(this.ENVIRONMENT, this.CONFIG);
+  }
+
+}
+```
+
+The `ENVIRONMENT` constant will show you the current environment name.
+
+## New
+
+You can create new environment files by doing the following:
+
+* create a `src/config/config.NAME.json`
+* add `{ "NAME": "config/config.NAME.json" }` in `.clea-cli.json`
+* use it with `--target=NAME` option

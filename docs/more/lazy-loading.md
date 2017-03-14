@@ -1,14 +1,18 @@
 # Lazy loading
 
-Pour faire du lazy loading avec AngularJS, c'est la librairie [ocLazyLoad](https://oclazyload.readme.io/docs) qui est utilisée.
+By default, lazy-loading is activated with [ocLazyLoad](https://oclazyload.readme.io/docs) library.
 
 ## Example
 
-La commande `akg generate module <name> --lazy-load` permet de générer directement un module et d'activer son lazy looading.
+To help you with the integration process, we made the following option:
 
-Le fonctionnement est le suivant. Prenons un module nommé `lazy` que l'on souhaite lazy loader, et un module parent `app`.
+```bash
+clea generate module lazy --lazy-load
+```
 
-La structure doit être la suivante: 
+It will generate a new module called **lazy** and lazy-load it in the closest routing file.
+
+With the above example, the following structure will be generated:
 
 <pre>
 ├── lazy/
@@ -18,9 +22,7 @@ La structure doit être la suivante:
 └── app.routing.ts
 </pre>
 
-### Routing
-
-Dans le fichier `app.routing.ts`, il faut référencer le nouveau module:
+In `app.route.ts`, the new module will be automatically referenced:
 
 ```typescript
 export class AppRoutes {
@@ -33,7 +35,7 @@ export class AppRoutes {
       component: 'lazy',
       resolve: {
         module: ($q, $ocLazyLoad: oc.ILazyLoad) => {
-          'ngInject';
+          'ngInrouteject';
 
           return $q ((resolve) => {
             (<WebpackRequire> require).ensure([], () => {
@@ -55,18 +57,18 @@ export class AppRoutes {
 }
 ```
 
-Dans l'example ci-dessus, la route **/lazy** va utiliser le lazy loading et le module ne sera donc chargé qu'au moment de l'appel à cette route.
+And that's it, you can now acces the **/lazy** URL which will lazy-load the new **LazyModule**.
 
 ## Build
 
-Au moment de build de votre application, un chunk doit être créé pour ce module:
+At build time, you should see a new chunk for each lazy-loaded module:
 
 ```bash
-$ akg build
+$ clea build
 
 Hash: 7efaa782e1e4c0463032
-Time: 13270ms
+Time: 10483ms
 chunk    {0} main.a10ee02ef5f81e30f2e1.bundle.js, main.7efaa782e1e4c0463032.bundle.css (main) 6.29 kB {2} [rendered]
-chunk    {1} 1.1825eb1e15d831e143e6.chunk.js 2.25 kB {0} [rendered] # <== Le chunk
-chunk    {2} vendor.d926d0a3d4c7bee26dbb.bundle.js, vendor.7efaa782e1e4c0463032.bundle.css (vendor) 3.31 MB [rendered]
+chunk    {1} 1.1825eb1e15d831e143e6.chunk.js 2.25 kB {0} [rendered] # <== The new chunk
+chunk    {2} vendor.d926d0a3d4c7bee26dbb.bundle.js, vendor.7efaa782e1e4c0463032.bundle.css (vendor) 2.1 MB [rendered]
 ```
