@@ -46,3 +46,22 @@ You can use most of the [sw-precache options](https://github.com/GoogleChrome/sw
 * `stripPrefix`: it's always stripping the `--output-path` option value.
 
 To configure sw-toolbox, you can use the [`runtimeCaching`](https://github.com/GoogleChrome/sw-precache#runtimecaching-arrayobject) property.
+
+### runtimeCaching
+
+For example, if you want to cache the response of `https://jsonplaceholder.typicode.com/users`, you can make the following configuration:
+
+```javascript
+module.exports = {
+  runtimeCaching: [
+    {
+      handler: 'cacheFirst',
+      urlPattern: /\/users/,
+      options: {
+        origin: /jsonplaceholder\.typicode\.com/
+      }
+    }
+  ]
+};
+
+```
