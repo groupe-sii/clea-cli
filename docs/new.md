@@ -28,7 +28,7 @@ clea help new
 
 `--skip-install` skip installing packages (defaults to: **false**).
 
-`--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**).
+`--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**). [Details](more/make-it-progressive.md).
 
 ### Library
 
