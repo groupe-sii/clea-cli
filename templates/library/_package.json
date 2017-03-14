@@ -1,5 +1,5 @@
 {
-  "name": "<%= slugify(appName) %>",
+  "name": "<%= slugifiedName %>",
   "version": "0.0.1",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -20,7 +20,7 @@
     "@types/jasmine": "^2.5.43",
     "@types/webpack": "^2.2.6",
     "angular-mocks": "^1.6.2",
-    "clea": "^0.0.1-beta.2",
+    "clea": "^0.0.1-beta.3",
     "typescript": "^2.1.6",
     "sonar-web-frontend-reporters": "^3.2.0"
   }

@@ -1,0 +1,35 @@
+{
+  "name": "<%= appName %>",
+  "short_name": "<%= appName %>",
+  "icons": [
+    {
+      "src": "assets/launcher/launcher-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/launcher/launcher-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/launcher/launcher-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/launcher/launcher-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/launcher/launcher-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2E82D6",
+  "theme_color": "#1976D2"
+}
