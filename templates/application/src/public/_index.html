@@ -13,7 +13,7 @@
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no" />
-    <% if (pwa) { %>
+
     <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json" />
 
@@ -25,11 +25,12 @@
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="assets/launcher/launcher-128x128.png" />
-    <meta name="msapplication-TileColor" content="#1976D2" /><% } %>
+    <meta name="msapplication-TileColor" content="#1976D2" />
   </head>
 
   <body>
     <ui-view></ui-view><% if (pwa) { %>
+    
     <script type="text/javascript">
       var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
         // [::1] is the IPv6 localhost address.

@@ -1,6 +1,6 @@
 {
   "name": "clea",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "description": "CLI tool for AngularJS + Typescript projects",
   "scripts": {
     "lint": "eslint ."
@@ -14,6 +14,10 @@
     "Valentin Got <gotvalentin@gmail.com>",
     "Olivier Le Lay <liollury@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groupe-sii/clea-cli.git"
+  },
   "keywords": [
     "clea",
     "angularjs",
@@ -22,7 +26,8 @@
     "generator",
     "webpack",
     "karma",
-    "jasmine"
+    "jasmine",
+    "progressive-web-app"
   ],
   "dependencies": {
     "angular-mocks": "^1.6.3",

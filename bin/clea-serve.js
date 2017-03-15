@@ -16,7 +16,7 @@ program
   .option('--https', 'flag to turn on HTTPS')
   .option('--progress', 'display a compilation progress (defaults to: false)')
   .option('--api [db]', 'enable the mock API on the specified database JSON file (defaults to: db.json)')
-  .option('--json-server-route [route]', 'add custom routes to json-server definition (defaults to: json-server.js)', 'json-server.js')
+  .option('--api-custom-routes [config]', 'add custom Express routes (defaults to: api.conf.js)', 'api.conf.js')
   .option('--proxy-config [config]', 'proxy configuration file')
   .option('--merge-config [config]', 'merge the given webpack configuration with the existing one')
   .option('--override-config [config]', 'override the existing webpack configuration by the given one');
@@ -38,7 +38,7 @@ project.init().then(() => {
     https          : program.https !== undefined,
     progress       : program.progress !== undefined,
     api            : program.api === true ? 'db.json' : program.api,
-    jsonServerRoute: program.jsonServerRoute,
+    apiCustomRoutes: program.apiCustomRoutes,
     proxyConfig    : program.proxyConfig,
     mergeConfig    : program.mergeConfig,
     overrideConfig : program.overrideConfig

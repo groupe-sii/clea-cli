@@ -12,15 +12,17 @@ let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'ngSanitize',
   'ngMessages',
   'ngAria',
+  'ngCookies',<% if (ngMaterial) { %>
+  'ngMaterial',<% } else if (bootstrap) { %>
+  'ngTouch',
+  'ui.bootstrap',<% } %>
   'ui.router',
-  'toastr',<% if (bootstrap) { %>
-  'ui.bootstrap',<% } else if (ngMaterial) { %>
-  'ngMaterial',<% } %>
+  'toastr',
   'restangular',
   'oc.lazyLoad'
 ]);
 
-module.constant('ENVIRONNEMENT', ENV);
+module.constant('ENVIRONMENT', ENV);
 module.constant('CONFIG', CONFIG);
 
 module.config(AppConfig);

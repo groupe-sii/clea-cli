@@ -2,9 +2,7 @@
 //  <%= appName %>
 //----------------------------------------
 <% if (bootstrap) { %>
-  @import '~angular-material/angular-material.scss';
-<% } %>
-<% if (ngMaterial) { %>
-  @import '~angular-material/angular-material.scss';
-<% } %>
-
+// Vendors
+@import 'vendors/angular-ui-bootstrap';<% } else if (ngMaterial) { %>
+// Vendors
+@import 'vendors/angular-material';<% } %>

@@ -22,7 +22,7 @@ clea help serve
 
 `--api [db]` enable the mock API on the specified database JSON file (defaults to: **db.json**). [Details](more/api.md).
 
-`--json-server-route [route]` add custom routes to json-server definition (defaults to: **json-server.js**). [Details](more/api.md).
+`--api-custom-routes [config]` add custom Express routes (defaults to: **api.conf.js**). [Details](more/api.md).
 
 `--proxy-config [config]` proxy configuration file. [Details](more/proxy.md).
 

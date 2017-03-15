@@ -41,6 +41,12 @@ Go to http://localhost:8080/. Hot reload is active by default.
 
 To see the `clea serve` options & details, go check the [documentation](https://github.com/groupe-sii/clea-cli/blob/master/docs/serve.md).
 
+## Progressive Web App
+
+You can generate basic Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
+
+[Learn more](docs/more/make-it-progressive.md)
+
 # Generate some entities
 
 The `clea generate` command allows you to easily generate entities in your application.

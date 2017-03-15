@@ -3,7 +3,7 @@
 > Create a new module
 
 
-> **Disclamer**
+> **Disclaimer**
 >
 > The new module isn't added to the closest parent module.
 >
