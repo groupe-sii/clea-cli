@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **templates**: missing `angular-cookies` import [@ValentinGot]
 - **ui-framework**: make angular-material icons work [@ValentinGot]
+- **ui-framework**: make angular-ui-bootstrap work [@ValentinGot]
 
 ## 0.0.1-beta.3 - 2017-03-14
 

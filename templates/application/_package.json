@@ -21,9 +21,11 @@
     "angular-messages": "^1.6.2",
     "angular-resource": "^1.6.2",
     "angular-sanitize": "^1.6.2",
-    "angular-toastr": "^2.1.1",
-    "angular-ui-router": "^1.0.0-rc.1",<% if (bootstrap) { %>
+    "angular-toastr": "^2.1.1",<% if (bootstrap) { %>
+    "angular-touch": "^1.6.3",
     "angular-ui-bootstrap": "^2.5.0",<% } %>
+    "angular-ui-router": "^1.0.0-rc.1",<% if (bootstrap) { %>
+    "bootstrap-sass": "^3.3.7",<% } %>
     "oclazyload": "^1.1.0",
     "restangular": "^1.6.1"
   },

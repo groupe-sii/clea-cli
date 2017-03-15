@@ -13,9 +13,10 @@ let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'ngMessages',
   'ngAria',
   'ngCookies',<% if (ngMaterial) { %>
-  'ngMaterial',<% } %>
-  'ui.router',<% if (bootstrap) { %>
+  'ngMaterial',<% } else if (bootstrap) { %>
+  'ngTouch',
   'ui.bootstrap',<% } %>
+  'ui.router',
   'toastr',
   'restangular',
   'oc.lazyLoad'
