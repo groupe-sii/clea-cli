@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **templates**: missing `angular-cookies` import [@ValentinGot]
 - **ui-framework**: make angular-material icons work [@ValentinGot]
 - **ui-framework**: make angular-ui-bootstrap work [@ValentinGot]
-- **generate**: a component name should be camelized when registered (Closes [#6](https://github.com/groupe-sii/clea-cli/issues/6)) [@ValentinGot]
+- **generate**: a component, directive or filter name should be camelized when registered (Closes [#6](https://github.com/groupe-sii/clea-cli/issues/6)) [@ValentinGot]
 
 ## 0.0.1-beta.3 - 2017-03-14
 
