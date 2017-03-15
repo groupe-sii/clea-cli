@@ -4,6 +4,7 @@ import 'angular-resource';
 import 'angular-sanitize';
 import 'angular-messages';
 import 'angular-aria';
+import 'angular-cookies';
 import 'angular-ui-router';
 import 'angular-mocks';
 import 'angular-toastr';

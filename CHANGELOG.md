@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **make-it-progressive**: the Web App Manifest is always generated, not need to use `--make-it-progressive` [@ValentinGot]
 - **library**: `--lib` has been deactivated for now. Needs a lot of fixes [@ValentinGot]
 
+### Fixed
+
+- **templates**: missing `angular-cookies` import [@ValentinGot]
+
 ## 0.0.1-beta.3 - 2017-03-14
 
 ### Added
