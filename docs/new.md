@@ -20,13 +20,14 @@ Go to http://localhost:8080/. Hot reload is active.
 ```bash
 clea help new
 ```
+
 `--verbose` (`-V`) verbose mode.
 
 `--lib` generate a library instead of an application.
 
-`--ui-framework [framework]` create application with built-in ui framework. **material** or **bootstrap** (defaults to: **none**).
-
 `--skip-install` skip installing packages (defaults to: **false**).
+
+`--ui-framework [framework]` create application with built-in ui framework. **material** or **bootstrap** (defaults to: **none**).
 
 `--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**). [Details](more/make-it-progressive.md).
 

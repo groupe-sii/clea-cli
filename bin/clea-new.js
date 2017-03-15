@@ -12,8 +12,8 @@ program
   .arguments('[project-name]')
   .option('-v, --verbose', 'verbose mode')
   .option('--lib', 'generate a library instead of an application')
-  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
   .option('--skip-install', 'skip installing packages (defaults to: false)')
+  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
   .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
