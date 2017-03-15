@@ -4,14 +4,13 @@ import 'angular-resource';
 import 'angular-sanitize';
 import 'angular-messages';
 import 'angular-aria';
-import 'angular-cookies';
-import 'angular-ui-router';
+import 'angular-cookies';<% if (ngMaterial) { %>
+import 'angular-material';<% } %>
+import 'angular-ui-router';<% if (bootstrap) { %>
+import 'angular-ui-bootstrap';<% } %>
 import 'angular-mocks';
 import 'angular-toastr';
 import 'restangular';
-import 'oclazyload';<% if (ngMaterial) { %>
-import 'angular-material';
-import 'material-design-icons';<% } else if (bootstrap) { %>
-import 'angular-ui-bootstrap';<% } %>
+import 'oclazyload';
 
 /// <reference path="custom-typings.d.ts" />

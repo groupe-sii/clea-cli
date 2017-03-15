@@ -3,8 +3,7 @@
 //----------------------------------------
 <% if (bootstrap) { %>
   @import '~angular-material/angular-material.scss';
-<% } %>
-<% if (ngMaterial) { %>
-  @import '~angular-material/angular-material.scss';
-<% } %>
+<% } else if (ngMaterial) { %>
+// Vendors
+@import 'vendors/angular-material';<% } %>
 

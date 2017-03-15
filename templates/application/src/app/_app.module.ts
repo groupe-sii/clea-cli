@@ -12,11 +12,11 @@ let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'ngSanitize',
   'ngMessages',
   'ngAria',
-  'ngCookies',
-  'ui.router',
-  'toastr',<% if (bootstrap) { %>
-  'ui.bootstrap',<% } else if (ngMaterial) { %>
+  'ngCookies',<% if (ngMaterial) { %>
   'ngMaterial',<% } %>
+  'ui.router',<% if (bootstrap) { %>
+  'ui.bootstrap',<% } %>
+  'toastr',
   'restangular',
   'oc.lazyLoad'
 ]);

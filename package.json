@@ -3,7 +3,8 @@
   "version": "0.0.1-beta.3",
   "description": "CLI tool for AngularJS + Typescript projects",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "mocha"
   },
   "bin": {
     "clea": "./bin/clea.js"
