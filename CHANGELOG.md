@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **api**: RESTFul mocks with json-server integration [@ValentinGot]
 - **docs**: add some documentation [stories](https://github.com/groupe-sii/clea-cli/tree/master/docs/more) (Closes [#1](https://github.com/groupe-sii/clea-cli/issues/1)) [@ValentinGot]
+- **new**: initialize a git repository when installation is done (Closes [#5](https://github.com/groupe-sii/clea-cli/issues/5)) [@ValentinGot]
+- **new**: add a `--skip-git` option to skip the git initialization [@ValentinGot]
 
 ### Updated
 

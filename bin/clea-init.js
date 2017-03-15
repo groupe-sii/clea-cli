@@ -12,9 +12,10 @@ program
   .arguments('[project-name]')
   .option('-v, --verbose', 'verbose mode')
   .option('--lib', 'generate a library instead of an application')
-  .option('--skip-install', 'skip installing packages (defaults to: false)')
   .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
   .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
+  .option('--skip-install', 'skip installing packages (defaults to: false)')
+  .option('--skip-git', 'skip initializing a git repository (defaults to: false)')
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
       logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('clea help new')} to see allowed types.`);
@@ -27,8 +28,9 @@ program
         init             : true,
         verbose          : Boolean(program.verbose),
         uiFramework      : program.uiFramework,
+        makeItProgressive: program.makeItProgressive !== undefined,
         skipInstall      : program.skipInstall !== undefined,
-        makeItProgressive: program.makeItProgressive !== undefined
+        skipGit          : program.skipGit !== undefined
       });
       initProject.start().catch((err) => {
         debug(err);

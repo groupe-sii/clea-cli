@@ -25,11 +25,13 @@ clea help new
 
 `--lib` generate a library instead of an application.
 
-`--skip-install` skip installing packages (defaults to: **false**).
-
 `--ui-framework [framework]` create application with built-in ui framework. **material** or **bootstrap** (defaults to: **none**).
 
 `--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**). [Details](more/make-it-progressive.md).
+
+`--skip-install` skip installing packages (defaults to: **false**).
+
+`--skip-git` skip initializing a git repository (defaults to: **false**).
 
 ### Library
 
