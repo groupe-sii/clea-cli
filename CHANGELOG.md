@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Fixed
+
+- **service**: the service name in generated spec file  should be camelized [@ValentinGot]
+
 ## 0.0.1-beta.4 - 2017-03-15
 
 ### Added

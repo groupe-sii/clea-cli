@@ -9,7 +9,7 @@ describe ('<%= classifiedName %>Service', () => {
   beforeEach (angular.mock.module(<%= moduleName %>));
 
   beforeEach(angular.mock.inject(($injector: angular.auto.IInjectorService) => {
-    <%= camelizedName %>Service = $injector.get<<%= classifiedName %>Service>('<%= classifiedName %>Service');
+    <%= camelizedName %>Service = $injector.get<<%= classifiedName %>Service>('<%= camelizedName %>Service');
   }));
 
   it ('should create', () => {
