@@ -79,6 +79,26 @@ Module                  | `clea generate module my-new-module`
 
 [Learn more](https://github.com/groupe-sii/clea-cli/blob/master/docs/generate.md)
 
+# Upgrade Clea
+
+To upgrade Clea to it's latest version, you must upgrade the global and local package.
+
+For the global package:
+
+```bash
+npm uninstall -g clea
+npm cache clea
+npm install -g clea
+```
+
+For a local project:
+
+```bash
+rm node_modules -rf
+npm install --save-dev clea
+npm install
+```
+
 # Documentation
 
 The documentation can be found under the [docs](https://github.com/groupe-sii/clea-cli/tree/master/docs) folder.
