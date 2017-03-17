@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - **service**: the service name in generated spec file  should be camelized [@ValentinGot]
+- **service**: the AppModule is now always loaded in the spec file [@ValentinGot]
 
 ## 0.0.1-beta.4 - 2017-03-15
 
