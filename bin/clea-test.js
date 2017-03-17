@@ -8,6 +8,7 @@ const program = require('commander'),
 
 program
   .version(packageFile.version)
+  .option('--watch', 'run tests when files change')
   .option('--log-level [level]', 'level of logging (defaults to: info)', 'info')
   .option('--port [port]', 'port where the web server will be listening (defaults to: 9876)', 9876);
 
@@ -15,6 +16,7 @@ program.parse(process.argv);
 
 project.init().then(() => {
   let test = new Test({
+    watch   : program.watch !== undefined,
     logLevel: program.logLevel,
     port    : program.port
   });

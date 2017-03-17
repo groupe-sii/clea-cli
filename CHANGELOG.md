@@ -7,11 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Added
+
+- **test**: add a `--watch` option to rerun tests when files change (Closes [#9](https://github.com/groupe-sii/clea-cli/issues/9)) [@ValentinGot]
+
 ### Fixed
 
 - **service**: the service name in generated spec file  should be camelized [@ValentinGot]
-- **service**: the AppModule is now always loaded in the spec file [@ValentinGot]
-- **component**: the AppModule is now always loaded in the spec file [@ValentinGot]
+- **service**: the AppModule is now always loaded in the spec file (Closes [#7](https://github.com/groupe-sii/clea-cli/issues/7)) [@ValentinGot]
+- **component**: the AppModule is now always loaded in the spec file (Closes [#7](https://github.com/groupe-sii/clea-cli/issues/7)) [@ValentinGot]
 - **tests**: add images, fonts and json loader on karma webpack config [@ValentinGot]
 
 ## 0.0.1-beta.4 - 2017-03-15
