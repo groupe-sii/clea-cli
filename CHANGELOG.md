@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - **test**: add a `--watch` option to rerun tests when files change (Closes [#9](https://github.com/groupe-sii/clea-cli/issues/9)) [@ValentinGot]
+- **test**: add a `--single-run` option to run tests only once (Closes [#10](https://github.com/groupe-sii/clea-cli/issues/10)) [@ValentinGot]
 
 ### Fixed
 
