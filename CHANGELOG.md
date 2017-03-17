@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **service**: the AppModule is now always loaded in the spec file (Closes [#7](https://github.com/groupe-sii/clea-cli/issues/7)) [@ValentinGot]
 - **component**: the AppModule is now always loaded in the spec file (Closes [#7](https://github.com/groupe-sii/clea-cli/issues/7)) [@ValentinGot]
 - **tests**: add images, fonts and json loader on karma webpack config [@ValentinGot]
+- **tsconfig**: allow use of es6 polyfills with TypeScript ([TypeScript #6974](https://github.com/Microsoft/TypeScript/issues/6974)) [@ValentinGot]
 
 ## 0.0.1-beta.4 - 2017-03-15
 
