@@ -41,7 +41,7 @@
     "@types/webpack": "^2.2.6",
     "angular-mocks": "^1.6.1",
     "clea": "^0.0.1-beta.5",
-    "typescript": "^2.1.6",
-    "sonar-web-frontend-reporters": "^3.2.0"
+    "sonar-web-frontend-reporters": "^3.2.0",
+   "typescript": "^2.1.6",
   }
 }
