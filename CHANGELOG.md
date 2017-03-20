@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **build**: UglifyJsPlugin warnings should only be visible in verbose mode [@ValentinGot]
 - **build**: CleanWebpackPlugin infos should only be visible in verbose mode  [@ValentinGot]
+- **ui-framework**: missing angular-material typings [@ValentinGot]
 
 ## 0.0.1-beta.5 - 2017-03-17
 
