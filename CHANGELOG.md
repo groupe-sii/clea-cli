@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## Fixed
+
+- **build**: UglifyJsPlugin warnings should only be visible in verbose mode [@ValentinGot]
+- **build**: CleanWebpackPlugin infos should only be visible in verbose mode  [@ValentinGot]
+
 ## 0.0.1-beta.5 - 2017-03-17
 
 ### Added
