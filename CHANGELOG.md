@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **build**: UglifyJsPlugin warnings should only be visible in verbose mode [@ValentinGot]
 - **build**: CleanWebpackPlugin infos should only be visible in verbose mode  [@ValentinGot]
 - **ui-framework**: missing angular-material typings [@ValentinGot]
+- **blueprint-module**: ng-annotate with lazy-loading is now working when builded (Closes [#12](https://github.com/groupe-sii/clea-cli/issues/12)) [@ValentinGot]
 
 ## 0.0.1-beta.5 - 2017-03-17
 
