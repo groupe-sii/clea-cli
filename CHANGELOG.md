@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **ui-framework**: missing angular-material typings [@ValentinGot]
 - **blueprint-module**: ng-annotate with lazy-loading is now working when builded (Closes [#12](https://github.com/groupe-sii/clea-cli/issues/12)) [@ValentinGot]
 
-## 0.0.1-beta.5 - 2017-03-17
+## [0.0.1-beta.5](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.4...0.0.1-beta.5) - 2017-03-17
 
 ### Added
 
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **tests**: add images, fonts and json loader on karma webpack config [@ValentinGot]
 - **tsconfig**: allow use of es6 polyfills with TypeScript ([TypeScript #6974](https://github.com/Microsoft/TypeScript/issues/6974)) [@ValentinGot]
 
-## 0.0.1-beta.4 - 2017-03-15
+## [0.0.1-beta.4](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.3...0.0.1-beta.4) - 2017-03-15
 
 ### Added
 
@@ -50,7 +50,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **ui-framework**: make angular-ui-bootstrap work [@ValentinGot]
 - **generate**: a component, directive or filter name should be camelized when registered (Closes [#6](https://github.com/groupe-sii/clea-cli/issues/6)) [@ValentinGot]
 
-## 0.0.1-beta.3 - 2017-03-14
+## [0.0.1-beta.3](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.2...0.0.1-beta.3) - 2017-03-14
 
 ### Added
 
@@ -62,7 +62,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **tests**: the karma configuration file location was wrong. It's under **clea/** folder and not **clea-cli/** [@ValentinGot]
 - **webpack**: stop removing the **dist/** folder when serving the application with `clea serve` [@ValentinGot]
 
-## 0.0.1-beta.2 - 2017-03-13
+## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
 
 ### Fixed
 
