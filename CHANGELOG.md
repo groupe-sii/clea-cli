@@ -71,3 +71,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.0.1-beta.1 - 2017-03-13
 
 Releasing the first version of `clea` [@ValentinGot] [@liollury]
+
+[@liollury]: https://github.com/liollury
+[@ValentinGot]: https://github.com/ValentinGot
