@@ -1,7 +1,7 @@
 {
   "name": "clea",
   "version": "0.0.1-beta.5",
-  "description": "CLI tool for AngularJS + Typescript projects",
+  "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
     "lint": "eslint ."
   },
