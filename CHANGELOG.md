@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1-beta.6](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.5...0.0.1-beta.6) - 2017-03-27
+
 ### Updated
 
 - **make-it-progressive**: register the service worker inside the angular context [@ValentinGot]
