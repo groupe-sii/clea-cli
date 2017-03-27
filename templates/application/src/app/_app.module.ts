@@ -18,7 +18,6 @@ let module: ng.IModule = angular.module('<%= slugifiedName %>', [
   'ngTouch',
   'ui.bootstrap',<% } %>
   'ui.router',
-  'toastr',
   'restangular',
   'oc.lazyLoad'
 ]);

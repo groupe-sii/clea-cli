@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **build**: CleanWebpackPlugin infos should only be visible in verbose mode  [@ValentinGot]
 - **ui-framework**: missing angular-material typings [@ValentinGot]
 - **blueprint-module**: ng-annotate with lazy-loading is now working when builded (Closes [#12](https://github.com/groupe-sii/clea-cli/issues/12)) [@ValentinGot]
+- **angular-toastr**: it shouldn't be installed by default [@ValentinGot]
 
 ## [0.0.1-beta.5](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.4...0.0.1-beta.5) - 2017-03-17
 

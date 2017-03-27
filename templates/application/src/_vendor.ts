@@ -10,7 +10,6 @@ import 'angular-touch';
 import 'angular-ui-bootstrap';<% } %>
 import 'angular-ui-router';
 import 'angular-mocks';
-import 'angular-toastr';
 import 'restangular';
 import 'oclazyload';
 
