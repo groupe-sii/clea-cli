@@ -7,8 +7,7 @@
 <p align="center">
   <a href="https://travis-ci.org/groupe-sii/clea-cli"><img alt="Travis Status" src="https://travis-ci.org/groupe-sii/clea-cli.svg"></a>
   <a href="https://npmjs.org/package/clea"><img alt="NPM version" src="https://badge.fury.io/js/clea.svg"></a>
-  <a href="https://david-dm.org/groupe-sii/clea"><img src="https://david-dm.org/groupe-sii/clea.svg" alt="npm dependencies"></a>
-  <a href="https://david-dm.org/groupe-sii/clea?type=dev"><img src="https://david-dm.org/groupe-sii/clea/dev-status.svg" alt="npm devDependencies"></a>
+  <a href="https://david-dm.org/groupe-sii/clea-cli"><img src="https://david-dm.org/groupe-sii/clea-cli.svg" alt="npm dependencies"></a>
   <a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT badge"></a>
 </p>
 
@@ -78,6 +77,26 @@ Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
 [Learn more](https://github.com/groupe-sii/clea-cli/blob/master/docs/generate.md)
+
+# Upgrade Clea
+
+To upgrade Clea to it's latest version, you must upgrade the global and local package.
+
+For the global package:
+
+```bash
+npm uninstall -g clea
+npm cache clea
+npm install -g clea
+```
+
+For a local project:
+
+```bash
+rm node_modules -rf
+npm install --save-dev clea
+npm install
+```
 
 # Documentation
 
