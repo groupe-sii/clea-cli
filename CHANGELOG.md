@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## Fixed
+### Updated
+
+- **make-it-progressive**: register the service worker inside the angular context [@ValentinGot]
+
+### Fixed
 
 - **build**: UglifyJsPlugin warnings should only be visible in verbose mode [@ValentinGot]
 - **build**: CleanWebpackPlugin infos should only be visible in verbose mode  [@ValentinGot]
