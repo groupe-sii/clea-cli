@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **build**: now providing an absolute path for webpack `configuration.output.path` (Closes [#13](https://github.com/groupe-sii/clea-cli/issues/13)) [@ValentinGot]
 - **progress**: progress in now shown on the same line [@ValentinGot]
+- **generate**: throw an error if no name has been specified [@ValentinGot]
 
 ## [0.0.1-beta.6](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.5...0.0.1-beta.6) - 2017-03-27
 
