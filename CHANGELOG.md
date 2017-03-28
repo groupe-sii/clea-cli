@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
 
+### Fixed
+
+- **build**: now providing an absolute path for webpack `configuration.output.path` (Closes [#13](https://github.com/groupe-sii/clea-cli/issues/13)) [@ValentinGot]
+
 ## [0.0.1-beta.6](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.5...0.0.1-beta.6) - 2017-03-27
 
 ### Updated
