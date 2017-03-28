@@ -2,8 +2,6 @@ import * as angular from 'angular';
 
 import '../vendor';
 
-import '../styles/main.scss';
-
 import { AppConfig } from './app.config';
 import { AppRoutes } from './app.routing';<% if (pwa) { %>
 import { AppServiceWorker } from './app.sw';<% } %>
