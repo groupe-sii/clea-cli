@@ -1,5 +1,7 @@
 import * as angular from 'angular';
 
+import '../vendor';
+
 import '../styles/main.scss';
 
 import { AppConfig } from './app.config';
