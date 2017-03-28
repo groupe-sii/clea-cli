@@ -16,6 +16,8 @@ clea help serve
 
 `--port [port]` the port to serve the application (defaults to: **8080**).
 
+`--base-href [url]` base url for the application being built (defaults to: **/**).
+  
 `--https` flag to turn on HTTPS.
 
 `--progress` display a compilation progress (defaults to: **false**).

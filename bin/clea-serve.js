@@ -13,6 +13,7 @@ program
   .option('--target [env]', 'build the application with the targeted environment (defaults to: development)', 'development')
   .option('--host [host]', 'host to listen to (defaults to: localhost)', 'localhost')
   .option('--port [port]', 'the port to serve the application (defaults to: 8080)', '8080')
+  .option('--base-href [url]', 'base url for the application being built (defaults to: /)', '/')
   .option('--https', 'flag to turn on HTTPS')
   .option('--progress', 'display a compilation progress (defaults to: false)')
   .option('--api [db]', 'enable the mock API on the specified database JSON file (defaults to: db.json)')
@@ -35,6 +36,7 @@ project.init().then(() => {
     target         : program.target,
     host           : program.host,
     port           : program.port,
+    baseHref       : program.baseHref,
     https          : program.https !== undefined,
     progress       : program.progress !== undefined,
     api            : program.api === true ? 'db.json' : program.api,

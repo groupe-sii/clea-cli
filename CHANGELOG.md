@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
+- **base-href**: add a `--base-href [url]` option to easily configure the `<base href="" />` tag [@ValentinGot]
 
 ### Updated
 
