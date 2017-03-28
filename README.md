@@ -45,7 +45,7 @@ To see the `clea serve` options & details, go check the [documentation](https://
 
 ## Progressive Web App
 
-You can generate basic Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
+You can generate the basics of a Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
 
 [Learn more](docs/more/make-it-progressive.md)
 
