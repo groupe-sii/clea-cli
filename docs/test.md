@@ -8,6 +8,10 @@
 clea help test
 ```
 
+`--watch` run tests when files change
+
+`--single-run` run tests only once
+
 `--log-level [level]` level of logging (defaults to: **info**). Available: off, error, warn, info, debug.
 
 `--port [port]` port where the web server will be listening (defaults to: **9876**)
