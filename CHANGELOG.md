@@ -7,6 +7,46 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Breaking changes
+
+- Clea package has been moved to `@clea/cli`.
+
+  If you're using Clea `beta.6` or less, you need to uninstall `clea` package.
+  
+  ```bash
+  npm uninstall -g clea
+  npm uninstall --save-dev clea
+  ```
+  
+  To upgrade Clea to it's latest version, you must upgrade the global and local package.
+
+  For the global package:
+  
+  ```bash
+  npm cache clean
+  npm install -g @clea/cli
+  ```
+  
+  For a local project:
+  
+  ```bash
+  rm node_modules -rf
+  npm install --save-dev @clea/cli
+  npm install
+  ```
+
+- A `spec` entry has been added to the `.clea-cli.json`. Add it to the end of the file:
+
+  ```json
+  "spec": {
+    "component": true, 
+    "directive": false, 
+    "filter": false, 
+    "service": true, 
+    "module": true 
+  } 
+  ```
+
 ### Added
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
