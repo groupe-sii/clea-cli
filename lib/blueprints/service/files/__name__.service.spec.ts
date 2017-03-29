@@ -2,7 +2,7 @@ import * as angular from 'angular';
 <% if (appModulePath) { %>
 import { <%= appModuleName %> } from '<%= appModulePath %>';<% } %>
 import { <%= moduleName %> } from '<%= modulePath %>';
-import { <%= classifiedName %>Service } from '<%= servicePath %>';
+import { <%= classifiedName %>Service } from './<%= fileName %>.service';
 
 describe ('<%= classifiedName %>Service', () => {
   let <%= camelizedName %>Service: <%= classifiedName %>Service;
