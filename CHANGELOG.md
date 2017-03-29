@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## Added
+
+- **build**: add [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) to gain ~70% compression ratio [@ValentinGot]
+
+  For an hello world app:
+  
+  Bundle      | Entry    | Emitted | Compressed (gzip)
+  ---         | ---      | ---     | ---
+  main        | 4.36 kB  | 2.33 kB | 907 bytes
+  vendor      | 2.57 MB  | 440 kB  | 144 kB
+  styles      | 70 kB    | 28.4 kB | 9.11 kB
+  
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
 ### Breaking changes
