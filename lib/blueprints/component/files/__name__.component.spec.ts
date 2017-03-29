@@ -2,7 +2,6 @@ import * as angular from 'angular';
 <% if (appModulePath) { %>
 import { <%= appModuleName %> } from '<%= appModulePath %>';<% } %>
 import { <%= moduleName %> } from '<%= modulePath %>';
-import { <%= classifiedName %>Component } from './<%= fileName %>.component';
 
 describe ('<%= classifiedName %>Component', () => {
   let <%= camelizedName %>Controller;
@@ -15,7 +14,7 @@ describe ('<%= classifiedName %>Component', () => {
   }));
 
   it ('should create', () => {
-    expect(<%= classifiedName %>Component).toBeTruthy();
+    expect(<%= camelizedName %>Controller).toBeTruthy();
   });
 
 });
