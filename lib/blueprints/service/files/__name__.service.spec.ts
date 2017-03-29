@@ -17,7 +17,7 @@ describe ('<%= classifiedName %>Service', () => {
   }));
 
   it ('should create', () => {
-    expect(<%= camelizedName %>Service.constructor).toBe(<%= classifiedName %>Service);
+    expect(<%= camelizedName %>Service).toBeTruthy();
   });
 
 });
