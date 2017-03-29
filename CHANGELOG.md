@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
 - **base-href**: add a `--base-href [url]` option to easily configure the `<base href="" />` tag [@ValentinGot]
+- **spec**: generate spec files based on the `spec` entry in the configuration file (Closes [#11](https://github.com/groupe-sii/clea-cli/issues/11)) [@ValentinGot]
 
 ### Updated
 
