@@ -20,7 +20,7 @@ The CLI requires NodeJS >= 6.9.0 and NPM 3 or higher.
 ## Installation
 
 ```bash
-npm install clea -g
+npm install @clea/cli -g
 ```
 
 ## Options
