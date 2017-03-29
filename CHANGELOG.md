@@ -141,9 +141,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **tests**: the karma configuration file location was wrong. It's under **clea/** folder and not **clea-cli/** [@ValentinGot]
 - **webpack**: stop removing the **dist/** folder when serving the application with `clea serve` [@ValentinGot]
 
-## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
+## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
 
-### Fixed
+### Fixed
 
 - **templates**: add `clea` package to generated projects [@ValentinGot]
 
