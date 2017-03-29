@@ -45,7 +45,7 @@ To see the `clea serve` options & details, go check the [documentation](https://
 
 ## Progressive Web App
 
-You can generate basic Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
+You can generate the basics of a Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
 
 [Learn more](docs/more/make-it-progressive.md)
 
@@ -85,16 +85,16 @@ To upgrade Clea to it's latest version, you must upgrade the global and local pa
 For the global package:
 
 ```bash
-npm uninstall -g clea
-npm cache clea
-npm install -g clea
+npm uninstall -g @clea/cli
+npm cache clean
+npm install -g @clea/cli
 ```
 
 For a local project:
 
 ```bash
 rm node_modules -rf
-npm install --save-dev clea
+npm install --save-dev @clea/cli
 npm install
 ```
 

@@ -14,6 +14,8 @@ clea help build
 
 `--output-path [path]` build the application into this path (defaults to: **dist/**).
 
+`--base-href [url]` base url for the application being built (defaults to: **/**).
+
 `--sourcemap` output sourcemaps.
 
 `--doc` generate the documentation with [TypeDoc](http://typedoc.org/).

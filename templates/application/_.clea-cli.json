@@ -7,6 +7,13 @@
     "development": "config/config.dev.json",
     "production": "config/config.prod.json"
   },
-  "karmaConfig": "./karma.conf.js"<% if (pwa) { %>,
-  "swConfig": "./sw.conf.js"<% } %>
+  "karmaConfig": "./karma.conf.js",<% if (pwa) { %>
+  "swConfig": "./sw.conf.js",<% } %>
+  "spec": {
+    "component": true,
+    "directive": false,
+    "filter": false,
+    "service": true,
+    "module": true
+  }
 }

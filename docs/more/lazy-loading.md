@@ -34,9 +34,7 @@ export class AppRoutes {
       url: '/lazy',
       component: 'lazy',
       resolve: {
-        module: ($q, $ocLazyLoad: oc.ILazyLoad) => {
-          'ngInrouteject';
-
+        module: ['$q', '$ocLazyLoad', ($q: ng.IQService, $ocLazyLoad: oc.ILazyLoad) => {
           return $q ((resolve) => {
             (<WebpackRequire> require).ensure([], () => {
               let { LazyModule } = require('./lazy/lazy.module');
@@ -49,7 +47,7 @@ export class AppRoutes {
               resolve(module);
             });
           });
-        }
+        }]
       }
     });
 

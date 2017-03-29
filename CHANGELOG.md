@@ -7,6 +7,66 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
+
+### Breaking changes
+
+- Clea package has been moved to `@clea/cli`.
+
+  If you're using Clea `beta.6` or less, you need to uninstall `clea` package.
+  
+  ```bash
+  npm uninstall -g clea
+  npm uninstall --save-dev clea
+  ```
+  
+  To upgrade Clea to it's latest version, you must upgrade the global and local package.
+
+  For the global package:
+  
+  ```bash
+  npm cache clean
+  npm install -g @clea/cli
+  ```
+  
+  For a local project:
+  
+  ```bash
+  rm node_modules -rf
+  npm install --save-dev @clea/cli
+  npm install
+  ```
+
+- A `spec` entry has been added to the `.clea-cli.json`. Add it to the end of the file:
+
+  ```json
+  "spec": {
+    "component": true, 
+    "directive": false, 
+    "filter": false, 
+    "service": true, 
+    "module": true 
+  } 
+  ```
+
+### Added
+
+- **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
+- **base-href**: add a `--base-href [url]` option to easily configure the `<base href="" />` tag [@ValentinGot]
+- **spec**: generate spec files based on the `spec` entry in the configuration file (Closes [#11](https://github.com/groupe-sii/clea-cli/issues/11)) [@ValentinGot]
+
+### Updated
+
+- **styles**: change the webpack configuration to export a `styles.bundle.js` [@ValentinGot]
+- **spec**: use beforeAll hook to follow AngularJS's [guidelines](https://docs.angularjs.org/guide/unit-testing#using-beforeall-) [@ValentinGot]
+
+### Fixed
+
+- **build**: now providing an absolute path for webpack `configuration.output.path` (Closes [#13](https://github.com/groupe-sii/clea-cli/issues/13)) [@ValentinGot]
+- **progress**: progress in now shown on the same line [@ValentinGot]
+- **generate**: throw an error if no name has been specified [@ValentinGot]
+- **test**: just load angular-mocks in karma configuration file [@ValentinGot]
+
 ## [0.0.1-beta.6](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.5...0.0.1-beta.6) - 2017-03-27
 
 ### Updated

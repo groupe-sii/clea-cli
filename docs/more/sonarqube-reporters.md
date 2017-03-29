@@ -1,6 +1,6 @@
 # SonarQube reporter
 
-`sonar-web-frontend-reporters` CLI is used to generated understandable reporters for SonarQube.
+`sonar-web-frontend-reporters` CLI is used to generate understandable reporters for SonarQube.
 
 Just launch `sreporter` or `npm run sonar:reporters` in your root folder and the reporters will be generated under the `reports` folder.
 

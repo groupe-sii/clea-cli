@@ -1,6 +1,6 @@
 import * as angular from 'angular';
 
-import '../styles/main.scss';
+import '../vendor';
 
 import { AppConfig } from './app.config';
 import { AppRoutes } from './app.routing';<% if (pwa) { %>
