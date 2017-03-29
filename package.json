@@ -1,5 +1,5 @@
 {
-  "name": "clea",
+  "name": "@clea/cli",
   "version": "0.0.1-beta.6",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {

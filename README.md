@@ -85,16 +85,16 @@ To upgrade Clea to it's latest version, you must upgrade the global and local pa
 For the global package:
 
 ```bash
-npm uninstall -g clea
-npm cache clea
-npm install -g clea
+npm uninstall -g @clea/cli
+npm cache clean
+npm install -g @clea/cli
 ```
 
 For a local project:
 
 ```bash
 rm node_modules -rf
-npm install --save-dev clea
+npm install --save-dev @clea/cli
 npm install
 ```
 
