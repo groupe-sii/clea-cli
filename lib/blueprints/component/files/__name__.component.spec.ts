@@ -5,11 +5,13 @@ import { <%= moduleName %> } from '<%= modulePath %>';
 
 describe ('<%= classifiedName %>Component', () => {
   let <%= camelizedName %>Controller;
-  <% if (appModulePath) { %>
-  beforeEach (angular.mock.module(<%= appModuleName %>));<% } %>
-  beforeEach (angular.mock.module(<%= moduleName %>));
 
-  beforeEach (angular.mock.inject(($componentController: angular.IComponentControllerService) => {
+  angular.mock.module.sharedInjector();
+  <% if (appModulePath) { %>
+  beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
+  beforeAll (angular.mock.module(<%= moduleName %>));
+
+  beforeAll (angular.mock.inject(($componentController: angular.IComponentControllerService) => {
     <%= camelizedName %>Controller = $componentController('<%= camelizedName %>', {}, {});
   }));
 

@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - **styles**: change the webpack configuration to export a `styles.bundle.js` [@ValentinGot]
+- **spec**: use beforeAll hook to follow AngularJS's [guidelines](https://docs.angularjs.org/guide/unit-testing#using-beforeall-) [@ValentinGot]
 
 ### Fixed
 

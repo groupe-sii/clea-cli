@@ -5,11 +5,13 @@ import { <%= moduleName %> } from '<%= modulePath %>';
 
 describe ('<%= classifiedName %>Filter', () => {
   let <%= camelizedName %>Filter;
-  <% if (appModulePath) { %>
-  beforeEach (angular.mock.module(<%= appModuleName %>));<% } %>
-  beforeEach (angular.mock.module(<%= moduleName %>));
 
-  beforeEach (angular.mock.inject(($filter: angular.IFilterService) => {
+  angular.mock.module.sharedInjector();
+  <% if (appModulePath) { %>
+  beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
+  beforeAll (angular.mock.module(<%= moduleName %>));
+
+  beforeAll (angular.mock.inject(($filter: angular.IFilterService) => {
     <%= camelizedName %>Filter = $filter('<%= camelizedName %>');
   }));
 
