@@ -3,20 +3,20 @@ import * as angular from 'angular';
 import { <%= appModuleName %> } from '<%= appModulePath %>';<% } %>
 import { <%= moduleName %> } from '<%= modulePath %>';
 
-describe ('<%= classifiedName %>Component', () => {
-  let <%= camelizedName %>Controller;
+describe ('<%= classifiedName %>Filter', () => {
+  let <%= camelizedName %>Filter;
 
   angular.mock.module.sharedInjector();
   <% if (appModulePath) { %>
   beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
   beforeAll (angular.mock.module(<%= moduleName %>));
 
-  beforeAll (angular.mock.inject(($componentController: angular.IComponentControllerService) => {
-    <%= camelizedName %>Controller = $componentController('<%= camelizedName %>', {}, {});
+  beforeAll (angular.mock.inject(($filter: angular.IFilterService) => {
+    <%= camelizedName %>Filter = $filter('<%= camelizedName %>');
   }));
 
   it ('should create', () => {
-    expect(<%= camelizedName %>Controller).toBeTruthy();
+    expect(<%= camelizedName %>Filter(null)).toEqual(null);
   });
 
 });

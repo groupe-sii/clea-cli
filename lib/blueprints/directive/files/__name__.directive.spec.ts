@@ -3,20 +3,22 @@ import * as angular from 'angular';
 import { <%= appModuleName %> } from '<%= appModulePath %>';<% } %>
 import { <%= moduleName %> } from '<%= modulePath %>';
 
-describe ('<%= classifiedName %>Component', () => {
-  let <%= camelizedName %>Controller;
+describe ('<%= classifiedName %>Directive', () => {
+  let element;
 
   angular.mock.module.sharedInjector();
   <% if (appModulePath) { %>
   beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
   beforeAll (angular.mock.module(<%= moduleName %>));
 
-  beforeAll (angular.mock.inject(($componentController: angular.IComponentControllerService) => {
-    <%= camelizedName %>Controller = $componentController('<%= camelizedName %>', {}, {});
+  beforeAll (angular.mock.inject(($compile: angular.ICompileService, $rootScope: angular.IRootScopeService) => {
+    element = $compile('<div <%= camelizedName %>="attr"></div>')($rootScope);
+
+    $rootScope.$digest();
   }));
 
-  it ('should create', () => {
-    expect(<%= camelizedName %>Controller).toBeTruthy();
+  it ('should have an attribute', () => {
+    expect(element.attr('<%= camelizedName %>')).toEqual('attr');
   });
 
 });

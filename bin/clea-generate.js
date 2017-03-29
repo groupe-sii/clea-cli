@@ -33,6 +33,12 @@ program
       name = (Blueprints.types.includes(name)) ? blueprint : name;
       blueprint = (Blueprints.types.includes(tmp)) ? tmp : blueprint;
 
+      if (name === undefined) {
+        logger.error(`The ${chalk.blue('clea generate ' + blueprint)} command requires a name to be specified.`);
+
+        process.exit(1);
+      }
+
       try {
         Generate.create(blueprint, name, {
           component: options.withComponent,

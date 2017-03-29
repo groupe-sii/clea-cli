@@ -9,7 +9,6 @@ import 'angular-material';<% } else if (bootstrap) { %>
 import 'angular-touch';
 import 'angular-ui-bootstrap';<% } %>
 import 'angular-ui-router';
-import 'angular-mocks';
 import 'restangular';
 import 'oclazyload';
 

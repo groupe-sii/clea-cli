@@ -51,15 +51,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
 - **base-href**: add a `--base-href [url]` option to easily configure the `<base href="" />` tag [@ValentinGot]
+- **spec**: generate spec files based on the `spec` entry in the configuration file (Closes [#11](https://github.com/groupe-sii/clea-cli/issues/11)) [@ValentinGot]
 
 ### Updated
 
 - **styles**: change the webpack configuration to export a `styles.bundle.js` [@ValentinGot]
+- **spec**: use beforeAll hook to follow AngularJS's [guidelines](https://docs.angularjs.org/guide/unit-testing#using-beforeall-) [@ValentinGot]
 
 ### Fixed
 
 - **build**: now providing an absolute path for webpack `configuration.output.path` (Closes [#13](https://github.com/groupe-sii/clea-cli/issues/13)) [@ValentinGot]
 - **progress**: progress in now shown on the same line [@ValentinGot]
+- **generate**: throw an error if no name has been specified [@ValentinGot]
+- **test**: just load angular-mocks in karma configuration file [@ValentinGot]
 
 ## [0.0.1-beta.6](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.5...0.0.1-beta.6) - 2017-03-27
 
