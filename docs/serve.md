@@ -2,7 +2,7 @@
 
 > Build the application and launch a server with hot reload
 
-## Options
+## Options
 
 ```bash
 clea help serve

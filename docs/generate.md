@@ -16,13 +16,13 @@ Filter                  | `clea generate filter my-new-filter`
 Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
-## Options
+## Options
 
 ```bash
 clea help generate
 ```
 
-## Command
+## Command
 
 ```bash
 clea generate [entity] my-new-entity
