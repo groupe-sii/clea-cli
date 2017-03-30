@@ -3,6 +3,7 @@
   "version": "0.0.1-rc.1",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
+    "test": "node test/runner",
     "lint": "eslint ."
   },
   "bin": {
@@ -86,6 +87,9 @@
     "npm": ">= 3.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1"
+    "chai": "^3.5.0",
+    "denodeify": "^1.2.1",
+    "eslint": "^3.17.1",
+    "mocha": "^3.2.0"
   }
 }
