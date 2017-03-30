@@ -72,7 +72,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   ```typescript
   import '../styles/main.scss'; 
   ```
+  
+- `angular-mocks` is now imported by the Karma configuration. Remove it from the `vendor.ts` file or it will break your tests. Line to remove:
 
+  ```typescript
+  import 'angular-mocks'; 
+  ```
+  
 ### Added
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
