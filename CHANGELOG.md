@@ -60,6 +60,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     "module": true 
   } 
   ```
+  
+- Take advantage of Tree Shaking by importing the `vendor.ts` directly in the `app.module.ts` file:
+
+  ```typescript
+  import '../vendor'; 
+  ```
+  
+- The styles bundle is now separated. So you have to remove the `main.scss` import from the `app.module.ts` file. Line to remove:
+  
+  ```typescript
+  import '../styles/main.scss'; 
+  ```
 
 ### Added
 
