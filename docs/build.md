@@ -16,6 +16,8 @@ clea help build
 
 `--base-href [url]` base url for the application being built (defaults to: **/**).
 
+`--compress` enable gzip compression.
+
 `--sourcemap` output sourcemaps.
 
 `--doc` generate the documentation with [TypeDoc](http://typedoc.org/).

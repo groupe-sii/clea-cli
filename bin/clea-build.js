@@ -12,6 +12,7 @@ program
   .option('--target [env]', 'build the application with the targeted environment (defaults to: development)')
   .option('--output-path [path]', 'build the application into this path (defaults to: dist/)')
   .option('--base-href [url]', 'base url for the application being built (defaults to: /)', '/')
+  .option('--compress', 'enable gzip compression')
   .option('--sourcemap', 'output sourcemaps')
   .option('--doc', 'generate the documentation')
   .option('--progress', 'display a compilation progress')
@@ -26,6 +27,7 @@ project.init().then(() => {
     target        : program.target || 'development',
     outputPath    : program.outputPath || 'dist/',
     baseHref      : program.baseHref,
+    compress      : program.compress !== undefined,
     sourcemap     : program.sourcemap !== undefined,
     progress      : program.progress !== undefined,
     mergeConfig   : program.mergeConfig,

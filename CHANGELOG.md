@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Added
 
-- **build**: add [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) to gain ~70% compression ratio [@ValentinGot]
+- **build**: add `--compress` option to gain ~70% compression ratio with [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) [@ValentinGot]
 
   For an hello world app:
   
