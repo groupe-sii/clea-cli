@@ -1,21 +1,44 @@
 const fs = require('fs-extra'),
   denodify = require('denodeify'),
   remove = denodify(fs.remove),
-
-  root = process.cwd();
+  InitProject = require('../lib/commands/init-project'),
+  project = require('../lib/project').getInstance();
 
 class Helper {
 
-  static setup (path = './tmp') {
-    process.chdir(root);
+  constructor (name = 'tmp') {
+    this.root = process.cwd();
+    this.path = `./${name}`;
 
-    return remove(path).then(() => fs.mkdirsSync(path));
+    this.initProject = new InitProject(name, 'application', {
+      quiet            : true,
+      init             : false,
+      verbose          : false,
+      uiFramework      : undefined,
+      makeItProgressive: false,
+      skipInstall      : true,
+      skipGit          : true
+    });
   }
 
-  static endup (path = './tmp') {
-    process.chdir(root);
+  setup () {
+    process.chdir(this.root);
 
-    return fs.existsSync(path) ? remove(path) : Promise.resolve();
+    return remove(this.path).then(() => {
+      this.initProject.createFolder();
+
+      return this.initProject.start();
+    }).then(() => {
+      process.chdir(this.path);
+
+      return project.init(true);
+    });
+  }
+
+  endup () {
+    process.chdir(this.root);
+
+    return fs.existsSync(this.path) ? remove(this.path) : Promise.resolve();
   }
 
 }
