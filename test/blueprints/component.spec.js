@@ -28,6 +28,22 @@ describe ('Blueprint::Component', () => {
     }).catch((err) => done(err));
   });
 
+  it ('should generate component sub/my-test-component', (done) => {
+    fs.mkdirSync(path.join(testPath, 'sub'));
+
+    Generate.create(BLUEPRINT, 'sub/my-test-component', {
+      quiet: true
+    }).then(() => {
+      expect(fs.existsSync(path.join(testPath, 'sub', 'my-test-component', 'my-test-component.component.ts'))).to.equal(true);
+      expect(fs.existsSync(path.join(testPath, 'sub', 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(true);
+      expect(fs.existsSync(path.join(testPath, 'sub', 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
+      expect(fs.existsSync(path.join(testPath, 'sub', 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
+      expect(fs.existsSync(path.join(testPath, 'sub', 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
+
+      done();
+    }).catch((err) => done(err));
+  });
+
   afterEach (() => helper.endup());
 
 });
