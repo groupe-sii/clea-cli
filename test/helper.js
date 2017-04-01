@@ -31,7 +31,7 @@ class Helper {
     }).then(() => {
       process.chdir(this.path);
 
-      return project.init(true);
+      return project.init();
     });
   }
 
