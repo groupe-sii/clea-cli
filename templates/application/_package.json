@@ -10,7 +10,8 @@
     "build:prod": "clea build --target production --doc",
     "test": "clea test",
     "lint": "clea lint",
-    "sonar:reporters": "sreporter"
+    "sonar:reporters": "sreporter"<% if (commitMessageConventions) { %>,
+    "postinstall": "node ./node_modules/@clea/cli/bin/postinstall.js"<% } %>
   },
   "dependencies": {
     "angular": "^1.6.2",

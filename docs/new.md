@@ -33,6 +33,8 @@ clea help new
 
 `--skip-git` skip initializing a git repository (defaults to: **false**).
 
+`--commit-message-conventions` add commit-msg hook to force use of the [Google message conventions](../templates/application/COMMITS-CONVENTION.md) (defaults to: **false**).
+
 ### Library
 
 You can also scaffold a new library instead of an application.

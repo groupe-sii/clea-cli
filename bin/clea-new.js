@@ -16,6 +16,7 @@ program
   .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
   .option('--skip-install', 'skip installing packages (defaults to: false)')
   .option('--skip-git', 'skip initializing a git repository (defaults to: false)')
+  .option('--commit-message-conventions', 'add commit-msg hook to force use of the Google message conventions (defaults to: false)')
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
       logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('clea help new')} to see allowed types.`);
@@ -29,7 +30,8 @@ program
         uiFramework      : program.uiFramework,
         makeItProgressive: program.makeItProgressive !== undefined,
         skipInstall      : program.skipInstall !== undefined,
-        skipGit          : program.skipGit !== undefined
+        skipGit          : program.skipGit !== undefined,
+        commitMessageConventions: program.commitMessageConventions !== undefined
       });
       initProject.createFolder();
       initProject.start().catch((err) => {
