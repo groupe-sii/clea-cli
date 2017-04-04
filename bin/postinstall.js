@@ -3,7 +3,7 @@
 const fs = require('fs-extra'),
   logger = require('../vendors/logger');
 
-fs.copy('./tools/git/commit-msg.js', '.git/hooks/commit-msg', (err) => {
+fs.copy('./node_modules/@clea/cli/lib/models/git-configs/commit-msg.js', '.git/hooks/commit-msg', (err) => {
   if (err) {
     return logger.error(err);
   }

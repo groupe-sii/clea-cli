@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   vendor      | 2.57 MB  | 440 kB  | 144 kB
   styles      | 70 kB    | 28.4 kB | 9.11 kB
   
+- **new**: add --commit-message-conventions options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
+  
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
 ### Breaking changes
