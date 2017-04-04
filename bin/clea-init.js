@@ -48,14 +48,4 @@ program
     }
   });
 
-program.on('--help', () => {
-  logger.help('  Arguments:');
-  logger.help('');
-  logger.help('    [type]           type of the project to generate.');
-  logger.help('                       For an application: application, app');
-  logger.help('                       For a library: library, lib');
-  logger.help('    [project-name]   project name');
-  logger.help('');
-});
-
 program.parse(process.argv);
