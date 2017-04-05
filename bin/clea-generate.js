@@ -7,13 +7,17 @@ const program = require('commander'),
   Project = require('../lib/project'),
   project = Project.getInstance(),
   Blueprints = require('../lib/blueprints/blueprints'),
-  Generate = require('../lib/commands/generate');
+  Generate = require('../lib/commands/generate'),
+  { options } = require('../lib/commands-options/clea-generate'),
+  Command = require('../lib/utilities/command');
 
 program
   .version(packageFile.version)
-  .arguments('[blueprint] [name]')
-  .option('--with-component', `generate a component with the generated module. Only for ${chalk.blue('module')} blueprint.`)
-  .option('--lazy-load', `lazy load the module in the closest parent routing file. Only for ${chalk.blue('module')} blueprint.`)
+  .arguments('[blueprint] [name]');
+
+Command.addOptions(program, options);
+
+program
   .action((blueprint, name, options) => {
     project.init().then(() => {
       if (project.clea && project.clea.type === Project.TYPE.LIBRARY) {
