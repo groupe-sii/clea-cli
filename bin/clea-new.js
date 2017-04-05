@@ -5,18 +5,17 @@ const program = require('commander'),
   packageFile = require('../package.json'),
   Project = require('../lib/project'),
   InitProject = require('../lib/commands/init-project'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-new'),
+  Command = require('../lib/utilities/command');
 
 program
   .version(packageFile.version)
-  .arguments('[project-name]')
-  .option('-v, --verbose', 'verbose mode')
-  .option('--lib', 'generate a library instead of an application')
-  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
-  .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
-  .option('--skip-install', 'skip installing packages (defaults to: false)')
-  .option('--skip-git', 'skip initializing a git repository (defaults to: false)')
-  .option('--commit-message-conventions', 'add commit-msg hook to force use of the Google message conventions (defaults to: false)')
+  .arguments('[project-name]');
+
+Command.addOptions(program, options);
+
+program
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
       logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('clea help new')} to see allowed types.`);
