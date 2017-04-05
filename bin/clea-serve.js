@@ -5,22 +5,14 @@ const program = require('commander'),
   Project = require('../lib/project'),
   project = Project.getInstance(),
   Serve = require('../lib/commands/serve'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-serve'),
+  Command = require('../lib/utilities/command');
 
 program
-  .version(packageFile.version)
-  .option('-v, --verbose', 'verbose mode')
-  .option('--target [env]', 'build the application with the targeted environment (defaults to: development)', 'development')
-  .option('--host [host]', 'host to listen to (defaults to: localhost)', 'localhost')
-  .option('--port [port]', 'the port to serve the application (defaults to: 8080)', '8080')
-  .option('--base-href [url]', 'base url for the application being built (defaults to: /)', '/')
-  .option('--https', 'flag to turn on HTTPS')
-  .option('--progress', 'display a compilation progress (defaults to: false)')
-  .option('--api [db]', 'enable the mock API on the specified database JSON file (defaults to: db.json)')
-  .option('--api-custom-routes [config]', 'add custom Express routes (defaults to: api.conf.js)', 'api.conf.js')
-  .option('--proxy-config [config]', 'proxy configuration file')
-  .option('--merge-config [config]', 'merge the given webpack configuration with the existing one')
-  .option('--override-config [config]', 'override the existing webpack configuration by the given one');
+  .version(packageFile.version);
+
+Command.addOptions(program, options);
 
 program.parse(process.argv);
 
