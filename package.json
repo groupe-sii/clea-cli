@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint .",
     "gitbook:serve": "gitbook serve",
-    "gitbook:build": "gitbook build"
+    "gitbook:build": "gitbook build",
+    "publish:documentation": "npm run gitbook:build && gh-pages -d _book"
   },
   "bin": {
     "clea": "./bin/clea.js"
@@ -89,6 +90,7 @@
   },
   "devDependencies": {
     "eslint": "^3.17.1",
+    "gh-pages": "^0.12.0",
     "gitbook-cli": "^2.3.0"
   }
 }
