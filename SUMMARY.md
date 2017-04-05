@@ -2,8 +2,7 @@
 
 * [Clea](/README.md)
 * [Commands](/docs/commands/README.md)
-  * [New](/docs/commands/new.md)
-  * [Init](/docs/commands/new.md)
+  * [New or Init](/docs/commands/new.md)
   * [Generate](/docs/commands/generate.md)
     * [Component](/docs/commands/generate/component.md)
     * [Directive](/docs/commands/generate/directive.md)
