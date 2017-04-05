@@ -4,7 +4,8 @@
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
     "lint": "eslint .",
-    "gitbook:serve": "gitbook serve"
+    "gitbook:serve": "gitbook serve",
+    "gitbook:build": "gitbook build"
   },
   "bin": {
     "clea": "./bin/clea.js"
