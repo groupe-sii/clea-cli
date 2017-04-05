@@ -13,6 +13,11 @@
 
 ---
 
+<p align="center">
+  <a href="https://groupe-sii.github.io/clea-cli"><strong>Documentation</strong></a> ·
+  <a href="https://groupe-sii.github.io/cheat-sheets/clea/index.html"><strong>Cheat Sheet</strong></a>
+</p>
+
 The CLI requires NodeJS >= 6.9.0 and NPM 3 or higher.
 
 # Usage
