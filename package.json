@@ -3,7 +3,10 @@
   "version": "0.0.1-rc.1",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "gitbook:serve": "gitbook serve",
+    "gitbook:build": "gitbook build",
+    "publish:documentation": "npm run gitbook:build && gh-pages -d _book"
   },
   "bin": {
     "clea": "./bin/clea.js"
@@ -86,6 +89,8 @@
     "npm": ">= 3.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1"
+    "eslint": "^3.17.1",
+    "gh-pages": "^0.12.0",
+    "gitbook-cli": "^2.3.0"
   }
 }

@@ -13,6 +13,11 @@
 
 ---
 
+<p align="center">
+  <a href="https://groupe-sii.github.io/clea-cli"><strong>Documentation</strong></a> ·
+  <a href="https://groupe-sii.github.io/cheat-sheets/clea/index.html"><strong>Cheat Sheet</strong></a>
+</p>
+
 The CLI requires NodeJS >= 6.9.0 and NPM 3 or higher.
 
 # Usage
@@ -41,7 +46,7 @@ clea serve
 
 Go to http://localhost:8080/. Hot reload is active by default.
 
-To see the `clea serve` options & details, go check the [documentation](https://github.com/groupe-sii/clea-cli/blob/master/docs/serve.md).
+To see the `clea serve` options & details, go check the [documentation](docs/commands/serve.md).
 
 ## Progressive Web App
 
@@ -76,7 +81,7 @@ Filter                  | `clea generate filter my-new-filter`
 Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
-[Learn more](https://github.com/groupe-sii/clea-cli/blob/master/docs/generate.md)
+[Learn more](docs/commands/generate.md)
 
 # Upgrade Clea
 
