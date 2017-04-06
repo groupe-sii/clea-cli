@@ -21,4 +21,5 @@
   * [Progressive Web App](/docs/more/make-it-progressive.md)
   * [Proxy to Backend](/docs/more/proxy.md)
   * [SonarQube Reporters](/docs/more/sonarqube-reporters.md)
+  * [Autocompletion](/docs/more/autocompletion.md)
 * [Change Log](/CHANGELOG.md)
