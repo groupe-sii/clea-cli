@@ -13,6 +13,7 @@
   * [Build](/docs/commands/build.md)
   * [Test](/docs/commands/test.md)
   * [Lint](/docs/commands/lint.md)
+  * [Completion](/docs/commands/completion.md)
 * [Stories](/docs/more/README.md)
   * [Mock API](/docs/more/api.md)
   * [Environments](/docs/more/environments.md)
