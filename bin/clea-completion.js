@@ -3,12 +3,15 @@
 
 const program = require('commander'),
   packageFile = require('../package.json'),
-  Completion = require('../lib/commands/completion');
+  Completion = require('../lib/commands/completion'),
+  { options } = require('../lib/commands-options/clea-completion'),
+  Command = require('../lib/utilities/command');
 
-program
-  .version(packageFile.version)
-  .option('-z, --zsh', 'generate zsh config')
-  .option('-b, --bash', 'generate bash config')
+program.version(packageFile.version);
+
+Command.addOptions(program, options);
+
 program.parse(process.argv);
 
-new Completion(program.bash && 'bash');
+const completion = new Completion(program.zsh && 'zsh');
+completion.start();
