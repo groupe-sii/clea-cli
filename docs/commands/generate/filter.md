@@ -6,7 +6,7 @@
 
 The generated structure is as followed:
 
-<pre>
+```
 ├── my-new-filter.filter.ts
 └── parent.module.ts    <-- Register the component in the closest parent module
-</pre>
+```

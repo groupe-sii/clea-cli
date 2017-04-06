@@ -1,0 +1,8 @@
+{
+  "plugins": [ "theme-api", "-sharing" ],
+  "pluginsConfig": {
+    "theme-api": {
+      "theme": "dark"
+    }
+  }
+}

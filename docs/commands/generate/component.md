@@ -6,7 +6,7 @@
 
 The generated structure is as followed:
 
-<pre>
+```
 ├── my-new-component/
 │    |──  my-new-component.component.html
 │    |──  my-new-component.component.scss
@@ -15,4 +15,4 @@ The generated structure is as followed:
 │    └──  my-new-component.controller.ts
 │
 └── parent.module.ts    <-- Register the component in the closest parent module
-</pre>
+```

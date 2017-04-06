@@ -10,7 +10,8 @@
     "build:prod": "clea build --target production --doc",
     "test": "clea test",
     "lint": "clea lint",
-    "sonar:reporters": "sreporter"
+    "sonar:reporters": "sreporter"<% if (commitMessageConventions) { %>,
+    "postinstall": "node ./node_modules/@clea/cli/bin/postinstall.js"<% } %>
   },
   "dependencies": {
     "angular": "^1.6.2",
@@ -29,7 +30,7 @@
     "restangular": "^1.6.1"
   },
   "devDependencies": {
-    "@clea/cli": "^0.0.1-rc.1",
+    "@clea/cli": "^0.0.1-rc.2",
     "@types/angular": "^1.6.5",<% if (ngMaterial) { %>
     "@types/angular-material": "^1.1.46",<% } %>
     "@types/angular-mocks": "^1.5.9",

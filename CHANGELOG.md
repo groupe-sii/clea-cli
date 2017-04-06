@@ -7,9 +7,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1-rc.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.1...0.0.1-rc.2) - 2017-04-06
+
+### Added
+
+- **build**: add `--compress` option to gain ~70% compression ratio with [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) [@ValentinGot]
+
+For an hello world app:
+
+Bundle      | Entry      | Emitted   | Compressed (gzip)
+---         | ---        | ---       | ---
+main        | 4.36 kB    | 2.33 kB   | 907 bytes
+vendor      | 2.57 MB    | 440 kB    | 144 kB
+styles      | 70 kB      | 28.4 kB   | 9.11 kB
+  
+- **new**: add `--commit-message-conventions` options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) (Closes [#15](https://github.com/groupe-sii/clea-cli/issues/15)) [@kgrandemange]
+- **completion**:  add a `clea completion` command (Closes [#8](https://github.com/groupe-sii/clea-cli/issues/8)) [@kgrandemange]
+
+### Fixed
+
+- **blueprints**: add ngInject annotation by default on component's controller [@ValentinGot]
+
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
-### Breaking changes
+### Breaking changes
 
 - Clea package has been moved to `@clea/cli`.
 
@@ -48,7 +69,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     "module": true 
   } 
   ```
+  
+- Take advantage of Tree Shaking by importing the `vendor.ts` directly in the `app.module.ts` file:
 
+  ```typescript
+  import '../vendor'; 
+  ```
+  
+- The styles bundle is now separated. So you have to remove the `main.scss` import from the `app.module.ts` file. Line to remove:
+  
+  ```typescript
+  import '../styles/main.scss'; 
+  ```
+  
+- `angular-mocks` is now imported by the Karma configuration. Remove it from the `vendor.ts` file or it will break your tests. Line to remove:
+
+  ```typescript
+  import 'angular-mocks'; 
+  ```
+  
 ### Added
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
@@ -129,9 +168,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **tests**: the karma configuration file location was wrong. It's under **clea/** folder and not **clea-cli/** [@ValentinGot]
 - **webpack**: stop removing the **dist/** folder when serving the application with `clea serve` [@ValentinGot]
 
-## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
+## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
 
-### Fixed
+### Fixed
 
 - **templates**: add `clea` package to generated projects [@ValentinGot]
 
@@ -139,5 +178,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 Releasing the first version of `clea` [@ValentinGot] [@liollury]
 
+[@kgrandemange]: https://github.com/kgrandemange
 [@liollury]: https://github.com/liollury
 [@ValentinGot]: https://github.com/ValentinGot
