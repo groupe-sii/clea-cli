@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## Added
+### Added
 
 - **build**: add `--compress` option to gain ~70% compression ratio with [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) [@ValentinGot]
 
@@ -19,8 +19,12 @@ main        | 4.36 kB    | 2.33 kB   | 907 bytes
 vendor      | 2.57 MB    | 440 kB    | 144 kB
 styles      | 70 kB      | 28.4 kB   | 9.11 kB
   
-- **new**: add --commit-message-conventions options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)
-  
+- **new**: add --commit-message-conventions options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) [@kgrandemange]
+
+### Fixed
+
+- **blueprints**: add ngInject annotation by default on component's controller [@ValentinGot]
+
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
 ### Breaking changes
@@ -171,5 +175,6 @@ styles      | 70 kB      | 28.4 kB   | 9.11 kB
 
 Releasing the first version of `clea` [@ValentinGot] [@liollury]
 
+[@kgrandemange]: https://github.com/kgrandemange
 [@liollury]: https://github.com/liollury
 [@ValentinGot]: https://github.com/ValentinGot

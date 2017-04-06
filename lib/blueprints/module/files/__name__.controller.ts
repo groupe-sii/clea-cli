@@ -1,7 +1,7 @@
 export class <%= classifiedName %>Controller {
 
-  constructor () { }
+  constructor () { 'ngInject'; }
 
-  $onInit () { }
+  $onInit () {}
 
 }
