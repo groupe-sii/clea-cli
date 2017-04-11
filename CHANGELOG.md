@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Breaking changes
+
+- There is now a dedicated entry for the main module file, between `root` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "root": "src",
+    "main": "app/app.module.ts",
+    "environmentSource": "config/config.json"
+  }
+  ```
+  
 ### Fixed
 
 - **webpack**: duplicate declaration of `config` variable was causing build errors [@ValentinGot]

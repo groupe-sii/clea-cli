@@ -2,6 +2,7 @@
   "type": "application",
   "name": "<%= appName %>",
   "root": "src",
+  "main": "app/app.module.ts",
   "environmentSource": "config/config.json",
   "environments": {
     "development": "config/config.dev.json",
