@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1-rc.3](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.2...0.0.1-rc.3) - 2017-04-11
+
+### Breaking changes
+
+- There is now a dedicated entry for the main module file, between `root` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "root": "src",
+    "main": "app/app.module.ts",
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+- There is now a dedicated entry for the main styles files, between `main` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "main": "app/app.module.ts",
+    "styles": [
+      "styles/main.scss"
+    ],
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+### Fixed
+
+- **webpack**: duplicate declaration of `config` variable was causing build errors [@ValentinGot]
+
 ## [0.0.1-rc.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.1...0.0.1-rc.2) - 2017-04-06
 
 ### Added
