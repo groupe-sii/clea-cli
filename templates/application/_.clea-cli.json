@@ -3,6 +3,9 @@
   "name": "<%= appName %>",
   "root": "src",
   "main": "app/app.module.ts",
+  "styles": [
+    "styles/main.scss"
+  ],
   "environmentSource": "config/config.json",
   "environments": {
     "development": "config/config.dev.json",

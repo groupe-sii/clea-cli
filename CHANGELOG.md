@@ -18,7 +18,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     "environmentSource": "config/config.json"
   }
   ```
-  
+
+- There is now a dedicated entry for the main styles files, between `main` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "main": "app/app.module.ts",
+    "styles": [
+      "styles/main.scss"
+    ],
+    "environmentSource": "config/config.json"
+  }
+  ```
+
 ### Fixed
 
 - **webpack**: duplicate declaration of `config` variable was causing build errors [@ValentinGot]
