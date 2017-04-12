@@ -6,6 +6,7 @@
  *
  * Installation:
  * $ ln -s tools/git/commit-msg.js .git/hooks/commit-msg
+ * chmod +x .git/hooks/commit-msg
  */
 
 'use strict';

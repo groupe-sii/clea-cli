@@ -7,18 +7,57 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## Added
+## [0.0.1-rc.3](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.2...0.0.1-rc.3) - 2017-04-11
+
+### Breaking changes
+
+- There is now a dedicated entry for the main module file, between `root` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "root": "src",
+    "main": "app/app.module.ts",
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+- There is now a dedicated entry for the main styles files, between `main` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "main": "app/app.module.ts",
+    "styles": [
+      "styles/main.scss"
+    ],
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+### Fixed
+
+- **webpack**: duplicate declaration of `config` variable was causing build errors [@ValentinGot]
+
+## [0.0.1-rc.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.1...0.0.1-rc.2) - 2017-04-06
+
+### Added
 
 - **build**: add `--compress` option to gain ~70% compression ratio with [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) [@ValentinGot]
 
-  For an hello world app:
+For an hello world app:
+
+Bundle      | Entry      | Emitted   | Compressed (gzip)
+---         | ---        | ---       | ---
+main        | 4.36 kB    | 2.33 kB   | 907 bytes
+vendor      | 2.57 MB    | 440 kB    | 144 kB
+styles      | 70 kB      | 28.4 kB   | 9.11 kB
   
-  Bundle      | Entry    | Emitted | Compressed (gzip)
-  ---         | ---      | ---     | ---
-  main        | 4.36 kB  | 2.33 kB | 907 bytes
-  vendor      | 2.57 MB  | 440 kB  | 144 kB
-  styles      | 70 kB    | 28.4 kB | 9.11 kB
-  
+- **new**: add `--commit-message-conventions` options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) (Closes [#15](https://github.com/groupe-sii/clea-cli/issues/15)) [@kgrandemange]
+- **completion**:  add a `clea completion` command (Closes [#8](https://github.com/groupe-sii/clea-cli/issues/8)) [@kgrandemange]
+
+### Fixed
+
+- **blueprints**: add ngInject annotation by default on component's controller [@ValentinGot]
+
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
 ### Breaking changes
@@ -169,5 +208,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 Releasing the first version of `clea` [@ValentinGot] [@liollury]
 
+[@kgrandemange]: https://github.com/kgrandemange
 [@liollury]: https://github.com/liollury
 [@ValentinGot]: https://github.com/ValentinGot

@@ -1,10 +1,13 @@
 {
   "name": "@clea/cli",
-  "version": "0.0.1-rc.1",
+  "version": "0.0.1-rc.3",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
     "test": "node test/runner",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "gitbook:serve": "gitbook serve",
+    "gitbook:build": "gitbook build",
+    "publish:documentation": "npm run gitbook:build && gh-pages -d _book"
   },
   "bin": {
     "clea": "./bin/clea.js"
@@ -13,7 +16,8 @@
   "author": "Groupe SII",
   "contributors": [
     "Valentin Got <gotvalentin@gmail.com>",
-    "Olivier Le Lay <liollury@gmail.com>"
+    "Olivier Le Lay <liollury@gmail.com>",
+    "Kevin Grandemange <kevin@kevingrandemange.net>"
   ],
   "repository": {
     "type": "git",
@@ -37,6 +41,7 @@
     "clean-webpack-plugin": "^0.1.15",
     "cli-spinner": "^0.2.6",
     "commander": "^2.9.0",
+    "common-tags": "^1.4.0",
     "compression-webpack-plugin": "^0.3.2",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.1",
@@ -87,9 +92,11 @@
     "npm": ">= 3.0.0"
   },
   "devDependencies": {
+    "eslint": "^3.17.1",
+    "gh-pages": "^0.12.0",
+    "gitbook-cli": "^2.3.0",
     "chai": "^3.5.0",
     "denodeify": "^1.2.1",
-    "eslint": "^3.17.1",
     "mocha": "^3.2.0"
   }
 }

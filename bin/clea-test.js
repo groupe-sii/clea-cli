@@ -4,14 +4,14 @@ const program = require('commander'),
   packageFile = require('../package.json'),
   project = require('../lib/project').getInstance(),
   Test = require('../lib/commands/test'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-test'),
+  Command = require('../lib/utilities/command');
 
 program
-  .version(packageFile.version)
-  .option('--watch', 'run tests when files change')
-  .option('--single-run', 'run tests only once')
-  .option('--log-level [level]', 'level of logging (defaults to: info)', 'info')
-  .option('--port [port]', 'port where the web server will be listening (defaults to: 9876)', 9876);
+  .version(packageFile.version);
+
+Command.addOptions(program, options);
 
 program.parse(process.argv);
 

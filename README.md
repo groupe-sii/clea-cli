@@ -6,12 +6,17 @@
 
 <p align="center">
   <a href="https://travis-ci.org/groupe-sii/clea-cli"><img alt="Travis Status" src="https://travis-ci.org/groupe-sii/clea-cli.svg"></a>
-  <a href="https://npmjs.org/package/clea"><img alt="NPM version" src="https://badge.fury.io/js/clea.svg"></a>
+  <a href="https://npmjs.org/package/@clea/cli"><img alt="NPM version" src="https://badge.fury.io/js/clea.svg"></a>
   <a href="https://david-dm.org/groupe-sii/clea-cli"><img src="https://david-dm.org/groupe-sii/clea-cli.svg" alt="npm dependencies"></a>
   <a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT badge"></a>
 </p>
 
 ---
+
+<p align="center">
+  <a href="https://groupe-sii.github.io/clea-cli"><strong>Documentation</strong></a> ·
+  <a href="https://groupe-sii.github.io/cheat-sheets/clea/index.html"><strong>Cheat Sheet</strong></a>
+</p>
 
 The CLI requires NodeJS >= 6.9.0 and NPM 3 or higher.
 
@@ -41,7 +46,7 @@ clea serve
 
 Go to http://localhost:8080/. Hot reload is active by default.
 
-To see the `clea serve` options & details, go check the [documentation](https://github.com/groupe-sii/clea-cli/blob/master/docs/serve.md).
+To see the `clea serve` options & details, go check the [documentation](docs/commands/serve.md).
 
 ## Progressive Web App
 
@@ -76,7 +81,7 @@ Filter                  | `clea generate filter my-new-filter`
 Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
-[Learn more](https://github.com/groupe-sii/clea-cli/blob/master/docs/generate.md)
+[Learn more](docs/commands/generate.md)
 
 # Upgrade Clea
 

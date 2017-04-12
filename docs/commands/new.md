@@ -27,11 +27,13 @@ clea help new
 
 `--ui-framework [framework]` create application with built-in ui framework. **material** or **bootstrap** (defaults to: **none**).
 
-`--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**). [Details](more/make-it-progressive.md).
+`--make-it-progressive` add the default configuration for a Progressive Web App (defaults to: **false**). [Details](../more/make-it-progressive.md).
 
 `--skip-install` skip installing packages (defaults to: **false**).
 
 `--skip-git` skip initializing a git repository (defaults to: **false**).
+
+`--commit-message-conventions` add commit-msg hook to force use of the [Google message conventions](../../templates/application/COMMITS-CONVENTION.md) (defaults to: **false**).
 
 ### Library
 

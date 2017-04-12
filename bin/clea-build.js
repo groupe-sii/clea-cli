@@ -4,21 +4,12 @@ const program = require('commander'),
   packageFile = require('../package.json'),
   project = require('../lib/project').getInstance(),
   Build = require('../lib/commands/build'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-build'),
+  Command = require('../lib/utilities/command');
 
-program
-  .version(packageFile.version)
-  .option('-v, --verbose', 'verbose mode')
-  .option('--target [env]', 'build the application with the targeted environment (defaults to: development)')
-  .option('--output-path [path]', 'build the application into this path (defaults to: dist/)')
-  .option('--base-href [url]', 'base url for the application being built (defaults to: /)', '/')
-  .option('--compress', 'enable gzip compression')
-  .option('--sourcemap', 'output sourcemaps')
-  .option('--doc', 'generate the documentation')
-  .option('--progress', 'display a compilation progress')
-  .option('--merge-config [config]', 'merge the given webpack configuration with the existing one')
-  .option('--override-config [config]', 'override the existing webpack configuration by the given one');
-
+program.version(packageFile.version);
+Command.addOptions(program, options);
 program.parse(process.argv);
 
 project.init().then(() => {
