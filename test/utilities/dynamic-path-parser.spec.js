@@ -3,7 +3,6 @@ const path = require('path'),
   expect = require('chai').expect,
 
   helper = new (require('../helper'))(),
-  Project = require('../../lib/project'),
   DynamicPathParser = require('../../lib/utilities/dynamic-path-parser');
 
 const appDir = `src${path.sep}app`;
@@ -11,10 +10,8 @@ const appDir = `src${path.sep}app`;
 describe ('Utilities::DynamicPathParser', () => {
   let project;
 
-  beforeEach (() => helper.setup().then(() => {
-    project = Project.getInstance();
-
-    return true;
+  beforeEach (() => helper.setup().then((pjt) => {
+    project = pjt;
   }));
 
   it ('parse from project root directory', () => {
