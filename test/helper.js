@@ -32,7 +32,7 @@ class Helper {
       process.chdir(this.path);
 
       return project.init();
-    });
+    }).then(() => project);
   }
 
   endup () {
