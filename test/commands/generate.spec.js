@@ -1,5 +1,4 @@
 const path = require('path'),
-  fs = require('fs'),
   expect = require('chai').expect,
 
   helper = new (require('../helper'))(),
