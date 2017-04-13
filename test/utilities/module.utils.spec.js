@@ -101,10 +101,18 @@ describe ('Utilities::ModuleUtils', () => {
     }).to.throw();
   });
 
-  it ('it should retrieve the module name', () => {
+  it ('should retrieve the module name', () => {
     const appModule = ModuleUtils.findAppModule(project, appDir);
 
     expect(ModuleUtils.getModuleName(appModule)).to.equal('AppModule');
+  });
+
+  it (`shouldn't find the module name`, () => {
+    const notAModule = path.join(project.root, appDir, 'app.component.html');
+
+    expect(() => {
+      ModuleUtils.getModuleName(notAModule);
+    }).to.throw();
   });
 
   it ('should throw an error if multiple module files were found', () => {
