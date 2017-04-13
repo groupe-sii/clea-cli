@@ -78,11 +78,30 @@ describe ('Utilities::ModuleUtils', () => {
   it ('should add the import statement in a module file', () => {
     const appModule = fs.readFileSync(ModuleUtils.findAppModule(project, appDir), 'utf8');
 
-    let withoutBrackets = ModuleUtils.addImportToModule(appModule, 'WithoutBracketsComponent', './without-brackets.component.ts'),
+    const withoutBrackets = ModuleUtils.addImportToModule(appModule, 'WithoutBracketsComponent', './without-brackets.component.ts'),
       withBrackets = ModuleUtils.addImportToModule(appModule, 'WithBracketsComponent', './with-brackets.component.ts', true);
 
     expect(withoutBrackets).to.contain(`import WithoutBracketsComponent from './without-brackets.component.ts';`);
     expect(withBrackets).to.contain(`import { WithBracketsComponent } from './with-brackets.component.ts';`);
+  });
+
+  it (`shouldn't be able to add the import statement with a misformatted module file`, () => {
+    expect(() => {
+      ModuleUtils.addImportToModule('misformattedModuleFile', 'ThrowErrorComponent', './throw-error.component.ts');
+    }).to.throw();
+  });
+
+  it ('should add the entity declaration in a module file', () => {
+    const appModule = fs.readFileSync(ModuleUtils.findAppModule(project, appDir), 'utf8'),
+      moduleWithDeclaration = ModuleUtils.addDeclarationToModule(appModule, 'MyNewComponent', 'myNewComponent', 'component');
+
+    expect(moduleWithDeclaration).to.contain(`module.component('myNewComponent', MyNewComponent);`);
+  });
+
+  it (`shouldn't be able to add the entity declaration with a misformatted module file`, () => {
+    expect(() => {
+      ModuleUtils.addDeclarationToModule('misformattedModuleFile', 'ThrowErrorComponent', 'throwErrorComponent', 'component');
+    }).to.throw();
   });
 
   afterEach (() => helper.endup());
