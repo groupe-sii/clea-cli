@@ -1,15 +1,10 @@
-const path = require('path'),
-  expect = require('chai').expect,
+const expect = require('chai').expect,
 
   helper = new (require('../helper'))(),
   InitProject = require('../../lib/commands/init-project');
 
-describe ('Commands::InitProject', () => {
-  let project;
-
-  beforeEach (() => helper.setup().then((pjt) => {
-    project = pjt;
-  }));
+describe ('Commands::Completion', () => {
+  beforeEach (() => helper.setup());
 
   it (`shouldn't be able to generate a library`, () => {
     expect(() => {
