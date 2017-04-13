@@ -15,3 +15,6 @@ test-gen-app/
 
 # Gitbook
 _book/
+
+# Code coverage
+coverage/

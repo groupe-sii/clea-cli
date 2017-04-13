@@ -1,0 +1,6 @@
+verbose: false
+instrumentation:
+  excludes:
+    - vgo/**
+    - templates/**
+  include-all-sources: true
