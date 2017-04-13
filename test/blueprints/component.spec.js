@@ -64,6 +64,22 @@ describe ('Blueprint::Component', () => {
     }).catch((err) => done(err));
   });
 
+  it (`shouldn't generate spec file`, (done) => {
+    project.clea.spec.component = false;
+
+    Generate.create(BLUEPRINT, 'my-test-component', {
+      quiet: true
+    }).then(() => {
+      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.ts'))).to.equal(true);
+      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(false);
+      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
+      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
+      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
+
+      done();
+    }).catch((err) => done(err));
+  });
+
   afterEach (() => helper.endup());
 
 });
