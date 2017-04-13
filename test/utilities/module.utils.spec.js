@@ -59,22 +59,6 @@ describe ('Utilities::ModuleUtils', () => {
     expect(parentModule).to.contain('parent.routing.ts');
   });
 
-  it ('should throw an error if multiple module files were found', () => {
-    fs.ensureFileSync(path.join(project.root, appDir, 'second.module.ts'));
-
-    expect(() => {
-      ModuleUtils.findParentModule(project, appDir);
-    }).to.throw();
-  });
-
-  it ('should throw an error if no module files were found', () => {
-    fs.unlinkSync(path.join(project.root, appDir, 'app.module.ts'));
-
-    expect(() => {
-      ModuleUtils.findParentModule(project, appDir);
-    }).to.throw();
-  });
-
   it ('should add the import statement in a module file', () => {
     const appModule = fs.readFileSync(ModuleUtils.findAppModule(project, appDir), 'utf8');
 
@@ -101,6 +85,41 @@ describe ('Utilities::ModuleUtils', () => {
   it (`shouldn't be able to add the entity declaration with a misformatted module file`, () => {
     expect(() => {
       ModuleUtils.addDeclarationToModule('misformattedModuleFile', 'ThrowErrorComponent', 'throwErrorComponent', 'component');
+    }).to.throw();
+  });
+
+  it ('should lazy load the module in a routing file', () => {
+    const appRouting = fs.readFileSync(ModuleUtils.findParentRouting(project, appDir), 'utf8'),
+      routingWithLazyLoad = ModuleUtils.addDeclarationToRouting(appRouting, 'lazy-load', 'lazyLoad', './lazy-load/lazy-load.module');
+
+    expect(routingWithLazyLoad).to.contain(`lazy-load`);
+  });
+
+  it (`shouldn't be able to lazy load the module with a misformatted routing file`, () => {
+    expect(() => {
+      ModuleUtils.addDeclarationToRouting('misformattedModuleFile', 'lazy-load', 'lazyLoad', './lazy-load/lazy-load.module');
+    }).to.throw();
+  });
+
+  it ('it should retrieve the module name', () => {
+    const appModule = ModuleUtils.findAppModule(project, appDir);
+
+    expect(ModuleUtils.getModuleName(appModule)).to.equal('AppModule');
+  });
+
+  it ('should throw an error if multiple module files were found', () => {
+    fs.ensureFileSync(path.join(project.root, appDir, 'second.module.ts'));
+
+    expect(() => {
+      ModuleUtils._findParent(project, appDir, '.module.ts');
+    }).to.throw();
+  });
+
+  it ('should throw an error if no module files were found', () => {
+    fs.unlinkSync(path.join(project.root, appDir, 'app.module.ts'));
+
+    expect(() => {
+      ModuleUtils._findParent(project, appDir, '.module.ts');
     }).to.throw();
   });
 
