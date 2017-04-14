@@ -22,4 +22,13 @@ describe ('Command::Generate', () => {
     expect(completion._getCompletion()).to.contain('compctl -K _clea_completion clea');
   });
 
+  it ('should generate instructions + completion + footer', () => {
+    let completion = new Completion(),
+      res = completion.show();
+
+    expect(res).to.contain('###-begin-clea-completion###');
+    expect(res).to.contain('complete -o default -F _clea_completion clea');
+    expect(res).to.contain('###-end-clea-completion###');
+  });
+
 });
