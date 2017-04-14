@@ -1,6 +1,7 @@
 verbose: false
 instrumentation:
   excludes:
-    - vgo/**
+    - bin/**
     - templates/**
+    - vgo/**
   include-all-sources: true
