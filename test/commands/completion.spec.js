@@ -2,7 +2,7 @@ const expect = require('chai').expect,
 
   Completion = require('../../lib/commands/completion');
 
-describe ('Commands::Generate', () => {
+describe ('Command::Generate', () => {
 
   it ('should generate bash completion by default', () => {
     let completion = new Completion();

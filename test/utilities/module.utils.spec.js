@@ -7,7 +7,7 @@ const path = require('path'),
 
 const appDir = `src${path.sep}app`;
 
-describe ('Utilities::ModuleUtils', () => {
+describe ('Utility::ModuleUtils', () => {
   let project;
 
   beforeEach (() => helper.setup().then((pjt) => {

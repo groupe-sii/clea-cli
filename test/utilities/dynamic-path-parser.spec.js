@@ -7,7 +7,7 @@ const path = require('path'),
 
 const appDir = `src${path.sep}app`;
 
-describe ('Utilities::DynamicPathParser', () => {
+describe ('Utility::DynamicPathParser', () => {
   let project;
 
   beforeEach (() => helper.setup().then((pjt) => {

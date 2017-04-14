@@ -4,7 +4,7 @@ const path = require('path'),
   helper = new (require('../helper'))(),
   Generate = require('../../lib/commands/generate');
 
-describe ('Commands::Generate', () => {
+describe ('Command::Generate', () => {
   let project;
 
   beforeEach (() => helper.setup().then((pjt) => {

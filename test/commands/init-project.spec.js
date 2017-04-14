@@ -3,7 +3,7 @@ const expect = require('chai').expect,
   helper = new (require('../helper'))(),
   InitProject = require('../../lib/commands/init-project');
 
-describe ('Commands::Completion', () => {
+describe ('Command::Completion', () => {
   beforeEach (() => helper.setup());
 
   it (`shouldn't be able to generate a library`, () => {
