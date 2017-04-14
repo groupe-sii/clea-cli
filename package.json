@@ -94,6 +94,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "codecov": "^2.1.0",
     "denodeify": "^1.2.1",
     "eslint": "^3.17.1",
