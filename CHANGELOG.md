@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **tests**: add some testing
 
+### Updated
+
+- **@clea/cli**: upgrade some packages to their latest minor version [@ValentinGot]
+
+  - angular-mocks: 1.6.3 to **1.6.4**
+  - clean-webpack-plugin: 0.1.15 to **0.1.16**
+  - debug: 2.6.1 to **2.6.6**
+  - file-loader: 0.10.1 to **0.11.1**
+  - karma-phantomjs-launcher: 1.0.3 to **1.0.4**
+  - karma-spec-reporter: 0.0.30 to **0.0.31**
+  - karma-webpack: 2.0.2 to **2.0.3**
+  - node-sass: to 4.5.0 **4.5.2**
+  - ts-loader: 2.0.1 to **2.0.3**
+  - typedoc-webpack-plugin: 1.1.3 to **1.1.4**
+  - webpack-dev-server: 2.4.1 to **2.4.5**
+
 ### Fixed
 
 - **tslint**: upgrade to 5.1.0 to fix [no-use-before-declare](https://github.com/palantir/tslint/issues/1400) issue [@ValentinGot]
