@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Added
+
+- **tests**: add some testing
+
+### Fixed
+
+- **tslint**: upgrade to 5.1.0 to fix [no-use-before-declare](https://github.com/palantir/tslint/issues/1400) issue [@ValentinGot]
+
 ## [0.0.1-rc.3](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.2...0.0.1-rc.3) - 2017-04-11
 
 ### Breaking changes
