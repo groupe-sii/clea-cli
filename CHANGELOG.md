@@ -15,6 +15,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - **@clea/cli**: upgrade some packages to their latest minor version [@ValentinGot]
 
+  - compression-webpack-plugin: 0.3.2 to **0.4.0**. [Release notes](https://github.com/webpack-contrib/compression-webpack-plugin/releases/tag/v0.4.0).
+  - css-loader: 0.27.1 to **0.28.1**. [Release notes](https://github.com/webpack-contrib/css-loader/releases/tag/v0.28.1).
+  - jasmine-core: 2.5.2 to **2.6.1**. [Release notes](https://github.com/jasmine/jasmine/blob/master/release_notes/2.6.1.md).
+  - json-server: 0.9.6 to **0.10.0**.
+  - karma: 1.5.0 to **1.6.0**. [Release notes](https://github.com/karma-runner/karma/releases/tag/v1.6.0).
+  - style-loader: 0.16.1 to **0.17.0**. [Release notes](https://github.com/webpack-contrib/style-loader/releases/tag/v0.17.0).
+  - sw-precache-webpack-plugin: 0.9.1 to **0.10.1**.
+  - typedoc: 0.5.7 to **0.6.0**. [Release notes](https://github.com/TypeStrong/typedoc/releases/tag/v0.6.0).
+  - typescript: 2.2.1 to **2.3.2**. [Release notes](https://blogs.msdn.microsoft.com/typescript/2017/04/27/announcing-typescript-2-3/).
+  - webpack: 2.2.1 to **2.4.1**. [Release notes](https://github.com/webpack/webpack/releases/tag/v2.4.0).
+  - webpack-merge: 4.0.0 to **4.1.0**.
+
+- **@clea/cli**: upgrade some packages to their latest patch version [@ValentinGot]
+
   - angular-mocks: 1.6.3 to **1.6.4**
   - clean-webpack-plugin: 0.1.15 to **0.1.16**
   - debug: 2.6.1 to **2.6.6**
