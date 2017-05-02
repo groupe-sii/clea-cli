@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 
 const program = require('commander'),
   packageFile = require('../package.json'),
@@ -14,4 +13,5 @@ Command.addOptions(program, options);
 program.parse(process.argv);
 
 const completion = new Completion(program.zsh && 'zsh');
-completion.start();
+
+console.log(`${completion.show()}`); // eslint-disable-line no-console

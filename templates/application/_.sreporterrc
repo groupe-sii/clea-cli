@@ -11,7 +11,7 @@
     "rulesFile": "./src/.htmlhintrc"
   },
   "tslint": {
-    "src": "src/**/*.ts",
+    "src": "src/app/**/*.ts",
     "report": "reports/sonar/tslint.json",
     "rulesFile": "tslint.json"
   }

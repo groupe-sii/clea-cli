@@ -47,6 +47,11 @@ program
         Generate.create(blueprint, name, {
           component: options.withComponent,
           lazyLoad : options.lazyLoad
+        }).catch((err) => {
+          debug(err);
+          logger.error(err.message);
+
+          process.exit(1);
         });
       } catch (err) {
         debug(err);
