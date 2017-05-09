@@ -103,5 +103,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "sinon": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
