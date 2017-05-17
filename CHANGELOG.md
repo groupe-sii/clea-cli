@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1-rc.4](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.3...0.0.1-rc.4) - 2017-05-17
+
 ### Added
 
 - **tests**: add some testing
