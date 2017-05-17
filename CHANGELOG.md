@@ -41,6 +41,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - typedoc-webpack-plugin: 1.1.3 to **1.1.4**
   - webpack-dev-server: 2.4.1 to **2.4.5**
 
+### Updated
+
+- **tsconfig**: upgrade tsconfig.json, mainly to add ES7 support [@ValentinGot]
+
 ### Fixed
 
 - **tslint**: upgrade to 5.1.0 to fix [no-use-before-declare](https://github.com/palantir/tslint/issues/1400) issue [@ValentinGot]
