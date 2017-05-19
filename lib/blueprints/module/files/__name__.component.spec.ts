@@ -7,7 +7,7 @@ describe ('<%= classifiedName %>Component', () => {
   let <%= camelizedName %>Controller;
 
   angular.mock.module.sharedInjector();
-  <% if (appModulePath) { %>
+<% if (appModulePath) { %>
   beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
   beforeAll (angular.mock.module(<%= classifiedName %>Module));
 
