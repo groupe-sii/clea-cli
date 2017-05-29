@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Fixed
+
+- **webpack**: fix webpack-dev-server [#88](https://github.com/webpack/webpack-dev-server/issues/88) issue with ouput.path on Windows
+
 ## [0.0.1-rc.4](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.3...0.0.1-rc.4) - 2017-05-17
 
 ### Added
