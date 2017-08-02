@@ -14,6 +14,7 @@
     "postinstall": "node ./node_modules/@clea/cli/bin/postinstall.js"<% } %>
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
     "angular": "^1.6.2",
     "angular-animate": "^1.6.2",
     "angular-aria": "^1.6.2",
@@ -23,8 +24,7 @@
     "angular-resource": "^1.6.2",
     "angular-sanitize": "^1.6.2",<% if (bootstrap) { %>
     "angular-touch": "^1.6.3",
-    "angular-ui-bootstrap": "^2.5.0",<% } %>
-    "angular-ui-router": "^1.0.0-rc.1",<% if (bootstrap) { %>
+    "angular-ui-bootstrap": "^2.5.0",<% } if (bootstrap) { %>
     "bootstrap-sass": "^3.3.7",<% } %>
     "oclazyload": "^1.1.0",
     "restangular": "^1.6.1"
