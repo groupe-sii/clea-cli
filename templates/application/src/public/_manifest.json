@@ -24,7 +24,7 @@
     },
     {
       "src": "assets/launcher/launcher-256x256.png",
-      "sizes": "256x256",
+      "sizes": "256x256 512x512",
       "type": "image/png"
     }
   ],
