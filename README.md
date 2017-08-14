@@ -47,13 +47,13 @@ clea serve
 
 Go to http://localhost:8080/. Hot reload is active by default.
 
-To see the `clea serve` options & details, go check the [documentation](docs/commands/serve.md).
+To see the `clea serve` options & details, go check the [documentation](https://groupe-sii.github.io/clea-cli/docs/commands/serve.html).
 
 ## Progressive Web App
 
 You can generate the basics of a Progressive Web App support with the following `clea new <app-name> --make-it-progressive`.
 
-[Learn more](docs/more/make-it-progressive.md)
+[Learn more](https://groupe-sii.github.io/clea-cli/docs/more/make-it-progressive.html)
 
 # Generate some entities
 
@@ -82,7 +82,7 @@ Filter                  | `clea generate filter my-new-filter`
 Service                 | `clea generate service my-new-service`
 Module                  | `clea generate module my-new-module`
 
-[Learn more](docs/commands/generate.md)
+[Learn more](https://groupe-sii.github.io/clea-cli/docs/commands/generate.html)
 
 # Upgrade Clea
 
@@ -103,10 +103,6 @@ rm node_modules -rf
 npm install --save-dev @clea/cli
 npm install
 ```
-
-# Documentation
-
-The documentation can be found under the [docs](https://github.com/groupe-sii/clea-cli/tree/master/docs) folder.
 
 # License
 
