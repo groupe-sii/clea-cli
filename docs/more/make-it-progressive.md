@@ -14,7 +14,7 @@ These file are generated or modified by the Progressive Web App support option:
 
 - **sw.conf.js**: sw-precache and sw-toolbox configuration file.
 - **src/app/app.sw.ts**: Service Worker registration.
-- **src/public/index.html**: add <head> metadata for PWA support.
+- **src/public/index.html**: add `<head>` metadata for PWA support.
 - **src/public/manifest.json**: manifest file describing the application.
 - **src/public/assets/launcher/**: some default launcher icons.
 
