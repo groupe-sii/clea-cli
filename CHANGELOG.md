@@ -7,11 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.4...0.0.1) - 2017-08-14
+
 ## Added
 
 - **progressive-web-apps**: 100% lighthouse report on Progressive Web Apps [@ValentinGot]
 
-  - add 512x512 icon which is required for [A2HS](https://developers.google.com/web/updates/2015/10/splashscreen)
+  - add 512x512 icon which is required for [A2HS](https://developers.google.com/web/updates/2015/10/splashscreen) (Closes [#19](https://github.com/groupe-sii/clea-cli/issues/19))
   - theme the [browser address bar] (https://developers.google.com/web/tools/lighthouse/audits/address-bar)
   - it should contains an error message when [JavaScript isn't enabled](https://developers.google.com/web/tools/lighthouse/audits/no-js)
 
@@ -23,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
-- **app**: angular-ui-router has been renamed to @uirouter/angularjs
+- **app**: angular-ui-router has been renamed to @uirouter/angularjs (Closes [#20](https://github.com/groupe-sii/clea-cli/issues/20))
 - **webpack**: fix webpack-dev-server [#88](https://github.com/webpack/webpack-dev-server/issues/88) issue with output.path on Windows [@ValentinGot]
 
 ## [0.0.1-rc.4](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.3...0.0.1-rc.4) - 2017-05-17
