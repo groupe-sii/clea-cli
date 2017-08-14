@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Upgrade to Webpack 3 and add new [Scope Hoisting](https://github.com/webpack/webpack/tree/master/examples/scope-hoisting) feature [@ValentinGot]
 
+## Updated
+
+- **@clea/cli**: upgrade packages to their latest version [@ValentinGot]
+
 ### Fixed
 
 - **app**: angular-ui-router has been renamed to @uirouter/angularjs
