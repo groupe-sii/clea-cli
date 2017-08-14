@@ -1,6 +1,6 @@
 {
   "name": "@clea/cli",
-  "version": "0.0.1-rc.4",
+  "version": "0.0.1",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
     "test": "node test/runner",
