@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - theme the [browser address bar] (https://developers.google.com/web/tools/lighthouse/audits/address-bar)
   - it should contains an error message when [JavaScript isn't enabled](https://developers.google.com/web/tools/lighthouse/audits/no-js)
 
+- Upgrade to Webpack 3 and add new [Scope Hoisting](https://github.com/webpack/webpack/tree/master/examples/scope-hoisting) feature [@ValentinGot]
+
 ### Fixed
 
 - **app**: angular-ui-router has been renamed to @uirouter/angularjs
