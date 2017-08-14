@@ -5,12 +5,14 @@ const program = require('commander'),
 
   project = require('../lib/project').getInstance(),
   Lint = require('../lib/commands/lint'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-lint'),
+  Command = require('../lib/utilities/command');
 
 program
-  .version(packageFile.version)
-  .option('--fix', 'will attempt to fix lint errors')
-  .option('--force', 'will always return error code 0 even with lint errors. It also launches all linters, whether there is errors or not.');
+  .version(packageFile.version);
+
+Command.addOptions(program, options);
 
 program.parse(process.argv);
 

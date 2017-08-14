@@ -10,11 +10,13 @@ clea help build
 
 `--verbose` (`-V`) verbose mode.
 
-`--target [env]` build the application with the targeted environment (defaults to: **development**). [Details](more/environments.md).
+`--target [env]` build the application with the targeted environment (defaults to: **development**). [Details](../more/environments.md).
 
 `--output-path [path]` build the application into this path (defaults to: **dist/**).
 
 `--base-href [url]` base url for the application being built (defaults to: **/**).
+
+`--compress` enable gzip compression.
 
 `--sourcemap` output sourcemaps.
 

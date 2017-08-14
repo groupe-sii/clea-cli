@@ -7,9 +7,127 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.4...0.0.1) - 2017-08-14
+
+## Added
+
+- **progressive-web-apps**: 100% lighthouse report on Progressive Web Apps [@ValentinGot]
+
+  - add 512x512 icon which is required for [A2HS](https://developers.google.com/web/updates/2015/10/splashscreen) (Closes [#19](https://github.com/groupe-sii/clea-cli/issues/19))
+  - theme the [browser address bar] (https://developers.google.com/web/tools/lighthouse/audits/address-bar)
+  - it should contains an error message when [JavaScript isn't enabled](https://developers.google.com/web/tools/lighthouse/audits/no-js)
+
+- Upgrade to Webpack 3 and add new [Scope Hoisting](https://github.com/webpack/webpack/tree/master/examples/scope-hoisting) feature [@ValentinGot]
+
+## Updated
+
+- **@clea/cli**: upgrade packages to their latest version [@ValentinGot]
+
+### Fixed
+
+- **app**: angular-ui-router has been renamed to @uirouter/angularjs (Closes [#20](https://github.com/groupe-sii/clea-cli/issues/20))
+- **webpack**: fix webpack-dev-server [#88](https://github.com/webpack/webpack-dev-server/issues/88) issue with output.path on Windows [@ValentinGot]
+
+## [0.0.1-rc.4](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.3...0.0.1-rc.4) - 2017-05-17
+
+### Added
+
+- **tests**: add some testing
+
+### Updated
+
+- **@clea/cli**: upgrade some packages to their latest minor version [@ValentinGot]
+
+  - compression-webpack-plugin: 0.3.2 to **0.4.0**. [Release notes](https://github.com/webpack-contrib/compression-webpack-plugin/releases/tag/v0.4.0).
+  - css-loader: 0.27.1 to **0.28.1**. [Release notes](https://github.com/webpack-contrib/css-loader/releases/tag/v0.28.1).
+  - jasmine-core: 2.5.2 to **2.6.1**. [Release notes](https://github.com/jasmine/jasmine/blob/master/release_notes/2.6.1.md).
+  - json-server: 0.9.6 to **0.10.0**.
+  - karma: 1.5.0 to **1.6.0**. [Release notes](https://github.com/karma-runner/karma/releases/tag/v1.6.0).
+  - style-loader: 0.16.1 to **0.17.0**. [Release notes](https://github.com/webpack-contrib/style-loader/releases/tag/v0.17.0).
+  - sw-precache-webpack-plugin: 0.9.1 to **0.10.1**.
+  - typedoc: 0.5.7 to **0.6.0**. [Release notes](https://github.com/TypeStrong/typedoc/releases/tag/v0.6.0).
+  - typescript: 2.2.1 to **2.3.2**. [Release notes](https://blogs.msdn.microsoft.com/typescript/2017/04/27/announcing-typescript-2-3/).
+  - webpack: 2.2.1 to **2.4.1**. [Release notes](https://github.com/webpack/webpack/releases/tag/v2.4.0).
+  - webpack-merge: 4.0.0 to **4.1.0**.
+
+- **@clea/cli**: upgrade some packages to their latest patch version [@ValentinGot]
+
+  - angular-mocks: 1.6.3 to **1.6.4**
+  - clean-webpack-plugin: 0.1.15 to **0.1.16**
+  - debug: 2.6.1 to **2.6.6**
+  - file-loader: 0.10.1 to **0.11.1**
+  - karma-phantomjs-launcher: 1.0.3 to **1.0.4**
+  - karma-spec-reporter: 0.0.30 to **0.0.31**
+  - karma-webpack: 2.0.2 to **2.0.3**
+  - node-sass: to 4.5.0 **4.5.2**
+  - ts-loader: 2.0.1 to **2.0.3**
+  - typedoc-webpack-plugin: 1.1.3 to **1.1.4**
+  - webpack-dev-server: 2.4.1 to **2.4.5**
+
+### Updated
+
+- **tsconfig**: upgrade tsconfig.json, mainly to add ES7 support [@ValentinGot]
+
+### Fixed
+
+- **tslint**: upgrade to 5.1.0 to fix [no-use-before-declare](https://github.com/palantir/tslint/issues/1400) issue [@ValentinGot]
+- **completion**: shouldn't error when used outside project folder [@ValentinGot]
+- **karma**: the karma configuration can now be overrided [@ValentinGot]
+
+## [0.0.1-rc.3](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.2...0.0.1-rc.3) - 2017-04-11
+
+### Breaking changes
+
+- There is now a dedicated entry for the main module file, between `root` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "root": "src",
+    "main": "app/app.module.ts",
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+- There is now a dedicated entry for the main styles files, between `main` and `environmentSource` in `.clea-cli.json`:
+
+  ```json
+  {
+    "main": "app/app.module.ts",
+    "styles": [
+      "styles/main.scss"
+    ],
+    "environmentSource": "config/config.json"
+  }
+  ```
+
+### Fixed
+
+- **webpack**: duplicate declaration of `config` variable was causing build errors [@ValentinGot]
+
+## [0.0.1-rc.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.1...0.0.1-rc.2) - 2017-04-06
+
+### Added
+
+- **build**: add `--compress` option to gain ~70% compression ratio with [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin) [@ValentinGot]
+
+For an hello world app:
+
+Bundle      | Entry      | Emitted   | Compressed (gzip)
+---         | ---        | ---       | ---
+main        | 4.36 kB    | 2.33 kB   | 907 bytes
+vendor      | 2.57 MB    | 440 kB    | 144 kB
+styles      | 70 kB      | 28.4 kB   | 9.11 kB
+  
+- **new**: add `--commit-message-conventions` options to enable the hook commit-msg with the [google conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) (Closes [#15](https://github.com/groupe-sii/clea-cli/issues/15)) [@kgrandemange]
+- **completion**:  add a `clea completion` command (Closes [#8](https://github.com/groupe-sii/clea-cli/issues/8)) [@kgrandemange]
+
+### Fixed
+
+- **blueprints**: add ngInject annotation by default on component's controller [@ValentinGot]
+
 ## [0.0.1-rc.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.6...0.0.1-rc.1) - 2017-03-29
 
-### Breaking changes
+### Breaking changes
 
 - Clea package has been moved to `@clea/cli`.
 
@@ -48,7 +166,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     "module": true 
   } 
   ```
+  
+- Take advantage of Tree Shaking by importing the `vendor.ts` directly in the `app.module.ts` file:
 
+  ```typescript
+  import '../vendor'; 
+  ```
+  
+- The styles bundle is now separated. So you have to remove the `main.scss` import from the `app.module.ts` file. Line to remove:
+  
+  ```typescript
+  import '../styles/main.scss'; 
+  ```
+  
+- `angular-mocks` is now imported by the Karma configuration. Remove it from the `vendor.ts` file or it will break your tests. Line to remove:
+
+  ```typescript
+  import 'angular-mocks'; 
+  ```
+  
 ### Added
 
 - **tree-shaking**: change the webpack configuration to take advantage of tree shaking [@ValentinGot]
@@ -129,9 +265,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - **tests**: the karma configuration file location was wrong. It's under **clea/** folder and not **clea-cli/** [@ValentinGot]
 - **webpack**: stop removing the **dist/** folder when serving the application with `clea serve` [@ValentinGot]
 
-## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
+## [0.0.1-beta.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.1...0.0.1-beta.2) - 2017-03-13
 
-### Fixed
+### Fixed
 
 - **templates**: add `clea` package to generated projects [@ValentinGot]
 
@@ -139,5 +275,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 Releasing the first version of `clea` [@ValentinGot] [@liollury]
 
+[@kgrandemange]: https://github.com/kgrandemange
 [@liollury]: https://github.com/liollury
 [@ValentinGot]: https://github.com/ValentinGot

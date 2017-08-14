@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="<%= slugifiedName %>" lang="en">
+<html ng-app="<%= slugifiedName %>">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +16,9 @@
     <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json" />
 
+    <!-- Theme the browser address bar -->
+    <meta name="theme-color" content="#1976D2"/>
+
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1976D2" />
@@ -29,5 +32,9 @@
 
   <body>
     <ui-view></ui-view>
+
+    <noscript>
+      <h1>This website requires JavaScript.</h1>
+    </noscript>
   </body>
 </html>

@@ -5,17 +5,17 @@ const program = require('commander'),
   packageFile = require('../package.json'),
   Project = require('../lib/project'),
   InitProject = require('../lib/commands/init-project'),
-  logger = require('../vendors/logger');
+  logger = require('../vendors/logger'),
+  { options } = require('../lib/commands-options/clea-init'),
+  Command = require('../lib/utilities/command');
 
 program
   .version(packageFile.version)
-  .arguments('[project-name]')
-  .option('-v, --verbose', 'verbose mode')
-  .option('--lib', 'generate a library instead of an application')
-  .option('--ui-framework [framework]', 'create application with built-in ui framework. "material" or "bootstrap" (defaults to: none)')
-  .option('--make-it-progressive', 'add the default configuration for a Progressive Web App (defaults to: false)')
-  .option('--skip-install', 'skip installing packages (defaults to: false)')
-  .option('--skip-git', 'skip initializing a git repository (defaults to: false)')
+  .arguments('[project-name]');
+
+Command.addOptions(program, options);
+
+program
   .action((name) => {
     if (!InitProject.UI_FRAMEWORKS.includes(program.uiFramework)) {
       logger.error(`"${program.uiFramework}" ui framework is not allowed. ${chalk.blue.bold('clea help new')} to see allowed types.`);
@@ -30,7 +30,8 @@ program
         uiFramework      : program.uiFramework,
         makeItProgressive: program.makeItProgressive !== undefined,
         skipInstall      : program.skipInstall !== undefined,
-        skipGit          : program.skipGit !== undefined
+        skipGit          : program.skipGit !== undefined,
+        commitMessageConventions: program.commitMessageConventions !== undefined
       });
       initProject.start().catch((err) => {
         debug(err);
@@ -45,15 +46,5 @@ program
       process.exit(1);
     }
   });
-
-program.on('--help', () => {
-  logger.help('  Arguments:');
-  logger.help('');
-  logger.help('    [type]           type of the project to generate.');
-  logger.help('                       For an application: application, app');
-  logger.help('                       For a library: library, lib');
-  logger.help('    [project-name]   project name');
-  logger.help('');
-});
 
 program.parse(process.argv);

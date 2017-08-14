@@ -19,4 +19,7 @@ node_modules/
 vgo/
 test-gen-app/
 
+# Gitbook
+_book/
+
 yarn.lock

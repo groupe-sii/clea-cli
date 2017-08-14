@@ -1,0 +1,8 @@
+verbose: false
+instrumentation:
+  excludes:
+    - bin/**
+    - templates/**
+    - vgo/**
+    - _book/**
+  include-all-sources: true

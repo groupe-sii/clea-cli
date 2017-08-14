@@ -7,7 +7,7 @@ describe ('<%= classifiedName %>Directive', () => {
   let element;
 
   angular.mock.module.sharedInjector();
-  <% if (appModulePath) { %>
+<% if (appModulePath) { %>
   beforeAll (angular.mock.module(<%= appModuleName %>));<% } %>
   beforeAll (angular.mock.module(<%= moduleName %>));
 

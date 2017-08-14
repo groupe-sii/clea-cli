@@ -14,13 +14,13 @@ It will generate a new module called **lazy** and lazy-load it in the closest ro
 
 With the above example, the following structure will be generated:
 
-<pre>
+```
 ├── lazy/
 │    |──  lazy.module.ts
 │    └──  lazy.component.ts
 │
 └── app.routing.ts
-</pre>
+```
 
 In `app.route.ts`, the new module will be automatically referenced:
 

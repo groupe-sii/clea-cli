@@ -12,3 +12,9 @@ node_modules
 # Test generated application
 vgo/
 test-gen-app/
+
+# Gitbook
+_book/
+
+# Code coverage
+coverage/
