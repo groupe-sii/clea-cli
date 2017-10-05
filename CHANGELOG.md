@@ -7,19 +7,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [0.0.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1...0.0.2) - 2017-10-05
+
+### Fixed
+
+- **service-worker**: remove [sw-precache-webpack-dev-plugin](https://github.com/ragingwind/sw-precache-webpack-dev-server-plugin) which lacks maintenance [@ValentinGot]
+- **@clea/cli**: upgrade some packages to their latest version [@ValentinGot]
+
 ## [0.0.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.4...0.0.1) - 2017-08-14
 
-## Added
+### Added
 
 - **progressive-web-apps**: 100% lighthouse report on Progressive Web Apps [@ValentinGot]
 
   - add 512x512 icon which is required for [A2HS](https://developers.google.com/web/updates/2015/10/splashscreen) (Closes [#19](https://github.com/groupe-sii/clea-cli/issues/19))
-  - theme the [browser address bar] (https://developers.google.com/web/tools/lighthouse/audits/address-bar)
+  - theme the [browser address bar](https://developers.google.com/web/tools/lighthouse/audits/address-bar)
   - it should contains an error message when [JavaScript isn't enabled](https://developers.google.com/web/tools/lighthouse/audits/no-js)
 
 - Upgrade to Webpack 3 and add new [Scope Hoisting](https://github.com/webpack/webpack/tree/master/examples/scope-hoisting) feature [@ValentinGot]
 
-## Updated
+### Updated
 
 - **@clea/cli**: upgrade packages to their latest version [@ValentinGot]
 
