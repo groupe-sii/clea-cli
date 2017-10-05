@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### Fixed
+
+- **service-worker**: remove [sw-precache-webpack-dev-plugin](https://github.com/ragingwind/sw-precache-webpack-dev-server-plugin) which lacks maintenance [@ValentinGot]
+
 ## [0.0.1](https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.4...0.0.1) - 2017-08-14
 
 ### Added
