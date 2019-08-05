@@ -25,9 +25,13 @@ With the above example, the following structure will be generated:
 In `app.route.ts`, the new module will be automatically referenced:
 
 ```typescript
+import { StateProvider } from '@uirouter/angularjs';
+
 export class AppRoutes {
 
-  constructor ($stateProvider: ng.ui.IStateProvider) {
+  constructor (
+    $stateProvider: StateProvider
+  ) {
     'ngInject';
 
     $stateProvider.state('lazy', {

@@ -14,7 +14,7 @@
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
-    "@clea/cli": "^0.0.2",
+    "@clea/cli": "^0.0.3",
     "@types/angular": "^1.6.5",
     "@types/core-js": "^0.9.36",
     "@types/angular-mocks": "^1.5.9",
