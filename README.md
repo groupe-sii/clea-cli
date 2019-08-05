@@ -19,7 +19,7 @@
   <a href="https://groupe-sii.github.io/cheat-sheets/clea/index.html"><strong>Cheat Sheet</strong></a>
 </p>
 
-The CLI requires NodeJS >= 6.9.0 and NPM 3 or higher.
+The CLI requires NodeJS >= 8.9.0 and NPM 5 or higher.
 
 # Usage
 

@@ -88,8 +88,8 @@
     "winston": "^2.4.4"
   },
   "engines": {
-    "node": ">= 6.9.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 8.9.0",
+    "npm": ">= 5.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.1",

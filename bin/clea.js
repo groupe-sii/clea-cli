@@ -8,8 +8,8 @@ const program = require('commander'),
   { commands } = require('../lib/commands-options/clea'),
   Command = require('../lib/utilities/command');
 
-if (nodeVersion.compare(new SemVer('6.9.0')) < 0) {
-  logger.error(`ERROR: Your running version of Node v${nodeVersion.version}, is not a supported version to use the CLI. The official Node supported version is 6.9 and greater.`);
+if (nodeVersion.compare(new SemVer('8.9.0')) < 0) {
+  logger.error(`ERROR: Your running version of Node v${nodeVersion.version}, is not a supported version to use the CLI. The official Node supported version is 8.9 and greater.`);
 
   process.exit(1);
 }
