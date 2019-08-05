@@ -3,9 +3,9 @@
   "version": "0.0.2",
   "description": "CLI tool for AngularJS & Typescript projects",
   "scripts": {
-    "test": "node test/runner",
+    "test": "mocha \"./test/**/*.spec.js\"",
     "lint": "eslint .",
-    "coverage": "istanbul cover test/runner.js --reporter lcovonly",
+    "coverage": "nyc --reporter=lcov npm run test",
     "gitbook:serve": "gitbook serve",
     "gitbook:build": "gitbook build",
     "publish:documentation": "npm run gitbook:build && gh-pages -d _book"
@@ -99,8 +99,8 @@
     "eslint": "^4.4.1",
     "gh-pages": "^1.0.0",
     "gitbook-cli": "^2.3.2",
-    "istanbul": "^0.4.5",
     "mocha": "^3.5.0",
+    "nyc": "^14.1.1",
     "sinon": "^3.2.0"
   },
   "publishConfig": {

@@ -17,4 +17,5 @@ test-gen-app/
 _book/
 
 # Code coverage
+.nyc_output
 coverage/
