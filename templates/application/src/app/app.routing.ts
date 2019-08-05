@@ -1,6 +1,11 @@
+import { StateProvider, UrlRouterProvider } from '@uirouter/angularjs';
+
 export class AppRoutes {
 
-  constructor ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) {
+  constructor (
+    $stateProvider: StateProvider,
+    $urlRouterProvider: UrlRouterProvider
+  ) {
     'ngInject';
 
     $urlRouterProvider.otherwise('/');
