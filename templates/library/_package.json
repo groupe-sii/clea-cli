@@ -10,17 +10,17 @@
     "sonar:reporters": "sreporter"
   },
   "dependencies": {
-    "angular": "^1.6.1",
+    "angular": "^1.7.0",
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
     "@clea/cli": "^0.0.3",
-    "@types/angular": "^1.6.5",
+    "@types/angular": "^1.7.0",
     "@types/core-js": "^0.9.36",
-    "@types/angular-mocks": "^1.5.9",
+    "@types/angular-mocks": "^1.7.0",
     "@types/jasmine": "^2.5.43",
     "@types/webpack": "^2.2.6",
-    "angular-mocks": "^1.6.2",
+    "angular-mocks": "^1.7.0",
     "autoprefixer": "^9.6.1",
     "typescript": "^2.1.6",
     "sonar-web-frontend-reporters": "^3.2.0"
