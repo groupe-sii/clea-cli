@@ -35,6 +35,7 @@
     "@types/angular-material": "^1.1.68",<% } %>
     "@types/angular-mocks": "^1.7.0",
     "@types/jasmine": "^2.5.43",
+    "@types/node": "~8.9.4",
     "@types/oclazyload": "^0.0.32",
     "@types/restangular": "^1.5.44",
     "@types/webpack": "^3.0.0",
