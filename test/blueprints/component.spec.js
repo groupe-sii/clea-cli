@@ -25,7 +25,6 @@ describe ('Blueprint::Component', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));
@@ -41,7 +40,6 @@ describe ('Blueprint::Component', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));
@@ -58,7 +56,6 @@ describe ('Blueprint::Component', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));
@@ -74,7 +71,6 @@ describe ('Blueprint::Component', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-component', 'my-test-component.controller.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));

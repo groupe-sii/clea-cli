@@ -28,7 +28,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.scss'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.html'))).to.equal(false);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.ts'))).to.equal(false);
 
       done();
     }).catch((err) => done(err));
@@ -45,7 +44,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-module', 'my-test-module.component.scss'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-module', 'my-test-module.component.html'))).to.equal(false);
-      expect(fs.existsSync(path.join(project.root, appDir, 'sub', 'my-test-module', 'my-test-module.component.ts'))).to.equal(false);
 
       done();
     }).catch((err) => done(err));
@@ -63,7 +61,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.scss'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.html'))).to.equal(false);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.ts'))).to.equal(false);
 
       done();
     }).catch((err) => done(err));
@@ -79,7 +76,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));
@@ -97,7 +93,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.scss'))).to.equal(true);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.html'))).to.equal(true);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.ts'))).to.equal(true);
 
       done();
     }).catch((err) => done(err));
@@ -115,7 +110,6 @@ describe ('Blueprint::Module', () => {
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.spec.ts'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.scss'))).to.equal(false);
       expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.html'))).to.equal(false);
-      expect(fs.existsSync(path.join(project.root, appDir, 'my-test-module', 'my-test-module.component.ts'))).to.equal(false);
       expect(ModuleUtils.addDeclarationToRouting.calledOnce).to.equal(true);
 
       done();

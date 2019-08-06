@@ -7,11 +7,54 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## [0.0.3](https://github.com/groupe-sii/clea-cli/compare/0.0.2...0.0.3) - 2019-08-05
+## [1.0.0](https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0) - 2019-08-06
+
+### BREAKING CHANGES
+
+- **raw-loader**: as of [raw-loader 2.0.0](https://github.com/webpack-contrib/raw-loader/pull/69), you should add the `.default` when requiring a template [@ValentinGot]
+
+  ```typescript
+  export const AppComponent = {
+    controller: AppController,
+    template: require('./app.component.html').default
+  };
+  ```
+
+- **@clea/cli**: bump to Webpack 4 [@ValentinGot]
+- **@clea/cli**: minimum required nodejs version is now `8.9.0` [@ValentinGot]
+
+### Feat
+
+- **performance**: add a new performance entry configuration in the `.clea-cli.json` file [@ValentinGot]
+  
+  ```json
+  {
+    "performance": {
+      "hints": "warning",
+      "maxEntrypointSize": 2000000,
+      "maxAssetSize": 2000000
+    }
+  }
+  ```
 
 ### Fixed
 
+- **package.json**: as of now, postcss requires `autoprefixer` to be set as a dependency [@ValentinGot]
+
+### Updated
+
+- **generate**: generated components are now in the `__name__.compnent.ts` file. The controller file has been removed for more clarity. [@ValentinGot]
+- **@clea/cli**: bump TypeScript version to `3.5` [@ValentinGot]
+- **@clea/cli**: bump Angular version to `1.7` [@ValentinGot]
+
+## [0.0.3](https://github.com/groupe-sii/clea-cli/compare/0.0.2...0.0.3) - 2019-08-05
+
+### updated
+
 - **@clea/cli**: upgrade dependencies [@ValentinGot]
+
+### Fixed
+
 - **@clea/cli**: security issues [@ValentinGot]
 
 ## [0.0.2](https://github.com/groupe-sii/clea-cli/compare/0.0.1...0.0.2) - 2017-10-05
