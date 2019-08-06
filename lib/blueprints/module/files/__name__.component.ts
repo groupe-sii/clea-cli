@@ -9,6 +9,6 @@ export class <%= classifiedName %>Controller {
 }
 
 export const <%= classifiedName %>Component: ng.IComponentOptions = {
-  template  : require('./<%= fileName %>.component.html'),
+  template  : require('./<%= fileName %>.component.html').default,
   controller: <%= classifiedName %>Controller
 };

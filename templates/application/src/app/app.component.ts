@@ -9,5 +9,5 @@ class AppController {
 
 export const AppComponent = {
   controller: AppController,
-  template: require('./app.component.html')
+  template: require('./app.component.html').default
 };
