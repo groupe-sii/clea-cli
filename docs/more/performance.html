@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Autocompletion · GitBook</title>
+        <title>Performance · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="performance.html" />
+    <link rel="next" href="../../CHANGELOG.html" />
     
     
-    <link rel="prev" href="sonarqube-reporters.html" />
+    <link rel="prev" href="autocompletion.html" />
     
 
     </head>
@@ -379,7 +379,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.7" data-path="autocompletion.html">
+        <li class="chapter " data-level="1.3.7" data-path="autocompletion.html">
             
                 <a href="autocompletion.html">
             
@@ -392,7 +392,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.8" data-path="performance.html">
+        <li class="chapter active" data-level="1.3.8" data-path="performance.html">
             
                 <a href="performance.html">
             
@@ -453,7 +453,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Autocompletion</a>
+        <a href="../.." >Performance</a>
     </h1>
 </div>
 
@@ -468,16 +468,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="autocompletion">Autocompletion</h1>
-<p>To turn on auto completion use the following commands:</p>
-<p>For bash:</p>
-<pre><code class="lang-bash">clea completion --bash &gt;&gt; ~/.bashrc
-<span class="hljs-built_in">source</span> ~/.bashrc
+                                <h1 id="performance">Performance</h1>
+<blockquote>
+<p>Clea can notify you of assets and entry points that exceed a specific file limit.</p>
+</blockquote>
+<h2 id="configuration">Configuration</h2>
+<p>The configuration can be found in the <code>.clea-cli.json</code> file:</p>
+<pre><code class="lang-json">{
+<span class="hljs-string">&quot;performance&quot;</span>: {
+  <span class="hljs-string">&quot;hints&quot;</span>: <span class="hljs-string">&quot;warning&quot;</span>,
+  <span class="hljs-string">&quot;maxEntrypointSize&quot;</span>: <span class="hljs-number">2000000</span>,
+  <span class="hljs-string">&quot;maxAssetSize&quot;</span>: <span class="hljs-number">2000000</span>
+}
+}
 </code></pre>
-<p>For zsh:</p>
-<pre><code class="lang-bash">clea completion --zsh &gt;&gt; ~/.zshrc
-<span class="hljs-built_in">source</span> ~/.zshrc
-</code></pre>
+<p>Please refer to the <a href="https://webpack.js.org/configuration/performance/" target="_blank">Webpack performance</a> section for mor information about configuration.</p>
 
                                 
                                 </section>
@@ -511,7 +516,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Autocompletion","level":"1.3.7","depth":2,"next":{"title":"Performance","level":"1.3.8","depth":2,"path":"docs/more/performance.md","ref":"docs/more/performance.md","articles":[]},"previous":{"title":"SonarQube Reporters","level":"1.3.6","depth":2,"path":"docs/more/sonarqube-reporters.md","ref":"docs/more/sonarqube-reporters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","-sharing"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/more/autocompletion.md","mtime":"2019-08-05T09:05:26.629Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-06T10:10:00.538Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Performance","level":"1.3.8","depth":2,"next":{"title":"Change Log","level":"1.4","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"Autocompletion","level":"1.3.7","depth":2,"path":"docs/more/autocompletion.md","ref":"docs/more/autocompletion.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","-sharing"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/more/performance.md","mtime":"2019-08-06T10:06:09.379Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-06T10:10:00.538Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

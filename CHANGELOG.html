@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="docs/more/autocompletion.html" />
+    <link rel="prev" href="docs/more/performance.html" />
     
 
     </head>
@@ -390,6 +390,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.8" data-path="docs/more/performance.html">
+            
+                <a href="docs/more/performance.html">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -458,6 +471,154 @@
 <p>The format is based on <a href="http://keepachangelog.com/" target="_blank">Keep a Changelog</a> 
 and this project adheres to <a href="http://semver.org/" target="_blank">Semantic Versioning</a>.</p>
 <h2 id="unreleased">Unreleased</h2>
+<h2 id="100---2019-08-06"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0" target="_blank">1.0.0</a> - 2019-08-06</h2>
+<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<ul>
+<li><p><strong>raw-loader</strong>: as of <a href="https://github.com/webpack-contrib/raw-loader/pull/69" target="_blank">raw-loader 2.0.0</a>, you should add the <code>.default</code> when requiring a template <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> AppComponent = {
+  controller: AppController,
+  template: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./app.component.html&apos;</span>).default
+};
+</code></pre>
+</li>
+<li><p><strong>@clea/cli</strong>: bump to Webpack 4 <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+</li>
+<li><strong>@clea/cli</strong>: minimum required nodejs version is now <code>8.9.0</code> <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h3 id="feat">Feat</h3>
+<ul>
+<li><p><strong>performance</strong>: add a new performance entry configuration in the <code>.clea-cli.json</code> file <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;performance&quot;</span>: {
+    <span class="hljs-string">&quot;hints&quot;</span>: <span class="hljs-string">&quot;warning&quot;</span>,
+    <span class="hljs-string">&quot;maxEntrypointSize&quot;</span>: <span class="hljs-number">2000000</span>,
+    <span class="hljs-string">&quot;maxAssetSize&quot;</span>: <span class="hljs-number">2000000</span>
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>package.json</strong>: as of now, postcss requires <code>autoprefixer</code> to be set as a dependency <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><strong>generate</strong>: generated components are now in the <code>__name__.compnent.ts</code> file. The controller file has been removed for more clarity. <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+<li><strong>@clea/cli</strong>: bump TypeScript version to <code>3.5</code> <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+<li><strong>@clea/cli</strong>: bump Angular version to <code>1.7</code> <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h2 id="003---2019-08-05"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.2...0.0.3" target="_blank">0.0.3</a> - 2019-08-05</h2>
+<h3 id="updated">updated</h3>
+<ul>
+<li><strong>@clea/cli</strong>: upgrade dependencies <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>@clea/cli</strong>: security issues <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h2 id="002---2017-10-05"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.1...0.0.2" target="_blank">0.0.2</a> - 2017-10-05</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>service-worker</strong>: remove <a href="https://github.com/ragingwind/sw-precache-webpack-dev-server-plugin" target="_blank">sw-precache-webpack-dev-plugin</a> which lacks maintenance <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+<li><strong>@clea/cli</strong>: upgrade some packages to their latest version <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h2 id="001---2017-08-14"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.4...0.0.1" target="_blank">0.0.1</a> - 2017-08-14</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><p><strong>progressive-web-apps</strong>: 100% lighthouse report on Progressive Web Apps <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+<ul>
+<li>add 512x512 icon which is required for <a href="https://developers.google.com/web/updates/2015/10/splashscreen" target="_blank">A2HS</a> (Closes <a href="https://github.com/groupe-sii/clea-cli/issues/19" target="_blank">#19</a>)</li>
+<li>theme the <a href="https://developers.google.com/web/tools/lighthouse/audits/address-bar" target="_blank">browser address bar</a></li>
+<li>it should contains an error message when <a href="https://developers.google.com/web/tools/lighthouse/audits/no-js" target="_blank">JavaScript isn&apos;t enabled</a></li>
+</ul>
+</li>
+<li><p>Upgrade to Webpack 3 and add new <a href="https://github.com/webpack/webpack/tree/master/examples/scope-hoisting" target="_blank">Scope Hoisting</a> feature <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+</li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><strong>@clea/cli</strong>: upgrade packages to their latest version <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>app</strong>: angular-ui-router has been renamed to @uirouter/angularjs (Closes <a href="https://github.com/groupe-sii/clea-cli/issues/20" target="_blank">#20</a>)</li>
+<li><strong>webpack</strong>: fix webpack-dev-server <a href="https://github.com/webpack/webpack-dev-server/issues/88" target="_blank">#88</a> issue with output.path on Windows <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h2 id="001-rc4---2017-05-17"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.3...0.0.1-rc.4" target="_blank">0.0.1-rc.4</a> - 2017-05-17</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li><strong>tests</strong>: add some testing</li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><p><strong>@clea/cli</strong>: upgrade some packages to their latest minor version <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+<ul>
+<li>compression-webpack-plugin: 0.3.2 to <strong>0.4.0</strong>. <a href="https://github.com/webpack-contrib/compression-webpack-plugin/releases/tag/v0.4.0" target="_blank">Release notes</a>.</li>
+<li>css-loader: 0.27.1 to <strong>0.28.1</strong>. <a href="https://github.com/webpack-contrib/css-loader/releases/tag/v0.28.1" target="_blank">Release notes</a>.</li>
+<li>jasmine-core: 2.5.2 to <strong>2.6.1</strong>. <a href="https://github.com/jasmine/jasmine/blob/master/release_notes/2.6.1.md" target="_blank">Release notes</a>.</li>
+<li>json-server: 0.9.6 to <strong>0.10.0</strong>.</li>
+<li>karma: 1.5.0 to <strong>1.6.0</strong>. <a href="https://github.com/karma-runner/karma/releases/tag/v1.6.0" target="_blank">Release notes</a>.</li>
+<li>style-loader: 0.16.1 to <strong>0.17.0</strong>. <a href="https://github.com/webpack-contrib/style-loader/releases/tag/v0.17.0" target="_blank">Release notes</a>.</li>
+<li>sw-precache-webpack-plugin: 0.9.1 to <strong>0.10.1</strong>.</li>
+<li>typedoc: 0.5.7 to <strong>0.6.0</strong>. <a href="https://github.com/TypeStrong/typedoc/releases/tag/v0.6.0" target="_blank">Release notes</a>.</li>
+<li>typescript: 2.2.1 to <strong>2.3.2</strong>. <a href="https://blogs.msdn.microsoft.com/typescript/2017/04/27/announcing-typescript-2-3/" target="_blank">Release notes</a>.</li>
+<li>webpack: 2.2.1 to <strong>2.4.1</strong>. <a href="https://github.com/webpack/webpack/releases/tag/v2.4.0" target="_blank">Release notes</a>.</li>
+<li>webpack-merge: 4.0.0 to <strong>4.1.0</strong>.</li>
+</ul>
+</li>
+<li><p><strong>@clea/cli</strong>: upgrade some packages to their latest patch version <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></p>
+<ul>
+<li>angular-mocks: 1.6.3 to <strong>1.6.4</strong></li>
+<li>clean-webpack-plugin: 0.1.15 to <strong>0.1.16</strong></li>
+<li>debug: 2.6.1 to <strong>2.6.6</strong></li>
+<li>file-loader: 0.10.1 to <strong>0.11.1</strong></li>
+<li>karma-phantomjs-launcher: 1.0.3 to <strong>1.0.4</strong></li>
+<li>karma-spec-reporter: 0.0.30 to <strong>0.0.31</strong></li>
+<li>karma-webpack: 2.0.2 to <strong>2.0.3</strong></li>
+<li>node-sass: to 4.5.0 <strong>4.5.2</strong></li>
+<li>ts-loader: 2.0.1 to <strong>2.0.3</strong></li>
+<li>typedoc-webpack-plugin: 1.1.3 to <strong>1.1.4</strong></li>
+<li>webpack-dev-server: 2.4.1 to <strong>2.4.5</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="updated">Updated</h3>
+<ul>
+<li><strong>tsconfig</strong>: upgrade tsconfig.json, mainly to add ES7 support <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>tslint</strong>: upgrade to 5.1.0 to fix <a href="https://github.com/palantir/tslint/issues/1400" target="_blank">no-use-before-declare</a> issue <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+<li><strong>completion</strong>: shouldn&apos;t error when used outside project folder <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+<li><strong>karma</strong>: the karma configuration can now be overrided <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
+<h2 id="001-rc3---2017-04-11"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.2...0.0.1-rc.3" target="_blank">0.0.1-rc.3</a> - 2017-04-11</h2>
+<h3 id="breaking-changes">Breaking changes</h3>
+<ul>
+<li><p>There is now a dedicated entry for the main module file, between <code>root</code> and <code>environmentSource</code> in <code>.clea-cli.json</code>:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;src&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app/app.module.ts&quot;</span>,
+  <span class="hljs-string">&quot;environmentSource&quot;</span>: <span class="hljs-string">&quot;config/config.json&quot;</span>
+}
+</code></pre>
+</li>
+<li><p>There is now a dedicated entry for the main styles files, between <code>main</code> and <code>environmentSource</code> in <code>.clea-cli.json</code>:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app/app.module.ts&quot;</span>,
+  <span class="hljs-string">&quot;styles&quot;</span>: [
+    <span class="hljs-string">&quot;styles/main.scss&quot;</span>
+  ],
+  <span class="hljs-string">&quot;environmentSource&quot;</span>: <span class="hljs-string">&quot;config/config.json&quot;</span>
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li><strong>webpack</strong>: duplicate declaration of <code>config</code> variable was causing build errors <a href="https://github.com/ValentinGot" target="_blank">@ValentinGot</a></li>
+</ul>
 <h2 id="001-rc2---2017-04-06"><a href="https://github.com/groupe-sii/clea-cli/compare/0.0.1-beta.rc.1...0.0.1-rc.2" target="_blank">0.0.1-rc.2</a> - 2017-04-06</h2>
 <h3 id="added">Added</h3>
 <ul>
@@ -660,7 +821,7 @@ npm install
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Change Log","level":"1.4","depth":1,"previous":{"title":"Autocompletion","level":"1.3.7","depth":2,"path":"docs/more/autocompletion.md","ref":"docs/more/autocompletion.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","-sharing"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CHANGELOG.md","mtime":"2017-04-06T13:43:45.297Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T13:46:37.234Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Change Log","level":"1.4","depth":1,"previous":{"title":"Performance","level":"1.3.8","depth":2,"path":"docs/more/performance.md","ref":"docs/more/performance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api","-sharing"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CHANGELOG.md","mtime":"2019-08-06T10:06:09.379Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-08-06T10:10:00.538Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
