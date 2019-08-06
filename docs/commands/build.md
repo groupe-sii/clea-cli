@@ -22,7 +22,7 @@ clea help build
 
 `--doc` generate the documentation with [TypeDoc](http://typedoc.org/).
 
-`--progress` display a compilation progress.
+`--progress` log progress to the console while building.
 
 `--merge-config [config]` merge the given webpack configuration with the existing one.
 
