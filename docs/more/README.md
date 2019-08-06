@@ -7,3 +7,4 @@
 * [Proxy to Backend](/docs/more/proxy.md)
 * [SonarQube Reporters](/docs/more/sonarqube-reporters.md)
 * [Autocompletion](/docs/more/autocompletion.md)
+* [Performance](/docs/more/performance.md)

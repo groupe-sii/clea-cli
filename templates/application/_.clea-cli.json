@@ -13,6 +13,11 @@
   },
   "karmaConfig": "./karma.conf.js",<% if (pwa) { %>
   "swConfig": "./sw.conf.js",<% } %>
+  "performance": {
+    "hints": "warning",
+    "maxEntrypointSize": 2000000,
+    "maxAssetSize": 2000000
+  },
   "spec": {
     "component": true,
     "directive": false,
