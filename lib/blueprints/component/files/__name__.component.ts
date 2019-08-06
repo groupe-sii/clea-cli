@@ -1,4 +1,3 @@
-import { <%= classifiedName %>Controller } from './<%= fileName %>.controller';
 import './<%= fileName %>.component.scss';
 
 export class <%= classifiedName %>Controller {
