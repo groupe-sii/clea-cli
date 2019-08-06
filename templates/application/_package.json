@@ -30,7 +30,7 @@
     "restangular": "^1.6.1"
   },
   "devDependencies": {
-    "@clea/cli": "^0.0.3",
+    "@clea/cli": "^1.0.0",
     "@types/angular": "^1.6.55",<% if (ngMaterial) { %>
     "@types/angular-material": "^1.1.68",<% } %>
     "@types/angular-mocks": "^1.7.0",
