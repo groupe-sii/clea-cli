@@ -32,7 +32,7 @@ describe ('Command::Bundler', () => {
     return bundler.start().should.be.rejectedWith(/environment is missing in \.clea-cli\.json/);
   });
 
-  it (`should throw an error if environmentSource file doesn't exists` , () => {
+  it (`should throw an error if environmentSource file doesn't exists`, () => {
     project.clea.environmentSource = 'unknownSource';
 
     const bundler = new Bundler('build', {
@@ -90,17 +90,21 @@ describe ('Command::Bundler', () => {
     });
 
     return expect(bundler.stats()).to.deep.equal({
-      colors      : true,
-      hash        : true,
-      timings     : true,
-      chunks      : true,
+      colors: true,
+      hash: true,
+      timings: true,
+      chunks: true,
       chunkModules: false,
-      children    : false,
-      modules     : false,
-      reasons     : false,
-      warnings    : true,
-      assets      : false,
-      version     : false
+      children: false,
+      modules: false,
+      reasons: false,
+      warnings: true,
+      errors: true,
+      assets: false,
+      version: false,
+      errorDetails: false,
+      moduleTrace: false,
+      entrypoints: false
     });
   });
 
@@ -111,17 +115,24 @@ describe ('Command::Bundler', () => {
     });
 
     return expect(bundler.stats()).to.deep.equal({
-      colors      : true,
-      hash        : true,
-      timings     : true,
-      chunks      : true,
-      chunkModules: false,
-      children    : true,
-      modules     : false,
-      reasons     : true,
-      warnings    : true,
-      assets      : true,
-      version     : true
+      colors: false,
+      hash: true,
+      timings: true,
+      chunks: true,
+      chunkModules: true,
+      children: true,
+      modules: false,
+      reasons: true,
+      warnings: true,
+      errors: true,
+      assets: true,
+      version: true,
+      errorDetails: true,
+      moduleTrace: true,
+      entrypoints: false,
+      usedExports: true,
+      maxModules: Infinity,
+      optimizationBailout: true
     });
   });
 
