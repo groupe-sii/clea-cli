@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [1.1.0](https://github.com/groupe-sii/clea-cli/compare/1.0.0...1.1.0) - 2019-08-07
+
 ### BREAKING CHANGES
 
 - **test**: upgrade the test process. As of now, the karma config file will old the entire configuration, for easy configuration by the end user.
