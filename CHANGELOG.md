@@ -23,18 +23,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         require('karma-jasmine'),
         require('karma-chrome-launcher'),
         require('karma-spec-reporter'),
-        require('karma-jasmine-html-reporter'),
-        require('karma-coverage-istanbul-reporter')
+        require('karma-jasmine-html-reporter')
       ],
       client: {
         clearContext: false // leave Jasmine Spec Runner output visible in browser
       },
       reporters: ['kjhtml', 'spec'],
-      coverageIstanbulReporter: {
-        dir: require('path').join(__dirname, './coverage/testapp'),
-        reports: ['html', 'lcovonly', 'text-summary'],
-        fixWebpackSourcePaths: true
-      },
       specReporter: {
         maxLogLines: 5,
         suppressErrorSummary: true,
@@ -59,7 +53,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   {
     "devDependencies": {
       "karma-chrome-launcher": "^3.0.0",
-      "karma-coverage-istanbul-reporter": "^2.1.0",
       "karma-jasmine": "^2.0.1",
       "karma-jasmine-html-reporter": "^1.4.2",
       "karma-sourcemap-loader": "^0.3.7",
