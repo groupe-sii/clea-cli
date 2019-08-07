@@ -18,9 +18,10 @@ program.parse(process.argv);
 project.init().then(() => {
   let test = new Test({
     browsers    : program.browsers,
-    singleRun: program.singleRun
-    watch       : program.watch,
-    singleRun   : program.singleRun
+    codeCoverage: program.codeCoverage !== undefined,
+    progress    : program.progress === 'true' || program.progress === true || program.progress === undefined,
+    singleRun   : program.singleRun,
+    watch       : program.watch
   });
 
   try {

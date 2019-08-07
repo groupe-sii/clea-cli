@@ -71,7 +71,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Feat
 
-- **test**: add a `--browsers` option to override which browsers tests are run against
+- **test**: add a `--browsers` option to override which browsers tests are run against [@ValentinGot]
+- **test**: add a `--progress` option [@ValentinGot]
 
 ## [1.0.0](https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0) - 2019-08-06
 

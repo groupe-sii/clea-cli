@@ -10,9 +10,11 @@ clea help test
 
 `--browsers [browsers]` override which browsers tests are run against
 
-`--watch` run tests when files change
+`--progress` log progress to the console while building (defaults to `true`)
 
 `--single-run` karma will exit once all tests are passed or any tests failed
+
+`--watch` run tests when files change
 
 ## Configuration
 
