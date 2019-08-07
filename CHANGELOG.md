@@ -69,6 +69,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   }
   ```
 
+### Feat
+
+- **test**: add a `--browsers` option to override which browsers tests are run against
+
 ## [1.0.0](https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0) - 2019-08-06
 
 ### BREAKING CHANGES

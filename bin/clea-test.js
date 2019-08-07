@@ -17,8 +17,10 @@ program.parse(process.argv);
 
 project.init().then(() => {
   let test = new Test({
-    watch    : program.watch,
+    browsers    : program.browsers,
     singleRun: program.singleRun
+    watch       : program.watch,
+    singleRun   : program.singleRun
   });
 
   try {
