@@ -7,6 +7,68 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## [1.1.0](https://github.com/groupe-sii/clea-cli/compare/1.0.0...1.1.0) - 2019-08-07
+
+### BREAKING CHANGES
+
+- **test**: upgrade the test process. As of now, the karma config file will old the entire configuration, for easy configuration by the end user.
+
+  karma.conf.js:
+  ```javascript
+  module.exports = function (config) {
+    config.set({
+      basePath: '',
+      frameworks: ['jasmine'],
+      plugins: [
+        require('karma-webpack'),
+        require('karma-sourcemap-loader'),
+        require('karma-jasmine'),
+        require('karma-chrome-launcher'),
+        require('karma-spec-reporter'),
+        require('karma-jasmine-html-reporter')
+      ],
+      client: {
+        clearContext: false // leave Jasmine Spec Runner output visible in browser
+      },
+      reporters: ['kjhtml', 'spec'],
+      specReporter: {
+        maxLogLines: 5,
+        suppressErrorSummary: true,
+        suppressFailed: false,
+        suppressPassed: false,
+        suppressSkipped: true,
+        showSpecTiming: false
+      },
+      port: 9876,
+      colors: true,
+      logLevel: config.LOG_INFO,
+      autoWatch: true,
+      browsers: ['Chrome'],
+      singleRun: false,
+      restartOnFileChange: true
+    });
+  };
+  ```
+  
+  package.json:
+  ```json
+  {
+    "devDependencies": {
+      "karma-chrome-launcher": "^3.0.0",
+      "karma-jasmine": "^2.0.1",
+      "karma-jasmine-html-reporter": "^1.4.2",
+      "karma-sourcemap-loader": "^0.3.7",
+      "karma-spec-reporter": "0.0.32",
+      "karma-webpack": "^4.0.2"
+    }
+  }
+  ```
+
+### Feat
+
+- **test**: add a `--browsers` option to override which browsers tests are run against [@ValentinGot]
+- **test**: add a `--progress` option [@ValentinGot]
+
 ## [1.0.0](https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0) - 2019-08-06
 
 ### BREAKING CHANGES

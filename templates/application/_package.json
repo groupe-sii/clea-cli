@@ -30,17 +30,24 @@
     "restangular": "^1.6.1"
   },
   "devDependencies": {
-    "@clea/cli": "^1.0.0",
+    "@clea/cli": "^1.1.0",
     "@types/angular": "^1.6.55",<% if (ngMaterial) { %>
     "@types/angular-material": "^1.1.68",<% } %>
     "@types/angular-mocks": "^1.7.0",
     "@types/jasmine": "^2.5.43",
+    "@types/node": "~8.9.4",
     "@types/oclazyload": "^0.0.32",
     "@types/restangular": "^1.5.44",
     "@types/webpack": "^3.0.0",
     "angular-mocks": "^1.7.0",
     "autoprefixer": "^9.6.1",
-    "sonar-web-frontend-reporters": "^3.2.0",
+    "karma-chrome-launcher": "^3.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "sonar-web-frontend-reporters": "^3.4.0",
     "typescript": "~3.5.3"
   }
 }

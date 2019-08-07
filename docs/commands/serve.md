@@ -20,7 +20,7 @@ clea help serve
   
 `--https` flag to turn on HTTPS.
 
-`--progress` display a compilation progress (defaults to: **false**).
+`--progress` log progress to the console while building.
 
 `--api [db]` enable the mock API on the specified database JSON file (defaults to: **db.json**). [Details](../more/api.md).
 

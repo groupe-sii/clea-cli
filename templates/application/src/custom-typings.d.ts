@@ -11,7 +11,7 @@ interface GlobalEnvironment {
 interface Global extends GlobalEnvironment  {}
 
 // Webpack specific require methods
-//-----------------------------------------
+// -----------------------------------------
 
 interface WebpackRequireFunction {
   (id: string): any;

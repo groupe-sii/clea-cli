@@ -17,10 +17,10 @@ program.parse(process.argv);
 
 project.init().then(() => {
   let test = new Test({
-    watch    : program.watch !== undefined,
-    singleRun: program.singleRun !== undefined,
-    logLevel : program.logLevel,
-    port     : program.port
+    browsers    : program.browsers,
+    progress    : program.progress === 'true' || program.progress === true || program.progress === undefined,
+    singleRun   : program.singleRun,
+    watch       : program.watch
   });
 
   try {

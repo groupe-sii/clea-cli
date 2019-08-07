@@ -1,10 +1,33 @@
-const karmaConfig = require('@clea/cli/lib/models/karma-configs/karma.app.conf.js');
-
 module.exports = function (config) {
-  const finalKarmaConfig = karmaConfig(config);
-
-  // You can add your own config here
-
-  config.set(finalKarmaConfig);
-
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine'],
+    plugins: [
+      require('karma-webpack'),
+      require('karma-sourcemap-loader'),
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-spec-reporter'),
+      require('karma-jasmine-html-reporter')
+    ],
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    reporters: ['kjhtml', 'spec'],
+    specReporter: {
+      maxLogLines: 5,
+      suppressErrorSummary: true,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: true,
+      showSpecTiming: false
+    },
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    restartOnFileChange: true
+  });
 };

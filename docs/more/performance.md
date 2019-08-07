@@ -7,11 +7,11 @@
 The configuration can be found in the `.clea-cli.json` file:
 ```json
 {
-"performance": {
-  "hints": "warning",
-  "maxEntrypointSize": 2000000,
-  "maxAssetSize": 2000000
-}
+  "performance": {
+    "hints": "warning",
+    "maxEntrypointSize": 2000000,
+    "maxAssetSize": 2000000
+  }
 }
 ```
 

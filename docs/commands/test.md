@@ -8,13 +8,13 @@
 clea help test
 ```
 
+`--browsers [browsers]` override which browsers tests are run against
+
+`--progress` log progress to the console while building (defaults to `true`)
+
+`--single-run` karma will exit once all tests are passed or any tests failed
+
 `--watch` run tests when files change
-
-`--single-run` run tests only once
-
-`--log-level [level]` level of logging (defaults to: **info**). Available: off, error, warn, info, debug.
-
-`--port [port]` port where the web server will be listening (defaults to: **9876**)
 
 ## Configuration
 
