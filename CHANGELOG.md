@@ -7,6 +7,68 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+### BREAKING CHANGES
+
+- **test**: upgrade the test process. As of now, the karma config file will old the entire configuration, for easy configuration by the end user.
+
+  karma.conf.js:
+  ```javascript
+  module.exports = function (config) {
+    config.set({
+      basePath: '',
+      frameworks: ['jasmine'],
+      plugins: [
+        require('karma-webpack'),
+        require('karma-sourcemap-loader'),
+        require('karma-jasmine'),
+        require('karma-chrome-launcher'),
+        require('karma-spec-reporter'),
+        require('karma-jasmine-html-reporter'),
+        require('karma-coverage-istanbul-reporter')
+      ],
+      client: {
+        clearContext: false // leave Jasmine Spec Runner output visible in browser
+      },
+      reporters: ['kjhtml', 'spec'],
+      coverageIstanbulReporter: {
+        dir: require('path').join(__dirname, './coverage/testapp'),
+        reports: ['html', 'lcovonly', 'text-summary'],
+        fixWebpackSourcePaths: true
+      },
+      specReporter: {
+        maxLogLines: 5,
+        suppressErrorSummary: true,
+        suppressFailed: false,
+        suppressPassed: false,
+        suppressSkipped: true,
+        showSpecTiming: false
+      },
+      port: 9876,
+      colors: true,
+      logLevel: config.LOG_INFO,
+      autoWatch: true,
+      browsers: ['Chrome'],
+      singleRun: false,
+      restartOnFileChange: true
+    });
+  };
+  ```
+  
+  package.json:
+  ```json
+  {
+    "devDependencies": {
+      "karma-chrome-launcher": "^3.0.0",
+      "karma-coverage-istanbul-reporter": "^2.1.0",
+      "karma-jasmine": "^2.0.1",
+      "karma-jasmine-html-reporter": "^1.4.2",
+      "karma-sourcemap-loader": "^0.3.7",
+      "karma-spec-reporter": "0.0.32",
+      "karma-webpack": "^4.0.2"
+    }
+  }
+  ```
+
 ## [1.0.0](https://github.com/groupe-sii/clea-cli/compare/0.0.3...1.0.0) - 2019-08-06
 
 ### BREAKING CHANGES
